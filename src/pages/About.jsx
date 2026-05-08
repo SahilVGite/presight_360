@@ -1,10 +1,10 @@
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import PageHero from '../components/common/PageHero';
 import SectionHeader from '../components/common/SectionHeader';
 import StatsBar from '../components/common/StatsBar';
 import Card from '../components/common/Card';
 import CTASection from '../components/common/CTASection';
-import { ChevronDown } from 'lucide-react';
-import { useState } from 'react';
 
 const TEAM = [
   { name: 'Team Name', role: 'Description', img: null },
@@ -14,21 +14,9 @@ const TEAM = [
 ];
 
 const ACCORDION_ITEMS = [
-  {
-    title: 'Vision',
-    content:
-      'To be the world\'s most trusted intelligence-driven security firm, empowering leaders to navigate uncertainty with clarity and confidence.',
-  },
-  {
-    title: 'Mission',
-    content:
-      'We provide discreet, behind-the-scenes research and analysis that enables companies and VIPs to act with precision, clarity, and confidence in high-stakes environments.',
-  },
-  {
-    title: 'Values',
-    content:
-      'Integrity, discretion, excellence, and innovation guide everything we do. We are committed to our clients\' success and safety in every engagement.',
-  },
+  { title: 'Vision',  content: "To be the world's most trusted intelligence-driven security firm, empowering leaders to navigate uncertainty with clarity and confidence." },
+  { title: 'Mission', content: "We provide discreet, behind-the-scenes research and analysis that enables companies and VIPs to act with precision, clarity, and confidence in high-stakes environments." },
+  { title: 'Values',  content: "Integrity, discretion, excellence, and innovation guide everything we do. We are committed to our clients' success and safety in every engagement." },
 ];
 
 const EXPERTISE = [
@@ -43,30 +31,22 @@ const CLIENTS = ['XEBO.ai', 'Hushly', 'KanTime', 'XEBO.ai', 'KanTime', 'Hushly']
 function AccordionItem({ title, content }) {
   const [open, setOpen] = useState(title === 'Vision');
   return (
-    <div
-      style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '16px', marginBottom: '16px' }}
-    >
+    <div className="border-b border-white\/08 pb-4 mb-4">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between text-left"
-        style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'white', padding: 0 }}
+        className="w-full flex items-center justify-between text-left bg-transparent border-none cursor-pointer text-white p-0"
       >
         <span className="flex items-center gap-3">
-          <span
-            className="w-4 h-4 rounded-full"
-            style={{ background: open ? 'var(--color-accent-red)' : 'rgba(255,255,255,0.15)', flexShrink: 0 }}
-          />
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, textTransform: 'uppercase' }}>
-            {title}
-          </span>
+          <span className={`w-4 h-4 rounded-full shrink-0 ${open ? 'bg-accent-red' : 'bg-white/15'}`} />
+          <span className="font-display font-bold text-base uppercase">{title}</span>
         </span>
         <ChevronDown
           size={18}
-          style={{ color: 'rgba(255,255,255,0.4)', transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}
+          className={`text-white/40 transition-transform duration-200 ${open ? 'rotate-180' : 'rotate-0'}`}
         />
       </button>
       {open && (
-        <p className="mt-3 text-sm leading-relaxed pl-7" style={{ color: 'rgba(168,192,214,0.75)' }}>
+        <p className="mt-3 text-sm leading-relaxed pl-7 text-secondary\/75">
           {content}
         </p>
       )}
@@ -83,14 +63,14 @@ export default function About() {
       />
 
       {/* Overview + VMV */}
-      <section style={{ padding: '80px 24px', background: 'var(--color-bg-secondary)' }}>
+      <section className="py-20 px-6 bg-secondary">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <p className="section-label mb-3">Overview</p>
-            <h2 className="section-title mb-6" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)' }}>
+            <h2 className="section-title mb-6 text-[clamp(1.5rem,3vw,2.25rem)]">
               INTELLIGENCE TO MAP GLOBAL THREAT VECTORS AND GEOPOLITICAL RISKS
             </h2>
-            <p className="text-sm leading-relaxed" style={{ color: 'rgba(168,192,214,0.75)' }}>
+            <p className="text-sm leading-relaxed text-secondary\/75">
               PreSight 360 is a global intelligence-driven security firm dedicated to mitigating risk for governments, NGOs, corporations and high-net-worth clients operating in challenging, high-threat settings. Our multidisciplinary team combines veteran analysts, technical experts and field operatives to deliver integrated risk management across diverse sectors.
             </p>
           </div>
@@ -103,27 +83,22 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section style={{ padding: '80px 24px', background: 'var(--color-bg-primary)' }}>
+      <section className="py-20 px-6 bg-primary">
         <div className="max-w-6xl mx-auto">
           <p className="section-label mb-2">Our Team</p>
           <SectionHeader title="PRESIGHT 360 EXPERTS" className="mb-10" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {TEAM.map((member, i) => (
               <div key={i} className="text-center">
-                <div
-                  className="rounded-xl overflow-hidden mb-3"
-                  style={{ aspectRatio: '1', background: 'rgba(26,107,219,0.1)', border: '1px solid rgba(255,255,255,0.06)' }}
-                >
+                <div className="rounded-xl overflow-hidden mb-3 aspect-square bg-blue-dim border border-white\/06">
                   {member.img ? (
                     <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center" style={{ color: 'rgba(255,255,255,0.15)', fontSize: '3rem' }}>
-                      👤
-                    </div>
+                    <div className="w-full h-full flex items-center justify-center text-white/15 text-5xl">👤</div>
                   )}
                 </div>
                 <p className="font-semibold text-sm">{member.name}</p>
-                <p className="text-xs mt-1" style={{ color: 'rgba(168,192,214,0.6)' }}>{member.role}</p>
+                <p className="text-xs mt-1 text-secondary\/60">{member.role}</p>
               </div>
             ))}
           </div>
@@ -131,25 +106,11 @@ export default function About() {
       </section>
 
       {/* Presence Map */}
-      <section
-        style={{
-          padding: '80px 24px',
-          background: 'linear-gradient(180deg, #05152a 0%, #020b18 100%)',
-        }}
-      >
+      <section className="py-20 px-6 gradient-cta">
         <div className="max-w-6xl mx-auto">
           <p className="section-label mb-2">Presight 360 Offices</p>
           <SectionHeader title="OUR PRESENCE" className="mb-10" />
-          <div
-            className="rounded-xl flex items-center justify-center"
-            style={{
-              height: '300px',
-              background: 'rgba(26,107,219,0.06)',
-              border: '1px solid rgba(255,255,255,0.06)',
-              color: 'rgba(255,255,255,0.2)',
-              fontSize: '0.875rem',
-            }}
-          >
+          <div className="rounded-xl h-[300px] flex items-center justify-center bg-blue-subtle border border-white\/06 text-white/20 text-sm">
             [ World Map — integrate with a map library ]
           </div>
         </div>
@@ -158,22 +119,15 @@ export default function About() {
       <StatsBar />
 
       {/* Expertise Pillars */}
-      <section style={{ padding: '80px 24px', background: 'var(--color-bg-secondary)' }}>
+      <section className="py-20 px-6 bg-secondary">
         <div className="max-w-6xl mx-auto">
           <p className="section-label mb-2">Presight 360 Offices</p>
           <SectionHeader title="EXPERTISE PILLARS" className="mb-10" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {EXPERTISE.map((item, i) => (
               <Card key={i} className="p-6">
-                <h3
-                  className="font-bold mb-2"
-                  style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', textTransform: 'uppercase' }}
-                >
-                  {item.title}
-                </h3>
-                <p className="text-sm" style={{ color: 'rgba(168,192,214,0.7)', lineHeight: 1.7 }}>
-                  {item.desc}
-                </p>
+                <h3 className="font-bold mb-2 font-display text-base uppercase">{item.title}</h3>
+                <p className="text-sm text-secondary\/70 leading-[1.7]">{item.desc}</p>
               </Card>
             ))}
           </div>
@@ -181,13 +135,13 @@ export default function About() {
       </section>
 
       {/* Clients */}
-      <section style={{ padding: '60px 24px', background: 'var(--color-bg-primary)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+      <section className="py-[60px] px-6 bg-primary border-t border-white\/05">
         <div className="max-w-6xl mx-auto">
           <p className="section-label mb-8 text-center">Associated Partners</p>
           <h2 className="section-title text-center mb-10">OUR CLIENTS</h2>
           <div className="flex flex-wrap items-center justify-center gap-8">
             {CLIENTS.map((client, i) => (
-              <div key={i} style={{ color: 'rgba(255,255,255,0.4)', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.1rem', letterSpacing: '0.05em' }}>
+              <div key={i} className="text-white/40 font-display font-bold text-[1.1rem] tracking-[0.05em]">
                 {client}
               </div>
             ))}

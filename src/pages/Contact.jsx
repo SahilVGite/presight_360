@@ -1,36 +1,15 @@
-import PageHero from '../components/common/PageHero';
-
 export default function Contact() {
   return (
     <>
-      <section
-        style={{
-          minHeight: '100vh',
-          paddingTop: '100px',
-          background: 'linear-gradient(180deg, #020b18 0%, #05152a 100%)',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
+      <section className="min-h-screen pt-[100px] bg-[linear-gradient(180deg,#020b18_0%,#05152a_100%)] flex items-center">
         <div className="max-w-6xl mx-auto px-6 py-16 w-full">
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 rounded-2xl overflow-hidden"
-            style={{ border: '1px solid rgba(255,255,255,0.07)', background: 'rgba(7,29,56,0.5)' }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 rounded-2xl overflow-hidden border border-white\/07 bg-card-50">
             {/* Form */}
             <div className="p-10 md:p-14">
-              <h1
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(2rem, 4vw, 3rem)',
-                  fontWeight: 900,
-                  textTransform: 'uppercase',
-                  marginBottom: '16px',
-                }}
-              >
+              <h1 className="font-display font-[900] uppercase mb-4 text-[clamp(2rem,4vw,3rem)]">
                 LET'S CONNECT
               </h1>
-              <p className="text-sm mb-8" style={{ color: 'rgba(168,192,214,0.7)', lineHeight: 1.7 }}>
+              <p className="text-sm mb-8 text-secondary\/70 leading-[1.7]">
                 Our global team is ready to help you determine the security and risk management path that's right for you.
               </p>
 
@@ -44,33 +23,17 @@ export default function Contact() {
                 <textarea
                   placeholder="Message"
                   rows={4}
-                  className="input-dark text-sm"
-                  style={{ resize: 'vertical' }}
+                  className="input-dark text-sm resize-y"
                 />
-
                 <div className="pt-2">
-                  <button className="btn-primary px-7 py-3 text-sm">
-                    Submit →
-                  </button>
+                  <button className="btn-primary px-7 py-3 text-sm">Submit →</button>
                 </div>
-                <p className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                  We respect your privacy. Your data will never be shared
-                </p>
+                <p className="text-xs text-white/35">We respect your privacy. Your data will never be shared</p>
               </div>
             </div>
 
-            {/* Image */}
-            <div
-              style={{
-                minHeight: '400px',
-                background: 'linear-gradient(135deg, rgba(7,29,56,0.8) 0%, rgba(26,107,219,0.1) 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'rgba(255,255,255,0.1)',
-                fontSize: '0.75rem',
-              }}
-            >
+            {/* Image placeholder */}
+            <div className="min-h-[400px] bg-[linear-gradient(135deg,rgba(7,29,56,0.8)_0%,rgba(26,107,219,0.1)_100%)] flex items-center justify-center text-white/10 text-xs">
               [ Contact Image ]
             </div>
           </div>

@@ -1,12 +1,9 @@
-/**
- * SectionHeader component
- * Props: label, title, subtitle, align ('left'|'center'), className
- */
 export default function SectionHeader({ label, title, subtitle, align = 'left', className = '' }) {
   const alignClass = align === 'center' ? 'text-center mx-auto' : '';
+  const maxWClass  = align === 'center' ? 'max-w-[680px]' : '';
 
   return (
-    <div className={`${alignClass} ${className}`} style={{ maxWidth: align === 'center' ? '680px' : undefined }}>
+    <div className={`${alignClass} ${maxWClass} ${className}`}>
       {label && <p className="section-label mb-3">{label}</p>}
       {title && (
         <h2
@@ -15,10 +12,7 @@ export default function SectionHeader({ label, title, subtitle, align = 'left', 
         />
       )}
       {subtitle && (
-        <p
-          className="mt-4 text-sm leading-relaxed"
-          style={{ color: 'rgba(168, 192, 214, 0.8)', maxWidth: '520px' }}
-        >
+        <p className="mt-4 text-sm leading-relaxed text-secondary\/80 max-w-[520px]">
           {subtitle}
         </p>
       )}

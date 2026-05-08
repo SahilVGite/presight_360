@@ -1,16 +1,8 @@
-/**
- * Card - reusable dark card
- * Props: children, className, onClick, hover (bool)
- */
-export default function Card({ children, className = '', onClick, hover = true, style = {} }) {
+export default function Card({ children, className = '', onClick }) {
   return (
     <div
-      className={`card-dark ${className}`}
+      className={`card-dark ${className} ${onClick ? 'cursor-pointer' : 'cursor-default'}`}
       onClick={onClick}
-      style={{
-        cursor: onClick ? 'pointer' : 'default',
-        ...style,
-      }}
     >
       {children}
     </div>
