@@ -31,8 +31,8 @@ export default function Navbar() {
           className={[
             "flex-1 rounded-full overflow-hidden relative flex items-center justify-between pl-20 pr-8 py-3.5  transition-all duration-300 backdrop-blur-nav",
             scrolled
-              ? "border border-[#FEFEFE] shadow-[0_4px_24px_rgba(0,0,0,0.5)] bg-[rgba(2,11,24,0.97)]"
-              : "border border-[#FEFEFE] bg-[rgba(2,11,24,0.88)]",
+              ? "border border-[#FEFEFE] shadow-[0_4px_24px_rgba(0,0,0,0.5)] bg-transparent"
+              : "border border-[#FEFEFE] bg-transparent",
           ].join(" ")}
         >
           {/* Logo */}
