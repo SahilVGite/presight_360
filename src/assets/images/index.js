@@ -18,6 +18,13 @@ import guidingImg1 from "./guidingImg1.png";
 import guidingImg2 from "./guidingImg2.png";
 
 import whyPresightBg from "./bgGif.gif";
+import strategyImg1 from "./strategyImg1.png";
+import strategyImg2 from "./strategyImg2.png";
+import strategyImg3 from "./strategyImg3.png";
+import reportImg1 from "./reportImg1.png";
+import reportImg2 from "./reportImg2.png";
+import reportImg3 from "./reportImg3.png";
+import worldMap from "./worldmap.svg";
 
 export {
   bannerBgImage,
@@ -36,4 +43,11 @@ export {
   guidingImg1,
   guidingImg2,
   whyPresightBg,
+  strategyImg1,
+  strategyImg2,
+  strategyImg3,
+    reportImg1,
+    reportImg2,
+    reportImg3,
+    worldMap
 };
