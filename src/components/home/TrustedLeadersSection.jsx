@@ -1,67 +1,119 @@
 import { Link } from 'react-router-dom';
 import Button from '../common/Button';
+import { guidingImg1, guidingImg2 } from '../../assets/images';
 
 const TRUSTED_ITEMS = [
   {
-    label: 'OUR SOLUTIONS',
+    label: 'OUR INDUSTRIES',
     title: 'Trusted Across Industries, Worldwide',
-    desc: "PreSight 360 provides end-to-end intelligence-led security solutions for the world's most demanding environments. Our approach is defined by precision, discretion, and relentless commitment to foresight.",
+    desc: 'Leveraging a multi-disciplinary team of intelligence analysts, cyber specialists, and field operatives, we deliver holistic threat management across key sectors including energy, aviation, technology, logistics, and development.',
+    buttonTxt: 'Explore Industries',
     href: '/solutions',
-    imgClass: 'bg-trusted-1',
+    imgSrc: guidingImg1,
   },
   {
     label: 'OUR PRESENCE',
     title: 'Trusted Across Industries, Worldwide',
     desc: 'With operations spanning continents, our field operatives and analysts are embedded in the regions that matter most. PreSight 360 delivers real-time intelligence you can act on.',
+    buttonTxt: 'Explore Now',
     href: '/about',
-    imgClass: 'bg-trusted-2',
+    imgSrc: guidingImg2,
   },
 ];
 
 export default function TrustedLeadersSection() {
   return (
-    <section className="bg-primary py-20 px-6 border-t border-white/05">
-      <div className="max-w-6xl mx-auto">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2 text-white/35">
-          GUIDING LEADERS THROUGH RISK
-        </p>
-        <h2 className="section-title mb-10 max-w-[700px] text-[clamp(1.5rem,3.5vw,2.4rem)]">
-          GUIDING LEADERS THROUGH RISK, WITH INSIGHT THEY CAN TRUST
+    <section className="section-gradient py-[clamp(4rem,8vw,8rem)] overflow-hidden">
+      <div className="max-w-[95rem] mx-auto px-4 lg:px-8">
+        {/* Heading */}
+        <h2 className="max-w-[64.375rem] text-white section-title uppercase mb-16 pl-[3.75rem]">
+          GUIDING LEADERS THROUGH RISK,
+          WITH INSIGHT THEY CAN TRUST
         </h2>
 
-        <div className="space-y-6">
+        {/* Cards */}
+        <div className="space-y-24">
           {TRUSTED_ITEMS.map((item, i) => (
             <div
               key={i}
-              className="flex flex-col md:flex-row items-stretch rounded-xl overflow-hidden border border-white/07"
+              className="flex flex-row lg:flex-row items-center gap-20"
             >
               {/* Image */}
-              <div className={`w-full md:max-w-[280px] min-h-[200px] shrink-0 relative ${item.imgClass}`}>
-                <div className="absolute inset-0 bg-[rgba(2,11,24,0.3)]" />
+              <div className="w-full lg:w-[29.375rem] shrink-0">
+                <img
+                  src={item.imgSrc}
+                  alt={item.label}
+                  className="
+                    w-full
+                    object-cover
+                    rounded-[2rem]
+                  "
+                />
               </div>
-              {/* Content */}
-              <div className="flex flex-col justify-center p-7 flex-1 bg-card-60">
-                <p className="section-label mb-2">{item.label}</p>
-                <h3 className="font-display font-bold uppercase text-[1.15rem] mb-2.5">
-                  {item.title}
-                </h3>
-                <p className="text-sm leading-relaxed mb-5 text-secondary/70">
-                  {item.desc}
-                </p>
-                <Link to={item.href}>
-                  <Button variant="primary" size="sm" showArrow>Learn More</Button>
-                </Link>
+
+              {/* Content Card */}
+              <div
+                className="
+                  relative
+                  flex-1
+                  rounded-[2rem]
+                  px-8
+                  py-10
+                  bg-[rgba(255,255,255,0.04)]
+                  border border-white/10
+                  backdrop-blur-xl
+                  shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+                "
+              >
+                {/* Left Accent Line */}
+                <span className="absolute left-0 top-2/4 -translate-1/2 h-[166px] w-[4px] rounded-full bg-accent-red" />
+
+                <div className="pl-6">
+                  <p className="section-label uppercase tracking-[0.2em] mb-3">
+                    {item.label}
+                  </p>
+
+                  <h3
+                    className="
+                      text-white
+                      font-display
+                      font-bold
+                      text-[clamp(1.5rem,2vw,2.25rem)]
+                      leading-tight
+                      mb-5
+                    "
+                  >
+                    {item.title}
+                  </h3>
+
+                  <p
+                    className="
+                      text-white
+                      text-sm
+                      md:text-lg
+                      leading-[1.8]
+                      max-w-[900px]
+                      mb-8
+                    "
+                  >
+                    {item.desc}
+                  </p>
+
+                  <Link to={item.href}>
+                    <Button variant="primary" size="sm" showArrow>
+                      {item.buttonTxt}
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-10">
-          <p className="text-xs font-bold uppercase tracking-widest mb-1 text-white/35">
-            CONFIDENTIAL INTELLIGENCE. UNMATCHED
-          </p>
-          <p className="text-sm font-bold uppercase tracking-wider text-accent-red">
-            FORESIGHT. UNSHAKEABLE LEADERSHIP.
+        {/* Bottom Text */}
+        <div className="mt-20 max-w-[51.25rem] pl-[3.75rem]">
+          <p className="text-[#B4B4B4] text-[2rem] font-semibold uppercase leading-tight">
+            CONFIDENTIAL INTELLIGENCE. UNMATCHED FORESIGHT<span className="text-[#6296FB]">.</span> <span className="text-[#DB3B3B] font-bold">UNSHAKEABLE LEADERSHIP.</span>
           </p>
         </div>
       </div>

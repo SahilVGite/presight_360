@@ -24,12 +24,15 @@ const STRATEGY_ITEMS = [
 
 export default function StrategySection() {
   return (
-    <section className="bg-secondary py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <p className="section-label mb-3">Presight 360</p>
-        <h2 className="section-title mb-10 text-[clamp(1.5rem,3.5vw,2.4rem)]">
-          WHERE STRATEGY MEETS FORESIGHT
-        </h2>
+    <section className="section-gradient pt-[11.25rem] py-[clamp(4rem,8vw,8rem)] relative overflow-hidden">
+      <div className="max-w-[104.375rem] mx-auto">
+        <span className='absolute left-2/4 -translate-x-2/4 top-[106px] bg-[#4E5E70] w-full max-w-[91.5625rem] h-[.0938rem]'></span>
+        <div className='pl-[8.75rem]'>
+            <p className="uppercase text-lg text-[#DB3B3B] font-semibold mb-[3.25rem]">Trending Insight</p>
+            <h2 className="section-title mb-[3.25rem]">
+            WHERE STRATEGY MEETS FORESIGHT
+            </h2>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {STRATEGY_ITEMS.map((item, i) => (
