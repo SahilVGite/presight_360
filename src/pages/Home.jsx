@@ -16,8 +16,10 @@ export default function Home() {
       <TrustedLeadersSection />
       <WhyPresightSection />
       <StrategySection />
-      <ReportsSection />
-      <LocationSection />
+      <div className='bg-report relative w-full h-full'>
+        <ReportsSection />
+        <LocationSection />
+      </div>
       <CertificationsSection />
       <CTASection />
     </>
