@@ -8,35 +8,30 @@ export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <footer className="gradient-footer border-t border-white\/06">
-      <div className="max-w-6xl mx-auto px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+    <footer className="gradient-footer ">
+      <div className="max-w-[104.375rem] mx-auto py-14">
+        <div className="flex flex-row md:flex-row justify-between gap-40">
 
           {/* Left — brand + newsletter */}
-          <div>
-            <div className="flex flex-col gap-3 mb-6">
-              <img src={siteLogo} alt="Presight 360" className="h-8 w-auto" />
-              <div className="flex items-center gap-2 mt-1">
-                <div className="w-7 h-7 rounded bg-blue-badge border border-blue\/30 flex items-center justify-center shrink-0">
-                  <img src={siteShortLogo} alt="Alliance" className="w-5 h-5 object-contain" />
-                </div>
-                <p className="font-bold uppercase text-white/70 text-[0.7rem] tracking-[0.15em]">
-                  Alliance International
-                </p>
+          <div className='max-w-[23.125rem] w-full flex flex-col justify-between gap-12'>
+            <div className="flex flex-col gap-3 mb-6 ">
+              <img src={siteLogo} alt="Presight 360" className="w-[15.625rem]" />
+              <div className="flex items-center gap-2 mt-[1.875rem]">
+                  <img src={siteShortLogo} alt="Alliance" />
               </div>
             </div>
 
-            <div className="mt-8">
-              <p className="text-xs font-semibold mb-3 uppercase tracking-wider text-white/50">
-                Subscribe to our Newsletter
+            <div>
+              <p className="text-3xl font-normal mb-14 tracking-wider text-white">
+                Subscribe to our newsletter
               </p>
-              <div className="flex items-center">
+              <div className="flex items-center w-full relative">
                 <input
                   type="email"
-                  placeholder="Enter your email"
-                  className="input-dark text-sm flex-1 rounded-r-none border-r-0"
+                  placeholder="Mindora@email.ru"
+                  className="text-sm flex-1 border-b-1 border-b-white focus:outline-none pb-2 bg-transparent pr-6"
                 />
-                <button className="flex items-center justify-center px-4 py-3 shrink-0 bg-accent-red rounded-r-md text-white border-none cursor-pointer hover:bg-accent-red-hover transition-colors">
+                <button className="flex items-center justify-center px-4 py-2 pr-0 shrink-0 bg-transparent text-white  cursor-pointer absolute right-0 bottom-0" >
                   <ArrowRight size={16} />
                 </button>
               </div>
@@ -44,59 +39,47 @@ export default function Footer() {
           </div>
 
           {/* Right — tagline + links */}
-          <div>
-            <p className="text-sm mb-8 max-w-xs text-white/40 leading-[1.7]">
-              Providing stability and foresight for leaders navigating uncertainty in high-stakes environments worldwide.
+          <div className='w-full'>
+            <p className="text-[1.25rem] font-light mb-16 max-w-[33.75rem] text-white leading-[1.7] pl-2">
+              Providing stability and foresight for leaders navigating uncertainty in high-stakes environments worldwide
             </p>
             <div>
-              <p className="text-xs uppercase tracking-widest mb-3 font-semibold text-white/25">
+              <p className="text-[.625rem] font-medium uppercase tracking-widest pb-3 mb-9 font-semibold text-white border-b border-[#C6C6C6] pl-2">
                 Info
               </p>
-              <div className="divider mb-4" />
-              <ul className="space-y-2">
+              <ul className="space-y-7 pl-12">
                 {FOOTER_LINKS.map((link) => (
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className="text-sm text-white/55 hover:text-white transition-colors"
-                    >
+                      className="text-lg text-white font-medium">
                       {link.label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-white\/06">
-          <div className="flex flex-col sm:flex-row gap-6 text-xs text-white/30">
-            <div>
-              <p className="font-semibold uppercase tracking-wider mb-1 text-white/40 text-[0.65rem]">Corporate Office</p>
-              <p>+62 899 077 632</p>
+            <div className='flex justify-between mt-20'>
+                <ul className='flex gap-12'>
+                    <li>
+                        <p className='mb-2 text-[.625rem] text-white font-medium uppercase'>Corporate Office</p>
+                        <Link to="tel:+62899077632" className='text-sm text-white font-medium'>+62 899 077 632</Link>
+                    </li>
+                    <li>
+                        <p className='mb-2 text-[.625rem] text-white font-medium uppercase'>PHONE</p>
+                        <Link to="tel:+62899077632" className='text-sm text-white font-medium'>+62 556 783 472</Link>
+                    </li>
+                    <li>
+                        <p className='mb-2 text-[.625rem] text-white font-medium uppercase'>Email</p>
+                        <Link to="mailto:Mindora@gmail.com" className='text-sm text-white font-medium'>Mindora@gmail.com</Link>
+                    </li>
+                </ul>
+                <div>
+                    <button onClick={scrollToTop} className='flex items-center gap-2 text-sm text-white font-medium uppercase tracking-widest rounded-full border-1 border-white px-4 py-2'>
+                        <ArrowUp size={24} />
+                    </button>
+                </div>
             </div>
-            <div>
-              <p className="font-semibold uppercase tracking-wider mb-1 text-white/40 text-[0.65rem]">Phone</p>
-              <p>+62 556 783 472</p>
-            </div>
-            <div>
-              <p className="font-semibold uppercase tracking-wider mb-1 text-white/40 text-[0.65rem]">Email</p>
-              <p>info@presight360.com</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              onClick={scrollToTop}
-              className="flex items-center justify-center w-9 h-9 rounded-full border border-white\/12 text-white/50 bg-transparent cursor-pointer hover:text-white hover:border-white/30 transition-all"
-              aria-label="Back to top"
-            >
-              <ArrowUp size={15} />
-            </button>
-            <p className="text-xs text-white/25">
-              © 2025 Presight 360. All rights reserved.
-            </p>
           </div>
         </div>
       </div>

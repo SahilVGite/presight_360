@@ -32,6 +32,12 @@ import worldMap from "./worldmap.svg";
 
 import industriesBannerBg from "./industries_banner_bg.png";
 import industriesMainImg from "./industriesMainImg.png";
+import certification1 from "./certification1.png";
+import certification2 from "./certification2.png";
+import certification3 from "./certification3.png";
+import certification4 from "./certification4.png";
+import certification5 from "./certification5.png";
+import certification6 from "./certification6.png";
 
 export {
   bannerBgImage,
@@ -63,4 +69,10 @@ export {
   worldMap,
   industriesBannerBg,
   industriesMainImg,
+  certification1,
+  certification2,
+  certification3,
+  certification4,
+  certification5,
+  certification6,
 };

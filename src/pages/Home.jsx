@@ -20,8 +20,10 @@ export default function Home() {
         <ReportsSection />
         <LocationSection />
       </div>
-      <CertificationsSection />
-      <CTASection />
+      <div className='section-gradient relative overflow-hidden'>
+        <CertificationsSection />
+        <CTASection />
+      </div>
     </>
   );
 }
