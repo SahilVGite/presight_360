@@ -45,7 +45,7 @@ export default function ReportsSection() {
     return (
         <section className="pt-[clamp(60px,8vw,100px)] pb-[clamp(60px,8vw,100px)] relative" style={{ overflowX: 'clip' }}>
             {/* Heading */}
-            <div className="mb-10" style={{ paddingLeft: 'clamp(30px, 15vw, 200px)' }}>
+            <div className="mb-10" style={{ paddingLeft: 'clamp(30px, 15vw, 240px)' }}>
                 <p className="uppercase text-lg tracking-[0.18em] text-[#DB3B3B] font-semibold mb-3">
                     Trending statistics
                 </p>

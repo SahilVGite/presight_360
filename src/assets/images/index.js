@@ -30,6 +30,13 @@ import reportImg2 from "./reportImg2.png";
 import reportImg3 from "./reportImg3.png";
 import worldMap from "./worldmap.svg";
 
+import certification1 from "./certification1.png";
+import certification2 from "./certification2.png";
+import certification3 from "./certification3.png";
+import certification4 from "./certification4.png";
+import certification5 from "./certification5.png";
+import certification6 from "./certification6.png";
+
 export {
   bannerBgImage,
   globeHalf,
@@ -57,5 +64,11 @@ export {
   reportImg1,
   reportImg2,
   reportImg3,
-  worldMap
+  worldMap,
+  certification1,
+  certification2,
+  certification3,
+  certification4,
+  certification5,
+  certification6,
 };
