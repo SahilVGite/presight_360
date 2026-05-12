@@ -6,7 +6,7 @@
     --color-bg-secondary: #05152a;
     --color-bg-card: #071d38;
     --color-bg-card-hover: #0a2545;
-    --color-accent-red: #e8462a;
+    --color-accent-red: #DB3B3B;
     --color-accent-red-hover: #c73a22;
     --color-accent-blue: #1a6bdb;
     --color-accent-blue-light: #2d8cf0;
@@ -126,6 +126,8 @@ body {
     }
 }
 
+.main-wrapper{@apply max-w-420.5 mx-auto}
+
 .animate-fade-in-up {
     animation: fadeInUp 0.7s ease forwards;
 }
@@ -186,7 +188,7 @@ body {
 }
 
 .section-label {
-    color: var(--color-text-primary);
+    color: var(--color-accent-red);
     font-size: 1.125rem;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -196,8 +198,8 @@ body {
 .section-title {
     font-family: var(--font-display);
     font-size: clamp(1.75rem, 4vw, 3.25rem);
-    font-weight: 800;
-    line-height: 1.1;
+    font-weight: 700;
+    line-height: 1.3461;
     text-transform: uppercase;
     letter-spacing: 0;
 }
@@ -435,8 +437,14 @@ body {
 }
 
 .gradient-radial-blue {
-    background: radial-gradient(ellipse at 80% 50%, rgba(26, 107, 219, 0.12) 0%, transparent 65%);
+    background: linear-gradient(270.01deg, rgba(4, 18, 56, 0) 0.01%, #041238 29.68%);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
 }
+
+.starsBg{background-image:url(./assets/images/commonBannerStars.png);background-position:left;background-repeat:no-repeat;background-size:contain;}
+
 
 .gradient-why-overlay {
     background: linear-gradient(0deg, rgba(0, 23, 49, 0.6), rgba(0, 23, 49, 0.6));
@@ -576,3 +584,5 @@ body {
 .reports-swiper-wrap .swiper-button-disabled {
     opacity: 0.25;
 }
+
+.gradientBgImg{background-image: url(./assets/images/industriesPgBg.png);background-repeat: no-repeat;background-position: top;background-size: cover;}

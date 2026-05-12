@@ -30,6 +30,9 @@ import reportImg2 from "./reportImg2.png";
 import reportImg3 from "./reportImg3.png";
 import worldMap from "./worldmap.svg";
 
+import industriesBannerBg from "./industries_banner_bg.png";
+import industriesMainImg from "./industriesMainImg.png";
+
 export {
   bannerBgImage,
   globeHalf,
@@ -57,5 +60,7 @@ export {
   reportImg1,
   reportImg2,
   reportImg3,
-  worldMap
+  worldMap,
+  industriesBannerBg,
+  industriesMainImg,
 };
