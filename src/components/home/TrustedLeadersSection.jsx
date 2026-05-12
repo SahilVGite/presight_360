@@ -1,22 +1,22 @@
-import { Link } from 'react-router-dom';
-import Button from '../common/Button';
-import { guidingImg1, guidingImg2 } from '../../assets/images';
+import { Link } from "react-router-dom";
+import Button from "../common/Button";
+import { guidingImg1, guidingImg2 } from "../../assets/images";
 
 const TRUSTED_ITEMS = [
   {
-    label: 'OUR INDUSTRIES',
-    title: 'Trusted Across Industries, Worldwide',
-    desc: 'Leveraging a multi-disciplinary team of intelligence analysts, cyber specialists, and field operatives, we deliver holistic threat management across key sectors including energy, aviation, technology, logistics, and development.',
-    buttonTxt: 'Explore Industries',
-    href: '/solutions',
+    label: "OUR INDUSTRIES",
+    title: "Trusted Across Industries, Worldwide",
+    desc: "Leveraging a multi-disciplinary team of intelligence analysts, cyber specialists, and field operatives, we deliver holistic threat management across key sectors including energy, aviation, technology, logistics, and development.",
+    buttonTxt: "Explore Industries",
+    href: "/solutions",
     imgSrc: guidingImg1,
   },
   {
-    label: 'OUR PRESENCE',
-    title: 'Trusted Across Industries, Worldwide',
-    desc: 'With operations spanning continents, our field operatives and analysts are embedded in the regions that matter most. PreSight 360 delivers real-time intelligence you can act on.',
-    buttonTxt: 'Explore Now',
-    href: '/about',
+    label: "OUR PRESENCE",
+    title: "Trusted Across Industries, Worldwide",
+    desc: "With operations spanning continents, our field operatives and analysts are embedded in the regions that matter most. PreSight 360 delivers real-time intelligence you can act on.",
+    buttonTxt: "Explore Now",
+    href: "/about",
     imgSrc: guidingImg2,
   },
 ];
@@ -26,9 +26,8 @@ export default function TrustedLeadersSection() {
     <section className="section-gradient py-[clamp(4rem,8vw,8rem)] overflow-hidden">
       <div className="main-wrapper px-4 lg:px-8">
         {/* Heading */}
-        <h2 className="max-w-[64.375rem] text-white section-title uppercase mb-16 pl-[3.75rem]">
-          GUIDING LEADERS THROUGH RISK,
-          WITH INSIGHT THEY CAN TRUST
+        <h2 className="max-w-[64.375rem] text-white section-title uppercase mb-16 pl-0 md:pl-6 lg:pl-12.5">
+          GUIDING LEADERS THROUGH RISK, WITH INSIGHT THEY CAN TRUST
         </h2>
 
         {/* Cards */}
@@ -36,17 +35,17 @@ export default function TrustedLeadersSection() {
           {TRUSTED_ITEMS.map((item, i) => (
             <div
               key={i}
-              className="flex flex-row lg:flex-row items-center gap-20"
+              className="flex [@media(max-width:850px)]:flex-col items-center gap-10 lg:gap-20"
             >
               {/* Image */}
-              <div className="w-full lg:w-[29.375rem] shrink-0">
+              <div className="w-full [@media(min-width:851px)]:w-117.5 shrink-0">
                 <img
                   src={item.imgSrc}
                   alt={item.label}
                   className="
                     w-full
                     object-cover
-                    rounded-[2rem]
+                    rounded-4xl
                   "
                 />
               </div>
@@ -56,8 +55,9 @@ export default function TrustedLeadersSection() {
                 className="
                   relative
                   flex-1
-                  rounded-[2rem]
-                  px-8
+                  rounded-4xl
+                  px-4
+                  md:px-8
                   py-10
                   bg-[rgba(255,255,255,0.04)]
                   border border-white/10
@@ -66,10 +66,10 @@ export default function TrustedLeadersSection() {
                 "
               >
                 {/* Left Accent Line */}
-                <span className="absolute left-0 top-2/4 -translate-1/2 h-[166px] w-[4px] rounded-full bg-accent-red" />
+                <span className="absolute left-0 top-2/4 -translate-1/2 min-h-41.5 w-1 rounded-full bg-accent-red" />
 
                 <div className="pl-6">
-                  <p className="section-label uppercase tracking-[0.2em] mb-3">
+                  <p className="section-label uppercase mb-3 text-white">
                     {item.label}
                   </p>
 
@@ -92,7 +92,7 @@ export default function TrustedLeadersSection() {
                       text-sm
                       md:text-lg
                       leading-[1.8]
-                      max-w-[900px]
+                      max-w-225
                       mb-8
                     "
                   >
@@ -111,9 +111,13 @@ export default function TrustedLeadersSection() {
         </div>
 
         {/* Bottom Text */}
-        <div className="mt-20 max-w-[51.25rem] pl-[3.75rem]">
+        <div className="mt-20 max-w-[51.25rem] pl-0 md:pl-6 lg:pl-12.5">
           <p className="text-[#B4B4B4] text-[2rem] font-semibold uppercase leading-tight">
-            CONFIDENTIAL INTELLIGENCE. UNMATCHED FORESIGHT<span className="text-[#6296FB]">.</span> <span className="text-[#DB3B3B] font-bold">UNSHAKEABLE LEADERSHIP.</span>
+            CONFIDENTIAL INTELLIGENCE. UNMATCHED FORESIGHT
+            <span className="text-[#6296FB]">.</span>{" "}
+            <span className="text-[#DB3B3B] font-bold">
+              UNSHAKEABLE LEADERSHIP.
+            </span>
           </p>
         </div>
       </div>

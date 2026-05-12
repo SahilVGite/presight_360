@@ -10,13 +10,13 @@ export default function Footer() {
   return (
     <footer className="gradient-footer">
       <div className="main-wrapper px-4 sm:px-6 lg:px-10 py-10 md:py-14">
-        <div className="flex [@media(min-width:768px)]:flex-row [@media(max-width:767px)]:flex-col justify-between gap-12 md:gap-16 lg:gap-40">
+        <div className="flex [@media(min-width:769px)]:flex-row [@media(max-width:768px)]:flex-col justify-between gap-12 md:gap-16 lg:gap-40">
 
           {/* Left — brand + newsletter */}
-          <div className="w-full md:w-[23.125rem] md:shrink-0 flex flex-col justify-between gap-10 md:gap-12">
+          <div className="w-full md:w-92.5 md:shrink-0 flex flex-col justify-between gap-10 md:gap-12">
             <div className="flex flex-col gap-3">
-              <img src={siteLogo} alt="Presight 360" className="w-[180px] sm:w-[200px] md:w-[15.625rem]" />
-              <div className="flex items-center gap-2 mt-4 md:mt-[1.875rem]">
+              <img src={siteLogo} alt="Presight 360" className="w-45 sm:w-50 md:w-62.5" />
+              <div className="flex items-center gap-2 mt-4 md:mt-7.5">
                 <img src={siteShortLogo} alt="Alliance" />
               </div>
             </div>

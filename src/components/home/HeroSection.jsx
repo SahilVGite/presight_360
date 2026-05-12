@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Gradient overlays */}
       <div className="absolute inset-0 gradient-hero-overlay" />
 
-      <div className="relative w-full px-[clamp(1rem,5vw,7.75rem)] py-[clamp(1rem,5vw,7.75rem)] pt-[clamp(32rem,5vw,7.75rem)]">
+      <div className="relative w-full px-[clamp(1rem,5vw,7.75rem)] py-[clamp(1rem,5vw,7.75rem)] pt-[clamp(25rem,5vw,7.75rem)]">
         <div className="max-w-[1040px]">
           <h1 className="font-display font-bold uppercase leading-[1.46] tracking-[0.02em] mb-6 text-white text-[clamp(2rem,5vw,3.125rem)]">
             CONFIDENTIAL INSIGHT THAT EMPOWERS LEADERSHIP AND PROTECTS WHAT MATTERS MOST

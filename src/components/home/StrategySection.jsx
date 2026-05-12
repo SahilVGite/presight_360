@@ -73,9 +73,9 @@ export default function StrategySection() {
             <Link
               key={i}
               to={item.href}
-              className="group rounded-[1.35rem] bg-glass-effect overflow-hidden transition-all duration-300"
+              className="group rounded-[1.35rem] bg-glass-effect pt-8 p-4 md:px-8 md:pt-17.5 md:pb-13.5 overflow-hidden transition-all duration-300"
             >
-              <div className=" pt-8 p-4 md:p-[2.3rem] pb-4">
+              <div className="pb-4">
                 <h3 className="text-white  text-[clamp(1.5rem,4vw,2.625rem)] leading-[1.15] font-bold mb-4">
                   {item.title}
                 </h3>
@@ -85,7 +85,7 @@ export default function StrategySection() {
                 </p>
               </div>
 
-              <div className="px-4 pb-4">
+              <div className="">
                 <img src={item.imgClass} alt={item.title} className='rounded-[1.25rem]'/>
               </div>
             </Link>
