@@ -1,3 +1,7 @@
+import ContactMain from "../images/contact_main.png";
+import CareerFormMain from "../images/career_form_main.png";
+import careerFormBannerBg from "../images/carrer_form_banner-bg.png";
+import careerFormBg from "../images/carrer_form-bg.png";
 import bannerBgImage from "./bannerBgImg.png";
 import globeHalf from "./globeHalf.png";
 import siteLogo from "./siteLogo.png";
@@ -43,11 +47,15 @@ export {
   guidingImg1,
   guidingImg2,
   whyPresightBg,
+  ContactMain,
+  CareerFormMain,
+  careerFormBannerBg,
+  careerFormBg,
   strategyImg1,
   strategyImg2,
   strategyImg3,
-    reportImg1,
-    reportImg2,
-    reportImg3,
-    worldMap
+  reportImg1,
+  reportImg2,
+  reportImg3,
+  worldMap
 };
