@@ -5,6 +5,7 @@ export default function PageHero({
   bgImage,
   children,
   isStarsBg = false,
+  isGradientBg = true,
 }) {
   return (
     <section
@@ -21,7 +22,9 @@ export default function PageHero({
       }
     >
       {/* Decorative radial glow */}
-      <div className="absolute left-0 top-0 w-1/2 h-full gradient-radial-blue pointer-events-none" />
+      {isGradientBg && (
+        <div className="absolute left-0 top-0 w-1/2 h-full gradient-radial-blue pointer-events-none" />
+      )}
       {isStarsBg && (
         <div className="starsBg absolute left-0 top-0 w-full h-full gradient-radial-blue pointer-events-none" />
       )}

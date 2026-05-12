@@ -191,10 +191,8 @@ body {
 
 .section-label {
     color: var(--color-accent-red);
-    font-size: 1.125rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-size: clamp(1rem,4rem,1.875rem);
+    font-weight: 500;
 }
 
 .section-title {
