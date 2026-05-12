@@ -115,10 +115,6 @@
 /* --- Responsive helpers --- */
 .desktop{display:block;}
 .mobile{display:none;}
-/* ============================================= LAYOUT WRAPPERS ============================================= */
-.head-wrapper{max-width:1741px;margin-inline:auto;}
-.main-wrapper{max-width:1200px;margin-inline:auto;}
-.narrow-wrapper{max-width:900px;margin-inline:auto;}
 .sv-gap{padding-block:80px;}
 .sv-gap-sm{padding-block:48px;}
 .sv-gap-lg{padding-block:120px;}

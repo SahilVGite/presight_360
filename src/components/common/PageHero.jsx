@@ -1,24 +1,34 @@
-export default function PageHero({ label, title, subtitle, bgImage, children }) {
+export default function PageHero({
+  label,
+  title,
+  subtitle,
+  bgImage,
+  children,
+  isStarsBg = false,
+}) {
   return (
     <section
       className={[
-        'relative overflow-hidden min-h-[85vh] flex items-center',
-        bgImage ? '' : 'gradient-page-hero',
-      ].join(' ')}
+        "relative overflow-hidden min-h-[85vh] flex items-center",
+        bgImage ? "" : "gradient-page-hero",
+      ].join(" ")}
       style={
         bgImage
           ? {
-              background: `linear-gradient(to right, rgba(2,11,24,0.92) 50%, rgba(2,11,24,0.5) 100%), url(${bgImage}) center/cover no-repeat`,
+              background: `url(${bgImage}) center/cover no-repeat`,
             }
           : undefined
       }
     >
       {/* Decorative radial glow */}
-      <div className="absolute right-0 top-0 w-1/2 h-full gradient-radial-blue pointer-events-none" />
+      <div className="absolute left-0 top-0 w-1/2 h-full gradient-radial-blue pointer-events-none" />
+      {isStarsBg && (
+        <div className="starsBg absolute left-0 top-0 w-full h-full gradient-radial-blue pointer-events-none" />
+      )}
 
       <div className="relative max-w-394 mx-auto px-6 w-full">
         {label && <p className="section-label mb-3">{label}</p>}
-        <h1 className="font-display text-white font-[800] uppercase leading-[1.05] max-w-[700px] tracking-[0.02em] text-[clamp(2rem,5vw,3.125rem)]">
+        <h1 className="font-display text-white font-bold uppercase leading-[1.1064] max-w-222.25 tracking-[0.02em] text-[clamp(2rem,5vw,3.125rem)]">
           {title}
         </h1>
         {subtitle && (

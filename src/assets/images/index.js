@@ -30,6 +30,8 @@ import reportImg2 from "./reportImg2.png";
 import reportImg3 from "./reportImg3.png";
 import worldMap from "./worldmap.svg";
 
+import industriesBannerBg from "./industries_banner_bg.png";
+import industriesMainImg from "./industriesMainImg.png";
 import certification1 from "./certification1.png";
 import certification2 from "./certification2.png";
 import certification3 from "./certification3.png";
@@ -65,6 +67,8 @@ export {
   reportImg2,
   reportImg3,
   worldMap,
+  industriesBannerBg,
+  industriesMainImg,
   certification1,
   certification2,
   certification3,
