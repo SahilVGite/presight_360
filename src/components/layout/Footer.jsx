@@ -81,7 +81,7 @@ export default function Footer() {
                     <ul className='grid grid-cols-2 gap-2 items-center'>
                         <li>
                             <Link to="/" className='rounded-full border-1 border-white p-[13px] flex items-center justify-center cursor-pointer w-10 h-10'>
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.25 0H1.75C0.784875 0 0 0.784875 0 1.75V12.25C0 13.2151 0.784875 14 1.75 14H7V9.1875H5.25V7H7V5.25C7 4.55381 7.27656 3.88613 7.76884 3.39384C8.26113 2.90156 8.92881 2.625 9.625 2.625H11.375V4.8125H10.5C10.017 4.8125 9.625 4.767 9.625 5.25V7H11.8125L10.9375 9.1875H9.625V14H12.25C13.2151 14 14 13.2151 14 12.25V1.75C14 0.784875 13.2151 0 12.25 0Z" fill="white"/></svg>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M12.25 0H1.75C0.784875 0 0 0.784875 0 1.75V12.25C0 13.2151 0.784875 14 1.75 14H7V9.1875H5.25V7H7V5.25C7 4.55381 7.27656 3.88613 7.76884 3.39384C8.26113 2.90156 8.92881 2.625 9.625 2.625H11.375V4.8125H10.5C10.017 4.8125 9.625 4.767 9.625 5.25V7H11.8125L10.9375 9.1875H9.625V14H12.25C13.2151 14 14 13.2151 14 12.25V1.75C14 0.784875 13.2151 0 12.25 0Z" fill="white"/></svg>
                             </Link>
                         </li>
                         <li>
