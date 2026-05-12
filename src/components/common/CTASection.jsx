@@ -8,8 +8,8 @@ export default function CTASection({
 }) {
     return (
         <section className="py-[clamp(4rem,8vw,8rem)] overflow-hidden relative">
-            <div className="max-w-[102.1875rem] mx-auto">
-                <div className='flex justify-between items-end'>
+            <div className="main-wrapper">
+                <div className='flex justify-between items-end [@media(max-width:768px)]:flex-wrap'>
                     <h2 className="font-display font-bold uppercase max-w-[67.1875rem] leading-[1.2] mb-10 text-[clamp(1.75rem,3.2vw,3.875rem)]">
                         {title}
                     </h2>
@@ -19,7 +19,7 @@ export default function CTASection({
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-9">
-                    <div className='w-full border-[1px] border-white rounded-[3.75rem] p-[3.125rem] flex justify-between items-center'>
+                    <div className='w-full border border-white rounded-4xl lg:rounded-[3.75rem] p-5 md:p-[2rem] lg:p-[3.125rem] flex [@media(max-width:610px)]:gap-2 [@media(max-width:610px)]:flex-col justify-between items-center'>
                         <h3 className='text-white font-semibold text-[clamp(1.25rem,2.2vw,2.1875rem)]'>Talk With Us</h3>
                         <div className="">
                             <Link to="/solutions">
@@ -29,12 +29,12 @@ export default function CTASection({
                             </Link>
                         </div>
                     </div>
-                    <div className='w-full border-[1px] border-white rounded-[3.75rem] p-[3.125rem]'>
+                    <div className='w-full border border-white  rounded-4xl lg:rounded-[3.75rem] p-5 md:p-[2rem] lg:p-[3.125rem]'>
                         <h3 className='text-white font-semibold text-[clamp(1.25rem,2.2vw,2.1875rem)] mb-10'>Book An Appointment </h3>
                         <form action="">
-                            <div className='flex gap-6'>
-                                <input type="email" placeholder="Enter email address" className='text-sm px-4 py-8 bg-white/10 rounded-[.5rem] w-full'/>
-                                <input type="number" placeholder="Enter Phone Number " className='text-sm px-4 py-8 bg-white/10 rounded-[.5rem] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-full'/>
+                            <div className='flex  [@media(max-width:767px)]:flex-col gap-6'>
+                                <input type="email" placeholder="Enter email address" className='text-sm px-4 py-4 md:py-6 lg:py-8 bg-white/10 rounded-[.5rem] w-full'/>
+                                <input type="number" placeholder="Enter Phone Number " className='text-sm px-4 py-4 md:py-6 lg:py-8 bg-white/10 rounded-[.5rem] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-full'/>
                             </div>
                             <div className="mt-9 text-end">
                                 <Link to="/solutions">

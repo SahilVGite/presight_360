@@ -118,7 +118,7 @@ export default function SecurityIntelligenceSection() {
             SMARTER SECURITY STARTS WITH BETTER INTELLIGENCE
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-20 gap-y-[2.875rem]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-[2.875rem]">
             {SOLUTIONS.map(({ icon, title, desc, href }, i) => (
               <Link
                 key={i}

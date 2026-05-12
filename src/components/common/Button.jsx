@@ -2,21 +2,21 @@ import { ArrowRight } from 'lucide-react';
 
 const sizeClasses = {
   sm: `
-    px-5 pr-2.5 py-2
+    px-5 pr-2.5 py-1 md:py-2
     text-[0.9rem]
     gap-3
     rounded-full
   `,
 
   md: `
-    px-7 pr-3.5 py-[10px]
+    px-7 pr-3.5 py-2 md:py-[10px]
     text-[1.05rem]
     gap-4
     rounded-full
   `,
 
   lg: `
-    px-8 pr-4 py-3
+    px-8 pr-4 py-1.5 md:py-3
     text-[1.15rem]
     gap-5
     rounded-full
@@ -102,9 +102,10 @@ export default function Button({
             flex
             items-center
             justify-center
-
-            w-[48px]
-            h-[48px]
+            w-[35px]
+            h-[35px]
+            md:w-[48px]
+            md:h-[48px]
 
             rounded-full
 
