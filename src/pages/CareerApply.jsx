@@ -4,7 +4,7 @@ import PageHero from "../components/common/PageHero";
 import Button from "../components/common/Button";
 import { CareerFormMain, careerFormBannerBg } from "../assets/images";
 import { JOBS_DATA } from "./Careers";
-import Upload from "../assets/icons/upload";
+import Upload from "../assets/icons/Upload.jsx";
 
 export default function CareerApply() {
   const { id } = useParams();
