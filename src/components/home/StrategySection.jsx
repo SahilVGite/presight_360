@@ -27,7 +27,7 @@ const STRATEGY_ITEMS = [
 export default function StrategySection() {
   return (
     <section className="section-gradient relative overflow-hidden pt-[11.25rem] pb-[6rem]">
-      <div className="max-w-[104.375rem] mx-auto px-6 xl:px-0 ">
+      <div className="main-wrapper px-6 xl:px-0 ">
 
         {/* Top Border */}
         <span className="absolute left-1/2 top-[6.625rem] -translate-x-1/2 w-full max-w-[1465px] h-px bg-[#4E5E70]"></span>
@@ -49,15 +49,15 @@ export default function StrategySection() {
           {/* Large Top Card */}
           <Link
             to={STRATEGY_ITEMS[0].href}
-            className="group rounded-[1.35rem] overflow-hidden flex flex-row md:flex-row items-stretch transition-all duration-300 md:col-span-2 bg-glass-effect"
+            className="group rounded-[1.35rem] overflow-hidden flex [@media(max-width:767px)]:flex-col items-stretch transition-all duration-300 md:col-span-2 bg-glass-effect"
           >
             {/* Content */}
-            <div className="flex-1 p-[2.3rem] flex flex-col justify-center">
-              <h3 className="text-white font-bold leading-[1.1] text-[2.625rem] max-w-[37.3125rem] mb-5">
+            <div className="flex-1 pt-8 p-4 md:p-[2.3rem] flex flex-col justify-center">
+              <h3 className="text-white font-bold leading-[1.1] text-[clamp(1.5rem,4vw,2.625rem)] max-w-[37.3125rem] mb-5">
                 {STRATEGY_ITEMS[0].title}
               </h3>
 
-              <p className="text-white text-[1.3125rem] leading-[1.5] max-w-[37.3125rem]">
+              <p className="text-white text-[clamp(1rem,2.5vw,1.25rem)] leading-[1.5] max-w-[37.3125rem]">
                 {STRATEGY_ITEMS[0].desc}
               </p>
             </div>
@@ -73,19 +73,19 @@ export default function StrategySection() {
             <Link
               key={i}
               to={item.href}
-              className="group rounded-[1.35rem] bg-glass-effect overflow-hidden transition-all duration-300"
+              className="group rounded-[1.35rem] bg-glass-effect pt-8 p-4 md:px-8 md:pt-17.5 md:pb-13.5 overflow-hidden transition-all duration-300"
             >
-              <div className="p-[2rem] pb-4">
-                <h3 className="text-white text-[2.625rem] leading-[1.15] font-bold mb-4">
+              <div className="pb-4">
+                <h3 className="text-white  text-[clamp(1.5rem,4vw,2.625rem)] leading-[1.15] font-bold mb-4">
                   {item.title}
                 </h3>
 
-                <p className="text-white text-[1.3125rem] leading-[1.5]">
+                <p className="text-white text-[clamp(1rem,2.5vw,1.25rem)] leading-[1.5]">
                   {item.desc}
                 </p>
               </div>
 
-              <div className="px-4 pb-4">
+              <div className="">
                 <img src={item.imgClass} alt={item.title} className='rounded-[1.25rem]'/>
               </div>
             </Link>

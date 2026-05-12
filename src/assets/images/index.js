@@ -2,6 +2,7 @@ import ContactMain from "../images/contact_main.png";
 import CareerFormMain from "../images/career_form_main.png";
 import careerFormBannerBg from "../images/carrer_form_banner-bg.png";
 import careerFormBg from "../images/carrer_form-bg.png";
+import careerBannerBg from "../images/carrer_banner-bg.png";
 import bannerBgImage from "./bannerBgImg.png";
 import globeHalf from "./globeHalf.png";
 import siteLogo from "./siteLogo.png";
@@ -60,6 +61,7 @@ export {
   CareerFormMain,
   careerFormBannerBg,
   careerFormBg,
+  careerBannerBg,
   strategyImg1,
   strategyImg2,
   strategyImg3,

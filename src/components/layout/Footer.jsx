@@ -9,14 +9,14 @@ export default function Footer() {
 
   return (
     <footer className="gradient-footer">
-      <div className="max-w-[104.375rem] mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-14">
-        <div className="flex flex-row lg:flex-row md:flex-col justify-between gap-12 md:gap-16 lg:gap-40">
+      <div className="main-wrapper px-4 sm:px-6 lg:px-10 py-10 md:py-14">
+        <div className="flex [@media(min-width:769px)]:flex-row [@media(max-width:768px)]:flex-col justify-between gap-12 md:gap-16 lg:gap-40">
 
           {/* Left — brand + newsletter */}
-          <div className="w-full md:w-[23.125rem] md:shrink-0 flex flex-col justify-between gap-10 md:gap-12">
+          <div className="w-full md:w-92.5 md:shrink-0 flex flex-col justify-between gap-10 md:gap-12">
             <div className="flex flex-col gap-3">
-              <img src={siteLogo} alt="Presight 360" className="w-[180px] sm:w-[200px] md:w-[15.625rem]" />
-              <div className="flex items-center gap-2 mt-4 md:mt-[1.875rem]">
+              <img src={siteLogo} alt="Presight 360" className="w-45 sm:w-50 md:w-62.5" />
+              <div className="flex items-center gap-2 mt-4 md:mt-7.5">
                 <img src={siteShortLogo} alt="Alliance" />
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function Footer() {
               <p className="text-[.625rem] font-semibold uppercase tracking-widest pb-3 mb-6 md:mb-9 text-white border-b border-[#C6C6C6] pl-2">
                 Info
               </p>
-              <ul className="flex flex-wrap gap-x-8 gap-y-4 md:block md:space-y-7 pl-4 md:pl-12">
+              <ul className="flex-wrap gap-x-8 gap-y-4 block space-y-7 pl-4 md:pl-12">
                 {FOOTER_LINKS.map((link) => (
                   <li key={link.path}>
                     <Link to={link.path} className="text-base md:text-lg text-white font-medium">
@@ -76,7 +76,7 @@ export default function Footer() {
                 </li>
               </ul>
 
-              <div className="flex items-center gap-4 md:gap-5">
+              <div className="flex items-center gap-4 md:gap-5 shrink-0">
                 <button onClick={scrollToTop} className="flex items-center gap-2 text-sm text-white font-medium uppercase tracking-widest rounded-full border border-white p-5 md:p-8 cursor-pointer">
                   <ArrowUp size={20} />
                 </button>
