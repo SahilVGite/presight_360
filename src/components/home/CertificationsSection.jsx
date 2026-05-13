@@ -35,11 +35,11 @@ export default function CertificationsSection() {
                 key={i}
                 className=" flex items-center justify-center rounded-[17px] bg-white/5 backdrop-blur-md p-[.5625rem] transition-all duration-300 hover:bg-white/10 "
               >
-                <div className="flex items-center justify-center bg-blue-badge overflow-hidden ">
+                <div className="flex items-center justify-center overflow-hidden w-full">
                   <img
                     src={cert.img}
                     alt="Certification"
-                    className="object-contain"
+                    className="object-contain w-full"
                   />
                 </div>
               </div>

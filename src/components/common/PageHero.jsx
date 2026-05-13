@@ -29,9 +29,9 @@ export default function PageHero({
         <div className="starsBg absolute left-0 top-0 w-full h-full gradient-radial-blue pointer-events-none" />
       )}
 
-      <div className="relative max-w-394 mx-auto px-6 w-full">
+      <div className="relative main-wrapper w-full">
         {label && <p className="section-label mb-3">{label}</p>}
-        <h1 className="font-display text-white font-bold uppercase leading-[1.1064] max-w-222.25 tracking-[0.02em] text-[clamp(2rem,5vw,3.125rem)]">
+        <h1 className="font-display text-white font-bold uppercase leading-[1.1064] max-w-[56.875rem] text-[clamp(2rem,5vw,3.125rem)]">
           {title}
         </h1>
         {subtitle && (
