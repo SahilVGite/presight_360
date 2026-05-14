@@ -31,7 +31,7 @@ export default function PageHero({
 
       <div className="relative main-wrapper w-full">
         {label && <p className="section-label mb-3">{label}</p>}
-        <h1 className="font-display text-white font-bold uppercase leading-[1.1064] max-w-[56.875rem] text-[clamp(2rem,5vw,3.125rem)]">
+        <h1 className="uppercase max-w-[56.875rem] section-title">
           {title}
         </h1>
         {subtitle && (

@@ -197,9 +197,9 @@ body {
 
 .section-title {
     font-family: var(--font-display);
-    font-size: clamp(1.75rem, 4vw, 3.25rem);
+    font-size: clamp(1.5rem, 1rem + 2.5vw, 3.25rem);
     font-weight: 700;
-    line-height: 1.3461;
+    line-height: 1.1;
     text-transform: uppercase;
     letter-spacing: 0;
 }
@@ -757,7 +757,7 @@ body {
     text-align: left;
     transition: background 0.25s ease;
 }
-/* 
+/*
 .sva-item--active .sva-item__btn,
 .sva-item__btn:hover {
     background: var(--color-bg-card-hover);
@@ -833,4 +833,21 @@ body {
     .sectors-v-accordion {
         display: block;
     }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.4);
 }

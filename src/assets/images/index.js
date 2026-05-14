@@ -40,6 +40,9 @@ import certification4 from "./certification4.png";
 import certification5 from "./certification5.png";
 import certification6 from "./certification6.png";
 
+import successStoryImg1 from "./successStoryImg1.png";
+import successStoryImg2 from "./successStoryImg2.png";
+
 export {
   bannerBgImage,
   globeHalf,
@@ -77,4 +80,6 @@ export {
   certification4,
   certification5,
   certification6,
+  successStoryImg1,
+  successStoryImg2,
 };
