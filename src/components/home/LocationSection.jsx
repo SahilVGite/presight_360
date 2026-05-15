@@ -1,37 +1,61 @@
+import { useState } from "react";
 import { worldMap } from "../../assets/images";
 
 const LOCATIONS = [
-    { topClass: 'top-[35%]', leftClass: 'left-[22%]', label: 'New York' },
-    { topClass: 'top-[40%]', leftClass: 'left-[45%]', label: 'London' },
-    { topClass: 'top-[42%]', leftClass: 'left-[55%]', label: 'Dubai' },
-    { topClass: 'top-[55%]', leftClass: 'left-[72%]', label: 'Singapore' },
-    { topClass: 'top-[60%]', leftClass: 'left-[80%]', label: 'Sydney' },
+    { posClass: "top-[30%] left-[47%]", country: "UK",       city: "London"        },
+    { posClass: "top-[33%] left-[52%]", country: "France",   city: "Paris"         },
+    { posClass: "top-[35%] left-[54%]", country: "Italy",    city: "Rome"          },
+    { posClass: "top-[36%] left-[58%]", country: "UAE",      city: "Dubai"         },
+    { posClass: "top-[43%] left-[66%]", country: "India",    city: "Mumbai"        },
+    { posClass: "top-[55%] left-[52%]", country: "Kenya",    city: "Nairobi"       },
+    { posClass: "top-[62%] left-[55%]", country: "Tanzania", city: "Dar es Salaam" },
 ];
 
 export default function LocationSection() {
+    const [hovered, setHovered] = useState(null);
+
     return (
         <section className="pt-[clamp(60px,8vw,100px)] pb-[clamp(60px,8vw,100px)] relative overflow-hidden">
             <div className="main-wrapper">
                 <div className="mb-10 pl-0 md:pl-6 lg:pl-24">
-                    <p className="uppercase text-lg tracking-[0.18em] text-[#DB3B3B] font-semibold mb-3">
+                    <p className="uppercase text-lg tracking-[0.18em] text-accent-red font-semibold mb-3">
                         Presight 360 Offices
                     </p>
                     <h2 className="section-title">Our Location</h2>
                 </div>
-                <div className="w-full mx-auto mt-14">
-                    <img src={worldMap} alt="World Map"  className="w-full h-auto"/>
-                </div>
-                {/* World Map */}
-                <div className="rounded-xl overflow-hidden relative">
+
+                <div className="w-full mx-auto mt-14 relative">
+                    <img src={worldMap} alt="World Map" className="w-full h-auto block" />
+
                     {LOCATIONS.map((dot, i) => (
                         <div
                             key={i}
-                            className={`absolute -translate-x-1/2 -translate-y-1/2 ${dot.topClass} ${dot.leftClass}`}
+                            className={`absolute -translate-x-1/2 -translate-y-1/2 z-10 ${dot.posClass}`}
+                            onMouseEnter={() => setHovered(i)}
+                            onMouseLeave={() => setHovered(null)}
                         >
-                            <div className="w-2.5 h-2.5 rounded-full bg-accent-red shadow-[0_0_0_4px_rgba(232,70,42,0.3)] relative z-10" />
-                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[rgba(2,11,24,0.85)] text-white text-[0.6rem] font-semibold px-1.5 py-0.5 rounded whitespace-nowrap border border-white/10">
-                                {dot.label}
-                            </div>
+                            {/* Pulse ring */}
+                            <span className="absolute inset-0 rounded-full bg-accent-red opacity-30 animate-ping" />
+                            {/* Glow ring */}
+                            <span className="absolute -inset-1 rounded-full bg-accent-red opacity-15" />
+                            {/* Dot */}
+                            <div className="relative w-3 h-3 rounded-full bg-accent-red shadow-[0_0_0_3px_rgba(219,59,59,0.35)] cursor-pointer" />
+
+                            {/* Tooltip */}
+                            {hovered === i && (
+                                <div className="absolute bottom-[calc(100%+10px)] left-1/2 -translate-x-1/2 z-20 pointer-events-none flex flex-col items-center">
+                                    <div className="bg-white rounded-[6px] px-3 py-2 min-w-[90px] text-center shadow-[0_4px_20px_rgba(0,0,0,0.35)] whitespace-nowrap">
+                                        <p className="text-[0.6rem] font-bold uppercase tracking-[0.12em] text-accent-red mb-0.5">
+                                            {dot.country}
+                                        </p>
+                                        <p className="text-[0.75rem] font-semibold text-[#020b18] leading-tight">
+                                            {dot.city}
+                                        </p>
+                                    </div>
+                                    {/* Caret using Tailwind border utilities */}
+                                    <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-white" />
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
