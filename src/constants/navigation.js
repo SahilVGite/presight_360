@@ -1,9 +1,10 @@
 export const NAV_LINKS = [
-  { label: 'Our Solutions', path: '/solutions' },
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Services', path: '/solutions' },
+  { label: 'Infusion Cell', path: '/insights' },
   { label: 'Industries', path: '/industries' },
-  { label: 'About Us', path: '/about' },
-  { label: 'News & Insight', path: '/insights' },
-  { label: 'Careers', path: '/careers' },
+  // { label: 'Careers', path: '/careers' },
 ];
 
 export const FOOTER_LINKS = [
@@ -11,6 +12,7 @@ export const FOOTER_LINKS = [
   { label: 'Solutions', path: '/solutions' },
   { label: 'Industries', path: '/industries' },
   { label: 'Insights', path: '/insights' },
+  { label: 'Careers', path: '/careers' },
 ];
 
 export const ROUTES = {

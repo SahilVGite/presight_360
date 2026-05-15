@@ -58,7 +58,7 @@ export default function Contact() {
                 </div>
                 <div className="pt-2">
                   <Button variant="primary" size="md" showArrow>
-                    Submit
+                    Request Consultation
                   </Button>
                 </div>
                 <p className="text-[clamp(0.675rem,3vw,1rem)] text-white">

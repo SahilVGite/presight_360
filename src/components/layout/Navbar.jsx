@@ -54,7 +54,7 @@ export default function Navbar() {
                     className={[
                       "block px-3 xl:px-4.5 py-2.5 xl:py-3 text-[13px] xl:text-[16px] font-normal rounded-full transition-all duration-200 whitespace-nowrap font-display tracking-[0.01em] leading-tight",
                       isActive(link.path)
-                        ? "border border-[#FEFEFE] text-accent-red bg-[rgba(232,70,42,0.08)]"
+                        ? "border border-accent-red text-accent-red bg-[rgba(232,70,42,0.08)]"
                         : "border border-[#FEFEFE] text-[#FEFEFE] bg-transparent hover:bg-white/5 hover:border-white/50",
                     ].join(" ")}
                   >

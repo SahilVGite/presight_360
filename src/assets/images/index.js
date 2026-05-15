@@ -43,6 +43,16 @@ import certification6 from "./certification6.png";
 import successStoryImg1 from "./successStoryImg1.png";
 import successStoryImg2 from "./successStoryImg2.png";
 
+import aboutBannerBg from "./about_banner-bg.png";
+import aboutPgBgGradient from "./aboutPgBgGradient.png";
+import aboutOverviewBg from "./aboutOverviewBg.png";
+import Team1 from "./team1.png";
+import Team2 from "./team2.png";
+import Team3 from "./team3.png";
+import Team4 from "./team4.png";
+import aboutMapBg from "./aboutMapBg.png";
+import aboutInfoSecBg from "./aboutInfoSecBg.png";
+
 export {
   bannerBgImage,
   globeHalf,
@@ -82,4 +92,13 @@ export {
   certification6,
   successStoryImg1,
   successStoryImg2,
+  aboutBannerBg,
+  aboutPgBgGradient,
+  aboutOverviewBg,
+  Team1,
+  Team2,
+  Team3,
+  Team4,
+  aboutMapBg,
+  aboutInfoSecBg,
 };
