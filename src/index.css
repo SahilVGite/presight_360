@@ -104,6 +104,11 @@ body {
     background: linear-gradient(200deg, rgba(0, 61, 131, 1) 0%, rgba(0, 1, 46, 1) 100%);
 }
 
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -191,13 +196,13 @@ body {
 
 .section-label {
     color: var(--color-accent-red);
-    font-size: clamp(0.7rem,1.9rem,1.875rem);
+    font-size: var(--fs-title-base);
     font-weight: 500;
 }
 
 .section-title {
     font-family: var(--font-display);
-    font-size: clamp(1.5rem, 1rem + 2.5vw, 3.25rem);
+    font-size: var(--fs-section-title);
     font-weight: 700;
     line-height: 1.1;
     text-transform: uppercase;
@@ -584,7 +589,7 @@ body {
 
 .reports-swiper-wrap .swiper-button-prev::after,
 .reports-swiper-wrap .swiper-button-next::after {
-    font-size: 13px;
+    font-size: calc(var(--fs-body-xs) + 1px);
     font-weight: 800;
 }
 
@@ -710,14 +715,14 @@ body {
 }
 
 .sha-card__title {
-    font-size: clamp(2rem,4vw,4rem);;
+    font-size: var(--fs-banner-title-xl);
     font-weight: 700;
     color: #fff;
     margin-bottom: 8px;
 }
 
 .sha-card__desc {
-    font-size: 0.855rem;
+    font-size: var(--fs-body-sm);
     line-height: 1.65;
     color: rgba(255, 255, 255, 0.72);
 }
@@ -742,7 +747,7 @@ body {
 .sha-card__label span {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    font-size: clamp(1.5rem,4vw,3.5rem);;
+    font-size: var(--fs-section-title-xl);
     font-weight: 500;
     line-height: 1;
     /* letter-spacing: 0.09em; */
@@ -813,7 +818,7 @@ body {
 }
 
 .sva-item__name {
-    font-size: 0.95rem;
+    font-size: var(--fs-body);
     font-weight: 600;
     color: #fff;
     text-transform: uppercase;
@@ -844,7 +849,7 @@ body {
 }
 
 .sva-item__desc {
-    font-size: 0.9rem;
+    font-size: var(--fs-body-sm);
     line-height: 1.65;
     color: rgba(168, 192, 214, 0.85);
 }
@@ -875,4 +880,17 @@ body {
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255,255,255,0.4);
+}
+
+.aboutInfos li{position: relative;}
+.aboutInfos li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
 }

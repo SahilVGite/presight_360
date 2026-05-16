@@ -52,6 +52,20 @@ import Team3 from "./team3.png";
 import Team4 from "./team4.png";
 import aboutMapBg from "./aboutMapBg.png";
 import aboutInfoSecBg from "./aboutInfoSecBg.png";
+import aboutProjectsCompeted from "./aboutProjectsCompeted.png";
+import aboutSuccessfulYears from "./aboutSuccessfulYears.png";
+import aboutClientRetention from "./aboutClientRetention.png";
+import aboutCountries from "./aboutCountries.png";
+import Client1 from "./client1.png";
+import Client2 from "./client2.png";
+import Client3 from "./client3.png";
+import Client4 from "./client4.png";
+import aboutExpertiesBg from "./aboutExpertiesBg.png";
+import expertise1 from "./expertise1.png";
+import expertise2 from "./expertise2.png";
+import expertise3 from "./expertise3.png";
+import expertise4 from "./expertise4.png";
+import ourClientsBg from "./ourClientsBg.png";
 
 export {
   bannerBgImage,
@@ -101,4 +115,18 @@ export {
   Team4,
   aboutMapBg,
   aboutInfoSecBg,
+  aboutProjectsCompeted,
+  aboutSuccessfulYears,
+  aboutClientRetention,
+  aboutCountries,
+  Client1,
+  Client2,
+  Client3,
+  Client4,
+  aboutExpertiesBg,
+  expertise1,
+  expertise2,
+  expertise3,
+  expertise4,
+  ourClientsBg,
 };

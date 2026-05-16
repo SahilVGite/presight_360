@@ -42,7 +42,7 @@ export default function PageHero({
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-4 text-[clamp(1rem,4vw,1.125rem)] max-w-xl text-secondary\/75 leading-[1.7]">
+          <p className="mt-4 [font-size:var(--fs-body-md)] max-w-xl text-secondary\/75 leading-[1.7]">
             {subtitle}
           </p>
         )}

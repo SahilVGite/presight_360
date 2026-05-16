@@ -22,14 +22,14 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="text-xl md:text-2xl lg:text-3xl font-normal mb-8 md:mb-14 tracking-wider text-white">
+              <p className="[font-size:var(--fs-body-lg)] md:[font-size:var(--fs-body-2xl)] lg:[font-size:var(--fs-title-base)] font-normal mb-8 md:mb-14 tracking-wider text-white">
                 Subscribe to our newsletter
               </p>
               <div className="flex items-center w-full relative">
                 <input
                   type="email"
                   placeholder="Mindora@email.ru"
-                  className="text-sm flex-1 border-b border-b-white focus:outline-none pb-2 bg-transparent pr-6 text-white placeholder:text-white/50"
+                  className="[font-size:var(--fs-body-sm)] flex-1 border-b border-b-white focus:outline-none pb-2 bg-transparent pr-6 text-white placeholder:text-white/50"
                 />
                 <button className="flex items-center justify-center px-4 py-2 pr-0 shrink-0 bg-transparent text-white cursor-pointer absolute right-0 bottom-0">
                   <ArrowRight size={16} />
@@ -40,18 +40,18 @@ export default function Footer() {
 
           {/* Right — tagline + links */}
           <div className="w-full">
-            <p className="text-base md:text-lg lg:text-[1.25rem] font-light mb-8 md:mb-16 text-white leading-[1.7]">
+            <p className="[font-size:var(--fs-body)] md:[font-size:var(--fs-body-md)] lg:[font-size:var(--fs-body-lg)] font-light mb-8 md:mb-16 text-white leading-[1.7]">
               Providing stability and foresight for leaders navigating uncertainty in high-stakes environments worldwide
             </p>
 
             <div>
-              <p className="text-[.625rem] font-semibold uppercase tracking-widest pb-3 mb-6 md:mb-9 text-white border-b border-[#C6C6C6] pl-2">
+              <p className="text-[calc(var(--fs-body-xs)-2px)] font-semibold uppercase tracking-widest pb-3 mb-6 md:mb-9 text-white border-b border-[#C6C6C6] pl-2">
                 Info
               </p>
               <ul className="flex-wrap gap-x-8 gap-y-4 block space-y-7 pl-4 md:pl-12">
                 {FOOTER_LINKS.map((link) => (
                   <li key={link.path}>
-                    <Link to={link.path} className="text-base md:text-lg text-white font-medium">
+                    <Link to={link.path} className="[font-size:var(--fs-body)] md:[font-size:var(--fs-body-md)] text-white font-medium">
                       {link.label}
                     </Link>
                   </li>
@@ -63,21 +63,21 @@ export default function Footer() {
             <div className="flex flex-row sm:flex-col justify-between items-end sm:items-end gap-8 mt-12 md:mt-20">
               <ul className="flex flex-wrap gap-x-8 gap-y-5 sm:gap-12">
                 <li>
-                  <p className="mb-2 text-[.625rem] text-white font-medium uppercase">Corporate Office</p>
-                  <Link to="tel:+62899077632" className="text-xs md:text-sm text-white font-medium">+62 899 077 632</Link>
+                  <p className="mb-2 text-[calc(var(--fs-body-xs)-2px)] text-white font-medium uppercase">Corporate Office</p>
+                  <Link to="tel:+62899077632" className="[font-size:var(--fs-body-xs)] md:[font-size:var(--fs-body-sm)] text-white font-medium">+62 899 077 632</Link>
                 </li>
                 <li>
-                  <p className="mb-2 text-[.625rem] text-white font-medium uppercase">Phone</p>
-                  <Link to="tel:+62899077632" className="text-xs md:text-sm text-white font-medium">+62 556 783 472</Link>
+                  <p className="mb-2 text-[calc(var(--fs-body-xs)-2px)] text-white font-medium uppercase">Phone</p>
+                  <Link to="tel:+62899077632" className="[font-size:var(--fs-body-xs)] md:[font-size:var(--fs-body-sm)] text-white font-medium">+62 556 783 472</Link>
                 </li>
                 <li>
-                  <p className="mb-2 text-[.625rem] text-white font-medium uppercase">Email</p>
-                  <Link to="mailto:Mindora@gmail.com" className="text-xs md:text-sm text-white font-medium">Mindora@gmail.com</Link>
+                  <p className="mb-2 text-[calc(var(--fs-body-xs)-2px)] text-white font-medium uppercase">Email</p>
+                  <Link to="mailto:Mindora@gmail.com" className="[font-size:var(--fs-body-xs)] md:[font-size:var(--fs-body-sm)] text-white font-medium">Mindora@gmail.com</Link>
                 </li>
               </ul>
 
               <div className="flex items-center gap-4 md:gap-5 shrink-0">
-                <button onClick={scrollToTop} className="flex items-center gap-2 text-sm text-white font-medium uppercase tracking-widest rounded-full border border-white p-5 md:p-8 cursor-pointer">
+                <button onClick={scrollToTop} className="flex items-center gap-2 [font-size:var(--fs-body-sm)] text-white font-medium uppercase tracking-widest rounded-full border border-white p-5 md:p-8 cursor-pointer">
                   <ArrowUp size={20} />
                 </button>
                 <ul className="grid grid-cols-2 gap-2 items-center">

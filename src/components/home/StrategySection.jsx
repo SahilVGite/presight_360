@@ -34,7 +34,7 @@ export default function StrategySection() {
 
         {/* Heading */}
         <div className="mb-[3.5rem] pl-0 xl:pl-[8.75rem] ">
-          <p className="uppercase text-lg tracking-[0.18em] text-[#DB3B3B] font-semibold mb-8">
+          <p className="uppercase [font-size:var(--fs-body-md)] tracking-[0.18em] text-[#DB3B3B] font-semibold mb-8">
             Trending Insight
           </p>
 
@@ -53,11 +53,11 @@ export default function StrategySection() {
           >
             {/* Content */}
             <div className="flex-1 pt-8 p-4 md:p-[2.3rem] flex flex-col justify-center">
-              <h3 className="text-white font-bold leading-[1.1] text-[clamp(1.5rem,4vw,2.625rem)] max-w-[37.3125rem] mb-5">
+              <h3 className="text-white font-bold leading-[1.1] text-[calc(var(--fs-title-xl)+6px)] max-w-[37.3125rem] mb-5">
                 {STRATEGY_ITEMS[0].title}
               </h3>
 
-              <p className="text-white text-[clamp(1rem,2.5vw,1.25rem)] leading-[1.5] max-w-[37.3125rem]">
+              <p className="text-white [font-size:var(--fs-body-lg)] leading-[1.5] max-w-[37.3125rem]">
                 {STRATEGY_ITEMS[0].desc}
               </p>
             </div>
@@ -76,11 +76,11 @@ export default function StrategySection() {
               className="group rounded-[1.35rem] bg-glass-effect pt-8 p-4 md:px-8 md:pt-17.5 md:pb-13.5 overflow-hidden transition-all duration-300"
             >
               <div className="pb-4">
-                <h3 className="text-white  text-[clamp(1.5rem,4vw,2.625rem)] leading-[1.15] font-bold mb-4">
+                <h3 className="text-white  text-[calc(var(--fs-title-xl)+6px)] leading-[1.15] font-bold mb-4">
                   {item.title}
                 </h3>
 
-                <p className="text-white text-[clamp(1rem,2.5vw,1.25rem)] leading-[1.5]">
+                <p className="text-white [font-size:var(--fs-body-lg)] leading-[1.5]">
                   {item.desc}
                 </p>
               </div>

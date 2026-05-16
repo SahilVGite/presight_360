@@ -84,7 +84,7 @@ export default function SecurityIntelligenceSection() {
           </h2>
 
           <div className="lg:max-w-149.5">
-            <p className="text-lg leading-[1.85] mb-6 text-white">
+            <p className="[font-size:var(--fs-body-md)] leading-[1.85] mb-6 text-white">
               PreSight 360 is a global provider of integrated risk intelligence
               and security solutions. We provides discreet, behind-the-scenes
               research and analysis that enables companies and VIPs to act with
@@ -93,7 +93,7 @@ export default function SecurityIntelligenceSection() {
               risks are complex, and mistakes are costly.
             </p>
 
-            <p className="text-lg leading-[1.85] mb-6 text-white">
+            <p className="[font-size:var(--fs-body-md)] leading-[1.85] mb-6 text-white">
               We apply our proprietary PASTIL framework - Politics,
               Alert-Levels, Security, Technology, Insights, and Logistics - to
               ensure no critical factor is overlooked. With Presight 360,
@@ -116,7 +116,7 @@ export default function SecurityIntelligenceSection() {
       {/* Bottom Section */}
       <div className="relative overflow-hidden bg-water-image [@media(max-width:1800px)]:px-4">
         <div className="relative z-10 mx-auto my-12 max-w-427.75 p-8 lg:p-12 bg-glass-effect">
-          <h3 className="text-center font-display font-bold uppercase text-white mb-10 lg:mb-20 tracking-[0.07em] text-[clamp(1.3rem,3vw,2.8125rem)]">
+          <h3 className="text-center font-display font-bold uppercase text-white mb-10 lg:mb-20 tracking-[0.07em] text-[calc(var(--fs-section-title-sm)-5px)]">
             SMARTER SECURITY STARTS WITH BETTER INTELLIGENCE
           </h3>
 
@@ -129,12 +129,12 @@ export default function SecurityIntelligenceSection() {
                 </div>
 
                 {/* Title */}
-                <h4 className="font-display font-bold uppercase text-white mb-2 leading-snug text-[clamp(1.125rem,2.5vw,1.5rem)]">
+                <h4 className="font-display font-bold uppercase text-white mb-2 leading-snug [font-size:var(--fs-body-2xl)]">
                   {title}
                 </h4>
 
                 {/* Description */}
-                <p className="text-[clamp(0.875rem,2vw,1.125rem)] leading-[1.7] text-white">
+                <p className="[font-size:var(--fs-body-md)] leading-[1.7] text-white">
                   {desc}
                 </p>
               </Link>

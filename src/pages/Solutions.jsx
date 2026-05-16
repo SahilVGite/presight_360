@@ -26,13 +26,13 @@ export default function Solutions() {
             {SOLUTIONS_DATA.map((sol) => (
               <Link key={sol.slug} to={`/solutions/${sol.slug}`} className="block no-underline">
                 <Card className="p-7 h-full group">
-                  <h3 className="font-bold mb-3 font-display text-[1.15rem] uppercase leading-[1.2]">
+                  <h3 className="font-bold mb-3 font-display [font-size:var(--fs-body-md)] uppercase leading-[1.2]">
                     {sol.title}
                   </h3>
-                  <p className="text-sm mb-4 text-secondary\/70 leading-[1.7]">
+                  <p className="[font-size:var(--fs-body-sm)] mb-4 text-secondary\/70 leading-[1.7]">
                     {sol.desc}
                   </p>
-                  <div className="mt-auto flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all text-accent-red font-display uppercase tracking-[0.05em]">
+                  <div className="mt-auto flex items-center gap-2 [font-size:var(--fs-body-sm)] font-semibold group-hover:gap-3 transition-all text-accent-red font-display uppercase tracking-[0.05em]">
                     View Details <ArrowRight size={14} />
                   </div>
                 </Card>

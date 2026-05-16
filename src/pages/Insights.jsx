@@ -14,17 +14,17 @@ function InsightCard({ insight }) {
   return (
     <Link to={`/insights/${insight.slug}`} className="block no-underline">
       <Card className="overflow-hidden group h-full">
-        <div className="h-[180px] bg-[linear-gradient(135deg,rgba(26,107,219,0.2)_0%,rgba(7,29,56,0.8)_100%)] flex items-center justify-center text-white/10 text-xs">
+        <div className="h-[180px] bg-[linear-gradient(135deg,rgba(26,107,219,0.2)_0%,rgba(7,29,56,0.8)_100%)] flex items-center justify-center text-white/10 [font-size:var(--fs-body-xs)]">
           [ Article Image ]
         </div>
         <div className="p-5">
-          <p className="text-xs mb-2 font-semibold uppercase tracking-wider text-accent-red">
+          <p className="[font-size:var(--fs-body-xs)] mb-2 font-semibold uppercase tracking-wider text-accent-red">
             {insight.category}
           </p>
-          <h3 className="font-bold mb-3 leading-snug group-hover:opacity-80 transition-opacity font-display text-[0.95rem] uppercase">
+          <h3 className="font-bold mb-3 leading-snug group-hover:opacity-80 transition-opacity font-display [font-size:var(--fs-body)] uppercase">
             {insight.title}
           </h3>
-          <div className="flex items-center gap-3 text-xs text-secondary\/50">
+          <div className="flex items-center gap-3 [font-size:var(--fs-body-xs)]text-secondary\/50">
             <span className="flex items-center gap-1"><User size={11} /> {insight.author}</span>
             <span className="flex items-center gap-1"><Calendar size={11} /> {insight.date}</span>
           </div>
@@ -46,24 +46,24 @@ export default function Insights() {
         <div className="max-w-6xl mx-auto">
           <div className="rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2 border border-white\/08">
             <div className="p-8 flex flex-col justify-center bg-card-70">
-              <p className="text-xs mb-3 font-semibold uppercase tracking-wider text-accent-red">
+              <p className="[font-size:var(--fs-body-xs)] mb-3 font-semibold uppercase tracking-wider text-accent-red">
                 {featured.category}
               </p>
-              <h2 className="mb-4 font-display font-[800] uppercase leading-[1.15] text-[clamp(1.2rem,2.5vw,1.75rem)]">
+              <h2 className="mb-4 font-display font-[800] uppercase leading-[1.15] [font-size:var(--fs-title-sm)]">
                 {featured.title}
               </h2>
-              <div className="flex items-center gap-3 text-xs mb-5 text-secondary\/50">
+              <div className="flex items-center gap-3 [font-size:var(--fs-body-xs)]mb-5 text-secondary\/50">
                 <span className="flex items-center gap-1"><User size={11} /> {featured.author}</span>
                 <span className="flex items-center gap-1"><Calendar size={11} /> {featured.date}</span>
               </div>
-              <p className="text-sm leading-relaxed mb-6 text-secondary\/70">
+              <p className="[font-size:var(--fs-body-sm)] leading-relaxed mb-6 text-secondary\/70">
                 {featured.excerpt}
               </p>
-              <Link to={`/insights/${featured.slug}`} className="btn-primary px-5 py-2 text-sm self-start no-underline">
+              <Link to={`/insights/${featured.slug}`} className="btn-primary px-5 py-2 [font-size:var(--fs-body-sm)] self-start no-underline">
                 Continue Reading <ArrowRight size={14} />
               </Link>
             </div>
-            <div className="min-h-[260px] bg-[linear-gradient(135deg,rgba(26,107,219,0.15)_0%,rgba(7,29,56,0.6)_100%)] flex items-center justify-center text-white/10 text-xs">
+            <div className="min-h-[260px] bg-[linear-gradient(135deg,rgba(26,107,219,0.15)_0%,rgba(7,29,56,0.6)_100%)] flex items-center justify-center text-white/10 [font-size:var(--fs-body-xs)]">
               [ Featured Image ]
             </div>
           </div>
@@ -74,10 +74,10 @@ export default function Insights() {
       <section className="py-[60px] px-6 bg-primary">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="font-display font-[800] text-[1.5rem] text-accent-red uppercase">
+            <h2 className="font-display font-[800] [font-size:var(--fs-body-2xl)] text-accent-red uppercase">
               News &amp; Insight
             </h2>
-            <button className="btn-outline px-4 py-2 text-xs flex items-center gap-1.5">
+            <button className="btn-outline px-4 py-2 [font-size:var(--fs-body-xs)] flex items-center gap-1.5">
               Latest Topic ▾
             </button>
           </div>
@@ -96,7 +96,7 @@ export default function Insights() {
             {[1, 2, 3, '...', 30].map((p, i) => (
               <button
                 key={i}
-                className={`w-8 h-8 flex items-center justify-center rounded text-xs border border-white\/10 cursor-pointer transition-colors ${p === 2 ? 'bg-accent-red text-white' : 'bg-transparent text-white/50 hover:border-white/30'}`}
+                className={`w-8 h-8 flex items-center justify-center rounded [font-size:var(--fs-body-xs)] border border-white\/10 cursor-pointer transition-colors ${p === 2 ? 'bg-accent-red text-white' : 'bg-transparent text-white/50 hover:border-white/30'}`}
               >
                 {p}
               </button>

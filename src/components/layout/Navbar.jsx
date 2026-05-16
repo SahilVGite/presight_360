@@ -52,7 +52,7 @@ export default function Navbar() {
                   <Link
                     to={link.path}
                     className={[
-                      "block px-3 xl:px-4.5 py-2.5 xl:py-3 text-[13px] xl:text-[16px] font-normal rounded-full transition-all duration-200 whitespace-nowrap font-display tracking-[0.01em] leading-tight",
+                      "block px-3 xl:px-4.5 py-2.5 xl:py-3 text-[calc(var(--fs-body-xs)+1px)] xl:[font-size:var(--fs-body)] font-normal rounded-full transition-all duration-200 whitespace-nowrap font-display tracking-[0.01em] leading-tight",
                       isActive(link.path)
                         ? "border border-accent-red text-accent-red bg-[rgba(232,70,42,0.08)]"
                         : "border border-[#FEFEFE] text-[#FEFEFE] bg-transparent hover:bg-white/5 hover:border-white/50",
@@ -68,7 +68,7 @@ export default function Navbar() {
             <div className="relative z-10 shrink-0 flex items-center gap-2">
               <Link
                 to="/contact"
-                className="hidden lg:inline-flex items-center bg-accent-red hover:bg-accent-red-hover text-white font-normal text-[13px] xl:text-[16px] px-3 xl:px-4.5 py-2.5 xl:py-3 rounded-full whitespace-nowrap font-display transition-colors duration-200 no-underline tracking-[0.01em] leading-tight"
+                className="hidden lg:inline-flex items-center bg-accent-red hover:bg-accent-red-hover text-white font-normal text-[calc(var(--fs-body-xs)+1px)] xl:[font-size:var(--fs-body)] px-3 xl:px-4.5 py-2.5 xl:py-3 rounded-full whitespace-nowrap font-display transition-colors duration-200 no-underline tracking-[0.01em] leading-tight"
               >
                 Contact Us
               </Link>
@@ -102,7 +102,7 @@ export default function Navbar() {
                 <Link
                   to={link.path}
                   className={[
-                    "block px-5 py-3 text-[15px] font-normal font-display transition-colors",
+                    "block px-5 py-3 text-[calc(var(--fs-body-sm)+1px)] font-normal font-display transition-colors",
                     isActive(link.path) ? "text-accent-red" : "text-white/75 hover:text-white",
                   ].join(" ")}
                 >
@@ -113,7 +113,7 @@ export default function Navbar() {
             <li className="px-5 pt-2 pb-3">
               <Link
                 to="/contact"
-                className="block bg-accent-red text-white font-normal text-[15px] px-5 py-2.5 rounded-full text-center font-display no-underline hover:bg-accent-red-hover transition-colors"
+                className="block bg-accent-red text-white font-normal text-[calc(var(--fs-body-sm)+1px)] px-5 py-2.5 rounded-full text-center font-display no-underline hover:bg-accent-red-hover transition-colors"
               >
                 Contact Us
               </Link>

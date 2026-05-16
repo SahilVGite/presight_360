@@ -78,7 +78,7 @@ export default function TrustedLeadersSection() {
                       text-white
                       font-display
                       font-bold
-                      text-[clamp(1.5rem,2vw,2.25rem)]
+                      [font-size:var(--fs-title-xl)]
                       leading-tight
                       mb-5
                     "
@@ -89,8 +89,8 @@ export default function TrustedLeadersSection() {
                   <p
                     className="
                       text-white
-                      text-sm
-                      md:text-lg
+                      [font-size:var(--fs-body-sm)]
+                      md:[font-size:var(--fs-body-md)]
                       leading-[1.8]
                       max-w-225
                       mb-8
@@ -112,7 +112,7 @@ export default function TrustedLeadersSection() {
 
         {/* Bottom Text */}
         <div className="mt-20 max-w-[51.25rem] pl-0 md:pl-6 lg:pl-12.5">
-          <p className="text-[#B4B4B4] text-[2rem] font-semibold uppercase leading-tight">
+          <p className="text-[#B4B4B4] [font-size:var(--fs-title-md)] font-semibold uppercase leading-tight">
             CONFIDENTIAL INTELLIGENCE. UNMATCHED FORESIGHT
             <span className="text-[#6296FB]">.</span>{" "}
             <span className="text-[#DB3B3B] font-bold">

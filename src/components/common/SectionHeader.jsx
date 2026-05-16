@@ -12,7 +12,7 @@ export default function SectionHeader({ label, title, subtitle, align = 'left', 
         />
       )}
       {subtitle && (
-        <p className="mt-4 text-sm leading-relaxed text-secondary\/80 max-w-[520px]">
+        <p className="mt-4 [font-size:var(--fs-body-sm)] leading-relaxed text-secondary\/80 max-w-[520px]">
           {subtitle}
         </p>
       )}

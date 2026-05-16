@@ -11,10 +11,10 @@ export default function HeroSection() {
 
       <div className="relative w-full px-[clamp(1rem,5vw,7.75rem)] py-[clamp(1rem,5vw,7.75rem)] pt-[clamp(20rem,5vw,7.75rem)]">
         <div className="max-w-[1040px]">
-          <h1 className="font-display font-bold uppercase leading-[1.46] tracking-[0.02em] mb-6 text-white text-[clamp(2rem,5vw,3.125rem)]">
+          <h1 className="font-display font-bold uppercase leading-[1.46] tracking-[0.02em] mb-6 text-white [font-size:var(--fs-section-title-sm)]">
             Integrated Operational Intelligence for Complex Risk Environments
           </h1>
-          <p className="text-lg leading-[1.85] mb-6 text-white">
+          <p className="[font-size:var(--fs-body-md)] leading-[1.85] mb-6 text-white">
             Transforming data into actionable intelligence
           </p>
           <div className="flex flex-wrap gap-3">
