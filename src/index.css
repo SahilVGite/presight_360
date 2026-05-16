@@ -191,7 +191,7 @@ body {
 
 .section-label {
     color: var(--color-accent-red);
-    font-size: clamp(0.7rem,1.13rem,1.875rem);
+    font-size: clamp(0.7rem,1.9rem,1.875rem);
     font-weight: 500;
 }
 
@@ -590,6 +590,31 @@ body {
 
 .reports-swiper-wrap .swiper-button-disabled {
     opacity: 0.25;
+}
+
+/* Team section slider nav buttons */
+.team-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 74px;
+    background: #ffffff;
+    color: #1a2a3a;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    flex-shrink: 0;
+}
+
+.team-nav-btn:disabled {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+}
+
+.team-nav-btn:not(:disabled):hover {
+    background: #e8edf2;
 }
 
 .gradientBgImg {

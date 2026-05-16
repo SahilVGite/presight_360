@@ -10,7 +10,7 @@ const sizeClasses = {
 
   md: `
     px-7 pr-3.5 py-2 md:py-[10px]
-    text-[1.05rem]
+    text-[1.0625rem]
     gap-4
     rounded-full
   `,

@@ -18,7 +18,7 @@ export default function LocationSection() {
         <section className="pt-[clamp(60px,8vw,100px)] pb-[clamp(60px,8vw,100px)] relative overflow-hidden">
             <div className="main-wrapper">
                 <div className="mb-10 pl-0 md:pl-6 lg:pl-24">
-                    <p className="uppercase text-lg tracking-[0.18em] text-accent-red font-semibold mb-3">
+                    <p className="uppercase text-[clamp(0.7rem,1.5rem,1.125rem)]! tracking-[0.18em] text-[#DB3B3B] font-semibold mb-3">
                         Presight 360 Offices
                     </p>
                     <h2 className="section-title">Our Location</h2>

@@ -11,16 +11,23 @@ export default function PageHero({
     <section
       className={[
         "relative overflow-hidden min-h-[85vh] flex items-center",
-        bgImage ? "" : "gradient-page-hero",
+        !bgImage ? "gradient-page-hero" : "",
       ].join(" ")}
-      style={
-        bgImage
-          ? {
-              background: `url(${bgImage}) center/cover no-repeat`,
-            }
-          : undefined
-      }
     >
+      {/* Background image at 30% opacity */}
+      {bgImage && (
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.3,
+          }}
+        />
+      )}
+
       {/* Decorative radial glow */}
       {isGradientBg && (
         <div className="absolute left-0 top-0 w-1/2 h-full gradient-radial-blue pointer-events-none" />
