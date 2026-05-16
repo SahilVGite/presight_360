@@ -52,6 +52,10 @@ import Team3 from "./team3.png";
 import Team4 from "./team4.png";
 import aboutMapBg from "./aboutMapBg.png";
 import aboutInfoSecBg from "./aboutInfoSecBg.png";
+import aboutProjectsCompeted from "./aboutProjectsCompeted.png";
+import aboutSuccessfulYears from "./aboutSuccessfulYears.png";
+import aboutClientRetention from "./aboutClientRetention.png";
+import aboutCountries from "./aboutCountries.png";
 
 export {
   bannerBgImage,
@@ -101,4 +105,8 @@ export {
   Team4,
   aboutMapBg,
   aboutInfoSecBg,
+  aboutProjectsCompeted,
+  aboutSuccessfulYears,
+  aboutClientRetention,
+  aboutCountries,
 };
