@@ -18,3 +18,95 @@
     --fs-body-sm: 14px;
     --fs-body-xs: 12px;
 }
+
+@media (max-width: 1440px) {
+    :root {
+        --fs-banner-title-xl: 58px;
+        --fs-banner-title: 55px;
+        --fs-section-title-xl: 50px;
+        --fs-section-title: 46px;
+        --fs-section-title-sm: 45px;
+        --fs-title-xl: 32px;
+        --fs-title-lg: 30px;
+        --fs-title-md: 28px;
+        --fs-title-base: 26px;
+        --fs-title-sm: 24px;
+        --fs-title-xs: 22px;
+        --fs-body-2xl: 20px;
+        --fs-body-xl: 18px;
+        --fs-body-lg: 18px;
+        --fs-body-md: 16px;
+        --fs-body: 15px;
+        --fs-body-sm: 13px;
+        --fs-body-xs: 11px;
+    }
+}
+
+@media (max-width: 1280px) {
+    :root {
+        --fs-banner-title-xl: 52px;
+        --fs-banner-title: 50px;
+        --fs-section-title-xl: 44px;
+        --fs-section-title: 42px;
+        --fs-section-title-sm: 40px;
+        --fs-title-xl: 30px;
+        --fs-title-lg: 28px;
+        --fs-title-md: 26px;
+        --fs-title-base: 24px;
+        --fs-title-sm: 22px;
+        --fs-title-xs: 22px;
+        --fs-body-2xl: 20px;
+        --fs-body-xl: 18px;
+        --fs-body-lg: 18px;
+        --fs-body-md: 16px;
+        --fs-body: 15px;
+        --fs-body-sm: 13px;
+        --fs-body-xs: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --fs-banner-title-xl: 42px;
+        --fs-banner-title: 40px;
+        --fs-section-title-xl: 36px;
+        --fs-section-title: 34px;
+        --fs-section-title-sm: 32px;
+        --fs-title-xl: 24px;
+        --fs-title-lg: 24px;
+        --fs-title-md: 22px;
+        --fs-title-base: 20px;
+        --fs-title-sm: 20px;
+        --fs-title-xs: 18px;
+        --fs-body-2xl: 18px;
+        --fs-body-xl: 16px;
+        --fs-body-lg: 16px;
+        --fs-body-md: 15px;
+        --fs-body: 14px;
+        --fs-body-sm: 13px;
+        --fs-body-xs: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --fs-banner-title-xl: 34px;
+        --fs-banner-title: 32px;
+        --fs-section-title-xl: 28px;
+        --fs-section-title: 26px;
+        --fs-section-title-sm: 26px;
+        --fs-title-xl: 20px;
+        --fs-title-lg: 20px;
+        --fs-title-md: 18px;
+        --fs-title-base: 18px;
+        --fs-title-sm: 16px;
+        --fs-title-xs: 16px;
+        --fs-body-2xl: 16px;
+        --fs-body-xl: 15px;
+        --fs-body-lg: 14px;
+        --fs-body-md: 14px;
+        --fs-body: 13px;
+        --fs-body-sm: 12px;
+        --fs-body-xs: 11px;
+    }
+}

@@ -7,7 +7,7 @@ import {
   MoveRight,
 } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y } from "swiper/modules";
+import { Navigation, A11y, Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 import PageHero from "../components/common/PageHero";
 import SectionHeader from "../components/common/SectionHeader";
@@ -25,10 +25,14 @@ import {
   aboutPgBgGradient,
   aboutProjectsCompeted,
   aboutSuccessfulYears,
+  Client1,
+  Client2,
+  Client3,
   expertise1,
   expertise2,
   expertise3,
   expertise4,
+  ourClientsBg,
   siteLogo,
   Team1,
   Team2,
@@ -97,24 +101,27 @@ const EXPERTISE = [
 ];
 
 const CLIENTS = [
-  "XEBO.ai",
-  "Hushly",
-  "KanTime",
-  "XEBO.ai",
-  "KanTime",
-  "Hushly",
+  Client1,
+  Client2,
+  Client3,
+  Client1,
+  Client2,
+  Client3,
+  Client1,
+  Client2,
+  Client3,
 ];
 
 function AccordionItem({ icon, title, content, open, onClick }) {
   return (
-    <div className="border-b border-white/15 pb-[53.6px] mb-[53.6px] last:border-b-0 last:pb-0 last:mb-0">
+    <div className="[font-size:var(--fs-body-2xl)] border-b border-white/15 pb-[2.333em] mb-[2.333em] last:border-b-0 last:pb-0 last:mb-0">
       <button
         onClick={onClick}
         className="w-full flex items-center justify-between text-left bg-transparent border-none cursor-pointer text-white p-0"
       >
         <span className="flex items-center gap-7">
           {icon}
-          <span className="font-display font-bold text-[clamp(0.7rem,1.9rem,1.875rem)]">
+          <span className="font-display font-bold [font-size:var(--fs-title-base)]">
             {title}
           </span>
         </span>
@@ -128,7 +135,7 @@ function AccordionItem({ icon, title, content, open, onClick }) {
       </button>
 
       {open && (
-        <p className="mt-[53.6px] text-[clamp(0.7rem,1vw,1.5rem)] leading-[1.2166] text-white">
+        <p className="mt-[2.333em] [font-size:var(--fs-body-2xl)] leading-[1.2166] text-white">
           {content}
         </p>
       )}
@@ -158,21 +165,21 @@ export default function About() {
       >
         {/* Overview + VMV */}
         <section
-          className="py-20 px-6"
+          className="py-20"
           style={{
             background: `url(${aboutOverviewBg}) center/100% 100% no-repeat`,
           }}
         >
-          <div className="main-wrapper flex justify-between items-stretch gap-12">
-            <div className="max-w-[60%] p-12 rounded-[38px] bg-[rgba(0, 0, 0, 0.004)] border border-[rgba(255,255,255,0.1)] backdrop-blur-md relative">
+          <div className="main-wrapper flex flex-col lg:flex-row justify-between items-stretch gap-12">
+            <div className="lg:max-w-[60%] p-12 rounded-[38px] bg-[rgba(0, 0, 0, 0.004)] border border-[rgba(255,255,255,0.1)] backdrop-blur-md relative">
               <div className="absolute bg-accent-red w-[2.5px] h-[70%] left-0 top-1/2 transform -translate-y-1/2" />
-              <p className="section-label text-[clamp(0.7rem,1.5rem,1.125rem)]! mb-10">
+              <p className="section-label [font-size:var(--fs-body-md)]! mb-10">
                 Overview
               </p>
-              <h2 className="section-title mb-10 text-[clamp(1.5rem,3vw,2.25rem)]">
+              <h2 className="section-title mb-10 [font-size:var(--fs-title-xl)]">
                 INTELLIGENCE TO MAP GLOBAL THREAT VECTORS AND GEOPOLITICAL RISKS
               </h2>
-              <p className="text-[clamp(0.7rem,1.5rem,1.125rem)] text-secondary\/75 leading-[1.9444]">
+              <p className="[font-size:var(--fs-body-md)] text-secondary\/75 leading-[1.9444]">
                 PreSight 360 is a global intelligence-driven security firm
                 dedicated to mitigating risk for governments, NGOs, corporations
                 and high-net-worth clients operating in challenging, high-threat
@@ -188,7 +195,7 @@ export default function About() {
                 worldwide.
               </p>
             </div>
-            <div className="max-w-[40%] w-full py-15 px-12 rounded-[38px] bg-[rgba(0, 0, 0, 0.004)] border border-[rgba(255,255,255,0.1)] backdrop-blur-md relative shadow-[0px_4px_15px_rgba(0,0,0,0.55)]">
+            <div className="lg:max-w-[40%] w-full py-15 px-12 rounded-[38px] bg-[rgba(0, 0, 0, 0.004)] border border-[rgba(255,255,255,0.1)] backdrop-blur-md relative shadow-[0px_4px_15px_rgba(0,0,0,0.55)]">
               <div className="absolute bg-accent-red w-[2.5px] h-[70%] left-0 top-1/2 transform -translate-y-1/2" />
 
               {ACCORDION_ITEMS.map((item, index) => (
@@ -209,19 +216,19 @@ export default function About() {
         </section>
 
         {/* Team */}
-        <section className="py-20 px-6">
+        <section className="py-20">
           <div className="main-wrapper">
-            <p className="section-label text-[clamp(0.7rem,1.5rem,1.125rem)]! mb-2">
+            <p className="section-label [font-size:var(--fs-body-md)]! mb-2">
               Core Team
             </p>
             <SectionHeader title="PRESIGHT 360 EXPERTS" className="mb-20" />
 
-            <div className="team-swiper-outer relative">
+            <div className="team-swiper-outer relative [@media(max-width:1800px)]:max-w-[95%] mx-auto">
               {/* Prev button */}
               <button
                 onClick={() => teamSwiperRef.current?.slidePrev()}
                 disabled={teamBeginning}
-                className="team-nav-btn absolute  right-[calc(100%+24px)] top-[45%] -translate-y-1/2 z-10"
+                className="team-nav-btn absolute right-[calc(100%-40px)] [@media(min-width:1801px)]:right-[calc(100%+24px)] top-[45%] -translate-y-1/2 z-10"
                 aria-label="Previous"
               >
                 <MoveLeft size={34} />
@@ -256,10 +263,10 @@ export default function About() {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <p className="font-bold text-[clamp(0.7rem,1vw,1.5rem)] text-white">
+                      <p className="font-bold [font-size:var(--fs-body-2xl)] text-white">
                         {member.name}
                       </p>
-                      <p className="text-[clamp(0.7rem,1.5rem,1.125rem)] text-white">
+                      <p className="[font-size:var(--fs-body-md)] text-white">
                         {member.role}
                       </p>
                     </div>
@@ -271,7 +278,7 @@ export default function About() {
               <button
                 onClick={() => teamSwiperRef.current?.slideNext()}
                 disabled={teamEnd}
-                className="team-nav-btn absolute left-[calc(100%+24px)] top-[45%] -translate-y-1/2 z-10"
+                className="team-nav-btn absolute left-[calc(100%-40px)] [@media(min-width:1801px)]:left-[calc(100%+24px)] top-[45%] -translate-y-1/2 z-10"
                 aria-label="Next"
               >
                 <MoveRight size={34} />
@@ -282,7 +289,7 @@ export default function About() {
 
         {/* Presence Map */}
         <section
-          className="py-20 px-6"
+          className="py-20"
           style={{
             background: `url(${aboutMapBg}) top/100% 200% no-repeat`,
           }}
@@ -293,33 +300,33 @@ export default function About() {
         </section>
 
         <section
-          className="py-20 md:py-35 lg:py-47 px-6 w-full relative"
+          className="py-20 md:py-35 lg:py-47 w-full relative"
           style={{
             background: `url(${aboutInfoSecBg}) center/cover no-repeat`,
           }}
         >
           <div className="main-wrapper">
-            <div className="px-12 py-12.5 relative bg-glass-effect w-fit mx-auto shadow-[0px_4px_15px_rgba(0,0,0,0.55)]">
-                <ul className="aboutInfos flex items-center justify-center text-center">
-                    <li className="py-5 px-15 mr-8 last:mr-0">
-                        <img className="w-13 mx-auto" src={aboutProjectsCompeted} alt="Client 1" />
-                        <p className="text-[clamp(1.7rem,3.5vw,3.25rem)] font-bold">400 <span>+</span></p>
-                        <p className="text-[#FFDBDB] text-[clamp(0.875rem,4vw,1.25rem)]">Projects Competed</p>
+            <div className="p-5 [@media(min-width:1025px)]:px-12 [@media(min-width:1025px)]:py-12.5 relative bg-glass-effect w-fit mx-auto shadow-[0px_4px_15px_rgba(0,0,0,0.55)]">
+                <ul className="aboutInfos flex flex-col md:flex-row flex-wrap  items-center justify-center text-center">
+                    <li className="py-3 [@media(min-width:1440px)]:py-5 px-10 [@media(min-width:1440px)]:px-15 mr-8 last:mr-0">
+                        <img className="w-5 md:w-8 lg:w-10 [@media(min-width:1440px)]:w-13 mx-auto" src={aboutProjectsCompeted} alt="Client 1" />
+                        <p className="[font-size:var(--fs-section-title)] font-bold">400 <span>+</span></p>
+                        <p className="text-[#FFDBDB] [font-size:var(--fs-body-lg)]">Projects Competed</p>
                     </li>
-                    <li className="py-5 px-15 mr-8 last:mr-0">
-                        <img className="w-13 mx-auto" src={aboutSuccessfulYears} alt="Client 2" />
-                        <p className="text-[clamp(1.7rem,3.5vw,3.25rem)] font-bold">15 <span>+</span></p>
-                        <p className="text-[#FFDBDB] text-[clamp(0.875rem,4vw,1.25rem)]">Successful Years</p>
+                    <li className="py-3 [@media(min-width:1440px)]:py-5 px-10 [@media(min-width:1440px)]:px-15 mr-8 last:mr-0">
+                        <img className="w-5 md:w-8 lg:w-10 [@media(min-width:1440px)]:w-13 mx-auto" src={aboutSuccessfulYears} alt="Client 2" />
+                        <p className="[font-size:var(--fs-section-title)] font-bold">15 <span>+</span></p>
+                        <p className="text-[#FFDBDB] [font-size:var(--fs-body-lg)]">Successful Years</p>
                     </li>
-                    <li className="py-5 px-15 mr-8 last:mr-0">
-                        <img className="w-13 mx-auto" src={aboutClientRetention} alt="Client 3" />
-                        <p className="text-[clamp(1.7rem,3.5vw,3.25rem)] font-bold">98 <span>%</span></p>
-                        <p className="text-[#FFDBDB] text-[clamp(0.875rem,4vw,1.25rem)]">Client Retention</p>
+                    <li className="py-3 [@media(min-width:1440px)]:py-5 px-10 [@media(min-width:1440px)]:px-15 mr-8 last:mr-0">
+                        <img className="w-5 md:w-8 lg:w-10 [@media(min-width:1440px)]:w-13 mx-auto" src={aboutClientRetention} alt="Client 3" />
+                        <p className="[font-size:var(--fs-section-title)] font-bold">98 <span>%</span></p>
+                        <p className="text-[#FFDBDB] [font-size:var(--fs-body-lg)]">Client Retention</p>
                     </li>
-                    <li className="py-5 px-15 mr-8 last:mr-0">
-                        <img className="w-13 mx-auto" src={aboutCountries} alt="Client 4" />
-                        <p className="text-[clamp(1.7rem,3.5vw,3.25rem)] font-bold">10 <span>+</span></p>
-                        <p className="text-[#FFDBDB] text-[clamp(0.875rem,4vw,1.25rem)]">Countries</p>
+                    <li className="py-3 [@media(min-width:1440px)]:py-5 px-10 [@media(min-width:1440px)]:px-15 mr-8 last:mr-0">
+                        <img className="w-5 md:w-8 lg:w-10 [@media(min-width:1440px)]:w-13 mx-auto" src={aboutCountries} alt="Client 4" />
+                        <p className="[font-size:var(--fs-section-title)] font-bold">10 <span>+</span></p>
+                        <p className="text-[#FFDBDB] [font-size:var(--fs-body-lg)]">Countries</p>
                     </li>
                 </ul>
             </div>
@@ -327,48 +334,78 @@ export default function About() {
         </section>
 
         {/* Expertise Pillars */}
-        <section className="py-25 px-6" style={{
+        <section className="py-25" style={{
             background: `url(${aboutExpertiesBg}) bottom/cover no-repeat`,
           }}>
           <div className="main-wrapper">
-            <p className="section-label text-[clamp(0.7rem,1.5rem,1.125rem)]! mb-2">Presight 360 Offices</p>
+            <p className="section-label [font-size:var(--fs-body-md)]! mb-2">Presight 360 Offices</p>
             <SectionHeader title="EXPERTISE PILLARS" className="mb-10" />
-            <p className="text-white text-[clamp(0.675rem,4vw,1.125rem)] mb-13">
+            <p className="text-white [font-size:var(--fs-body-md)] mb-13">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12.5 p-12.5 rounded-[38px] bg-[rgba(0, 0, 0, 0.004)] border border-[rgba(255,255,255,0.1)] shadow-[0px_4px_15px_rgba(0,0,0,0.55)] backdrop-blur-2xl relative">
-              {EXPERTISE.map((item, i) => (
-                <Card key={i} className="p-9.5">
-                <img src={item.image} alt="expertise" className="rounded-xl" />
-                  <h3 className="font-bold mb-2 font-display text-[clamp(0.65rem,5vw,1.5rem)] uppercase mt-6">
-                    {item.title}
-                  </h3>
-                  <p className="text-[clamp(0.5rem,4vw,1.125rem)] text-secondary\/70 leading-[1.7]">
-                    {item.desc}
-                  </p>
-                </Card>
-              ))}
-              <div className="absolute top-1/2 left-1/2 transform -translate-1/2 bg-[#041246] h-auto w-[20%] max-w-78 max-h-78 aspect-square rounded-[100%]"><img src={siteLogo} alt="Presight 360" className="w-full h-full mx-auto object-contain max-w-[65%]" /></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12.5 p-8 lg:p-12.5 rounded-[38px] bg-[rgba(0, 0, 0, 0.004)] border border-[rgba(255,255,255,0.1)] shadow-[0px_4px_15px_rgba(0,0,0,0.55)] backdrop-blur-2xl relative">
+              {EXPERTISE.map((item, i) => {
+                const isLeft = i % 2 === 0;
+                const imageFirst = i < 2;
+                return (
+                  <Card
+                    key={i}
+                    className={`p-6 [@media(min-width:1025px)]:p-9.5`}
+                  >
+                    {imageFirst ? (
+                      <>
+                        <img src={item.image} alt="expertise" className="rounded-xl" />
+                        <h3 className={`font-bold mb-2 font-display [font-size:var(--fs-body-2xl)] uppercase mt-6  ${isLeft ? 'text-left pr-10 [@media(min-width:1025px)]:pr-20' : 'text-right pl-10 [@media(min-width:1025px)]:pl-20'}`}>
+                          {item.title}
+                        </h3>
+                        <p className={`[font-size:var(--fs-body-md)] text-secondary\/70 leading-[1.7]  ${isLeft ? 'text-left pr-10 [@media(min-width:1025px)]:pr-20' : 'text-right pl-10 [@media(min-width:1025px)]:pl-20'}`}>
+                          {item.desc}
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <h3 className={`font-bold mb-2 font-display [font-size:var(--fs-body-2xl)] uppercase  ${isLeft ? 'text-left pr-10 [@media(min-width:1025px)]:pr-20' : 'text-right pl-10 [@media(min-width:1025px)]:pl-20'}`}>
+                          {item.title}
+                        </h3>
+                        <p className={`[font-size:var(--fs-body-md)] mb-6 text-secondary\/70 leading-[1.7]  ${isLeft ? 'text-left pr-10 [@media(min-width:1025px)]:pr-20' : 'text-right pl-10 [@media(min-width:1025px)]:pl-20'}`}>
+                          {item.desc}
+                        </p>
+                        <img src={item.image} alt="expertise" className="rounded-xl" />
+                      </>
+                    )}
+                  </Card>
+                );
+              })}
+              <div className="hidden md:block absolute top-1/2 left-1/2 transform -translate-1/2 bg-[#041246] h-auto w-[20%] max-w-78 max-h-78 aspect-square rounded-[100%]"><img src={siteLogo} alt="Presight 360" className="w-full h-full mx-auto object-contain max-w-[65%]" /></div>
             </div>
           </div>
         </section>
 
         {/* Clients */}
-        <section className="py-15 px-6 border-t border-white\/05">
-          <div className="max-w-6xl mx-auto">
-            <p className="section-label mb-8 text-center">
-              Associated Partners
-            </p>
-            <h2 className="section-title text-center mb-10">OUR CLIENTS</h2>
-            <div className="flex flex-wrap items-center justify-center gap-8">
-              {CLIENTS.map((client, i) => (
+        <section className="py-25 overflow-hidden" style={{
+            background: `url(${ourClientsBg}) bottom/cover no-repeat`,
+          }}>
+          <div className="main-wrapper">
+            <p className="section-label [font-size:var(--fs-body-md)]! mb-2">Associated Partners</p>
+            <SectionHeader title="OUR CLIENTS" className=" mb-25" />
+            <div className="overflow-hidden w-full">
                 <div
-                  key={i}
-                  className="text-white/40 font-display font-bold text-[1.1rem] tracking-wider"
+                className="flex items-center"
+                style={{ width: 'max-content', animation: 'marquee 18s linear infinite' }}
                 >
-                  {client}
+                {[...CLIENTS, ...CLIENTS].map((client, i) => (
+                    <div
+                    key={i}
+                    className="flex items-center justify-center px-8 sm:px-12 lg:px-16 py-6 shrink-0"
+                    >
+                    <img
+                        src={client}
+                        alt={`Client ${i + 1}`}
+                        className="h-10 sm:h-12 lg:h-14 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
+                    />
+                    </div>
+                ))}
                 </div>
-              ))}
             </div>
           </div>
         </section>

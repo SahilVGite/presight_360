@@ -69,10 +69,10 @@ function JobCard({ job }) {
                 className="w-full text-left p-6 flex items-start justify-between gap-4 bg-transparent border-none cursor-pointer text-white"
             >
                 <div>
-                    <h3 className="font-bold mb-3.5 font-display text-2xl">
+                    <h3 className="font-bold mb-3.5 font-display [font-size:var(--fs-body-2xl)]">
                         {job.title}
                     </h3>
-                    <div className="flex flex-wrap gap-2 text-xs">
+                    <div className="flex flex-wrap gap-2 [font-size:var(--fs-body-xs)]">
                         <span className="px-2 py-1 !rounded-sm bg-glass-effect text-white">
                             Open positions: {job.openings}
                         </span>
@@ -92,7 +92,7 @@ function JobCard({ job }) {
 
             {open && (
                 <div className="px-6 pb-6">
-                    <p className="text-lg mb-2 font-medium text-white">
+                    <p className="[font-size:var(--fs-body-md)] mb-2 font-medium text-white">
                         Skills Required: {job.skills.join(", ")}
                     </p>
                     <ul className="space-y-1 mb-5 list-disc pl-5">
@@ -103,7 +103,7 @@ function JobCard({ job }) {
                         ].map((item, i) => (
                             <li
                                 key={i}
-                                className="text-sm font-medium text-white leading-[1.7]"
+                                className="[font-size:var(--fs-body-sm)] font-medium text-white leading-[1.7]"
                             >
                                 {item}
                             </li>
@@ -112,7 +112,7 @@ function JobCard({ job }) {
                     <div className="flex justify-end">
                         <Link
                             to={`/careers/${job.id}/apply`}
-                            className="btn-primary px-5 py-2 text-sm no-underline"
+                            className="btn-primary px-5 py-2 [font-size:var(--fs-body-sm)] no-underline"
                         >
                             Apply Now
                         </Link>
@@ -148,10 +148,10 @@ export default function Careers() {
                     <div className="w-full relative">
                         <p className="section-label mb-3">Opportunity Awaits</p>
                         <SectionHeader title="DO THE MOST IMPORTANT WORK OF YOUR CAREER, HELPING SAFEGUARD THE WORLD'S MOST IMPORTANT ORGANIZATIONS AND INDIVIDUALS AGAINST RISK." className="mb-10" />
-                        <p className="text-[clamp(0.825rem,4vw,1.125rem)] leading-[2.0555]">
+                        <p className="[font-size:var(--fs-body-md)] leading-[2.0555]">
                             PreSight 360 is a global provider of integrated risk intelligence and security solutions. We provides discreet, behind-the-scenes research and analysis that enables companies and VIPs to act with precision, clarity, and confidence. Our intelligence is designed for decision-makers operating in high-stakes environments - where risks are complex, and mistakes are costly.
                         </p>
-                        <p className="text-[clamp(0.825rem,4vw,1.125rem)] leading-[2.0555]">
+                        <p className="[font-size:var(--fs-body-md)] leading-[2.0555]">
                             We apply our proprietary PASTIL framework - Politics,Alert-Levels,Security,Technology,Insights,and Logistics - to ensure no critical factor is overlooked. With Presight 360,leaders move forward knowing they have the intelligence advantage.
                         </p>
                         <div className="pt-32 [@media(max-width:1536px)]:pt-20 [@media(max-width:900px)]:pt-10">
@@ -161,10 +161,10 @@ export default function Careers() {
                 </div>
                 <div className="main-wrapper">
                     <div className="py-32 [@media(max-width:1536px)]:py-20 [@media(max-width:900px)]:py-10 relative">
-                        <h2 className="text-center text-[2.125rem] [@media(max-width:900px)]:text-[1.875rem] font-bold text-[#DB3B3B]">
+                        <h2 className="text-center [font-size:var(--fs-title-lg)] [@media(max-width:900px)]:[font-size:var(--fs-title-base)] font-bold text-[#DB3B3B]">
                             Search Jobs
                         </h2>
-                        <p className="text-center text-lg text-white mb-11">
+                        <p className="text-center [font-size:var(--fs-body-md)] text-white mb-11">
                             To begin the application process, search current openings and click
                             "Apply".
                         </p>
@@ -174,7 +174,7 @@ export default function Careers() {
                             <div className="w-full flex items-center flex-row gap-0">
                                 <div className="flex items-center flex-1 gap-3">
                                     <div>
-                                        <label htmlFor="searchBox" className="w-full text-xl text-white">
+                                        <label htmlFor="searchBox" className="w-full [font-size:var(--fs-body-lg)] text-white">
                                             Find Open Jobs
                                         </label>
                                         <input
@@ -184,7 +184,7 @@ export default function Careers() {
                                             placeholder="Search by job title/ref. code"
                                             value={search}
                                             onChange={(e) => setSearch(e.target.value)}
-                                            className="bg-transparent border-none outline-none text-white text-base w-full"
+                                            className="bg-transparent border-none outline-none text-white [font-size:var(--fs-body)] w-full"
                                         />
                                     </div>
                                 </div>
@@ -193,7 +193,7 @@ export default function Careers() {
                             <div className="w-full flex items-center flex-row gap-0">
                                 <div className="flex items-center flex-1 gap-3">
                                     <div>
-                                        <label htmlFor="locationInput" className="w-full text-xl text-white">
+                                        <label htmlFor="locationInput" className="w-full [font-size:var(--fs-body-lg)] text-white">
                                             Location
                                         </label>
                                         <input
@@ -203,7 +203,7 @@ export default function Careers() {
                                             placeholder="Office, data center, or remote locations"
                                             value={location}
                                             onChange={(e) => setLocation(e.target.value)}
-                                            className="bg-transparent border-none outline-none text-white text-base w-full"
+                                            className="bg-transparent border-none outline-none text-white [font-size:var(--fs-body)] w-full"
                                         />
                                     </div>
                                 </div>
@@ -215,7 +215,7 @@ export default function Careers() {
 
                         <div className="max-h-[75rem] overflow-y-auto pr-3 custom-scrollbar ">
                             {filtered.length === 0 ? (
-                                <p className="text-center text-sm text-secondary">
+                                <p className="text-center [font-size:var(--fs-body-sm)] text-secondary">
                                     No openings match your search.
                                 </p>
                             ) : (
@@ -245,18 +245,18 @@ export default function Careers() {
                         },
                     ].map((card, i) => (
                         <div key={i} className="bg-glass-effect overflow-hidden !rounded-[1.875rem]">
-                            <div className="rounded-lg flex items-center justify-center text-xs">
+                            <div className="rounded-lg flex items-center justify-center [font-size:var(--fs-body-xs)]">
                                 <img src={card.img} alt={card.title} className="w-full h-full object-cover" />
                             </div>
                             <div className="p-6">
-                                <h3 className="font-semibold mb-3 text-[2rem] [@media(max-width:900px)]:text-[1.5rem] uppercase">
+                                <h3 className="font-semibold mb-3 [font-size:var(--fs-title-md)] [@media(max-width:900px)]:[font-size:var(--fs-body-2xl)] uppercase">
                                     {card.title}
                                 </h3>
-                                <p className="text-lg leading-relaxed mb-5 text-white font-light [@media(max-width:900px)]:text-base">
+                                <p className="[font-size:var(--fs-body-md)] leading-relaxed mb-5 text-white font-light [@media(max-width:900px)]:[font-size:var(--fs-body)]">
                                     {card.desc}
                                 </p>
-                                <button className="flex items-center gap-2 text-sm font-bold text-white bg-transparent border-none cursor-pointer">
-                                    <span className="text-white text-base font-bold bg-[#DB3B3B] rounded-full p-4 [@media(max-width:900px)]:p- flex justify-center items-center">
+                                <button className="flex items-center gap-2 [font-size:var(--fs-body-sm)] font-bold text-white bg-transparent border-none cursor-pointer">
+                                    <span className="text-white [font-size:var(--fs-body)] font-bold bg-[#DB3B3B] rounded-full p-4 [@media(max-width:900px)]:p- flex justify-center items-center">
                                         <ArrowRight size={24} />
                                     </span>
                                     Read More

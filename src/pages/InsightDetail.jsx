@@ -39,23 +39,23 @@ export default function InsightDetail() {
           <div className="md:col-span-2">
             <Link
               to="/insights"
-              className="flex items-center gap-2 text-sm mb-8 text-secondary\/60 hover:text-white transition-colors no-underline"
+              className="flex items-center gap-2 [font-size:var(--fs-body-sm)] mb-8 text-secondary\/60 hover:text-white transition-colors no-underline"
             >
               <ArrowLeft size={14} /> Back to Insights
             </Link>
 
             <div className="rounded-xl p-8 bg-card-60 border border-white\/07">
               <p className="section-label mb-3">{insight.category}</p>
-              <h2 className="font-display font-[800] uppercase mb-4 leading-[1.2] text-[clamp(1.25rem,2.5vw,1.75rem)]">
+              <h2 className="font-display font-[800] uppercase mb-4 leading-[1.2] [font-size:var(--fs-title-sm)]">
                 Why Strategic Intelligence and Risk Awareness Matter More Than Ever
               </h2>
-              <div className="flex flex-wrap gap-4 text-xs mb-8 text-secondary\/50">
+              <div className="flex flex-wrap gap-4 [font-size:var(--fs-body-xs)] mb-8 text-secondary\/50">
                 <span className="flex items-center gap-1"><User size={11} /> By Charles Herron</span>
                 <span className="flex items-center gap-1"><Clock size={11} /> 2 Min Read</span>
                 <span>• 20 Views</span>
               </div>
 
-              <div className="prose text-secondary\/80 leading-[1.8] text-[0.9rem]">
+              <div className="prose text-secondary\/80 leading-[1.8] [font-size:var(--fs-body-sm)]">
                 <p className="mb-4">
                   In today's fast-changing business environment, uncertainty is no longer an exception, it is the norm. Organizations that succeed are not those that avoid risk entirely, but those that understand it early and respond with clarity and confidence. This is where Strategic Intelligence and Risk Management play a critical role.
                 </p>
@@ -74,7 +74,7 @@ export default function InsightDetail() {
 
               {/* Share */}
               <div className="flex items-center gap-4 mt-8 pt-6 border-t border-white\/08">
-                <span className="text-xs text-secondary\/50">Share:</span>
+                <span className="[font-size:var(--fs-body-xs)] text-secondary\/50">Share:</span>
                 {[Send].map((Icon, i) => (
                   <button key={i} className="text-white/40 bg-transparent border-none cursor-pointer p-1 hover:text-white/70 transition-colors">
                     <Icon size={16} />
@@ -87,18 +87,18 @@ export default function InsightDetail() {
           {/* Sidebar */}
           <aside className="space-y-6">
             <Card className="p-5">
-              <h3 className="font-bold mb-4 font-display text-base uppercase">Recent Post</h3>
+              <h3 className="font-bold mb-4 font-display [font-size:var(--fs-body)] uppercase">Recent Post</h3>
               <div className="space-y-4">
                 {INSIGHTS_DATA.slice(0, 5).map((post, i) => (
                   <Link key={i} to={`/insights/${post.slug}`} className="flex gap-3 group no-underline">
-                    <div className="rounded shrink-0 w-[52px] h-[52px] bg-blue-dim flex items-center justify-center text-[0.6rem] text-white/20">
+                    <div className="rounded shrink-0 w-[52px] h-[52px] bg-blue-dim flex items-center justify-center text-[calc(var(--fs-body-xs)-2px)] text-white/20">
                       img
                     </div>
                     <div>
-                      <p className="text-xs mb-1 text-accent-red font-semibold">
+                      <p className="[font-size:var(--fs-body-xs)] mb-1 text-accent-red font-semibold">
                         {post.category} · {post.readTime}
                       </p>
-                      <p className="text-xs leading-snug group-hover:opacity-80 text-white/75">
+                      <p className="[font-size:var(--fs-body-xs)] leading-snug group-hover:opacity-80 text-white/75">
                         {post.title.substring(0, 50)}...
                       </p>
                     </div>
@@ -108,11 +108,11 @@ export default function InsightDetail() {
             </Card>
 
             <Card className="p-5">
-              <h3 className="font-bold mb-4 font-display text-base uppercase">Categories</h3>
+              <h3 className="font-bold mb-4 font-display [font-size:var(--fs-body)] uppercase">Categories</h3>
               <ul className="space-y-2">
                 {CATEGORIES.map((cat, i) => (
                   <li key={i}>
-                    <button className="w-full flex items-center justify-between text-sm py-1 transition-colors bg-transparent border-none cursor-pointer text-secondary\/70 hover:text-white text-left">
+                    <button className="w-full flex items-center justify-between [font-size:var(--fs-body-sm)] py-1 transition-colors bg-transparent border-none cursor-pointer text-secondary\/70 hover:text-white text-left">
                       <span className="flex items-center gap-2">
                         <span className="text-white/30">›</span>
                         {cat.name}
@@ -131,21 +131,21 @@ export default function InsightDetail() {
       <section className="py-[60px] px-6 bg-primary">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="font-display font-[800] text-[1.5rem] text-accent-red uppercase">Related Post</h2>
-            <Link to="/insights" className="btn-primary px-4 py-2 text-xs no-underline">View All →</Link>
+            <h2 className="font-display font-[800] [font-size:var(--fs-body-2xl)] text-accent-red uppercase">Related Post</h2>
+            <Link to="/insights" className="btn-primary px-4 py-2 [font-size:var(--fs-body-xs)] no-underline">View All →</Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
             {related.map((post) => (
               <Link key={post.slug} to={`/insights/${post.slug}`} className="block no-underline">
                 <Card className="overflow-hidden h-full group">
-                  <div className="h-[120px] bg-blue-dim flex items-center justify-center text-white/10 text-[0.6rem]">
+                  <div className="h-[120px] bg-blue-dim flex items-center justify-center text-white/10 text-[calc(var(--fs-body-xs)-2px)]">
                     [ img ]
                   </div>
                   <div className="p-4">
-                    <p className="text-xs font-bold mb-2 font-display uppercase leading-[1.3] text-white/85">
+                    <p className="[font-size:var(--fs-body-xs)] font-bold mb-2 font-display uppercase leading-[1.3] text-white/85">
                       {post.title}
                     </p>
-                    <p className="text-xs text-secondary\/50">
+                    <p className="[font-size:var(--fs-body-xs)] text-secondary\/50">
                       By {post.author} · {post.date}
                     </p>
                   </div>

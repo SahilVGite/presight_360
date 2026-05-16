@@ -23,13 +23,13 @@ export default function CareerApply() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 rounded-2xl p-5 overflow-hidden backdrop-blur-[15px] bg-[#FFFFFF0A] border border-[#FDFDFD0A]">
             {/* Form */}
             <div className="p-0 md:p-6 lg:p-10 pb-5">
-              <h2 className="font-display uppercase font-bold mb-8 text-[clamp(1.75rem,3vw,2.5rem)] text-white">
+              <h2 className="font-display uppercase font-bold mb-8 text-[calc(var(--fs-title-xl)+4px)] text-white">
                 EASY APPLY
               </h2>
 
               {/* Personal Details */}
               <div className="mb-6">
-                <p className=" text-[clamp(1rem,4vw,1.5rem)] mb-4 text-white">
+                <p className=" [font-size:var(--fs-body-2xl)] mb-4 text-white">
                   Personal Details
                 </p>
                 <div className="space-y-4">
@@ -37,42 +37,42 @@ export default function CareerApply() {
                     <input
                       type="text"
                       placeholder="Last Name"
-                      className="input-dark text-sm"
+                      className="input-dark [font-size:var(--fs-body-sm)]"
                     />
                     <input
                       type="text"
                       placeholder="First Name"
-                      className="input-dark text-sm"
+                      className="input-dark [font-size:var(--fs-body-sm)]"
                     />
                   </div>
                   <input
                     type="email"
                     placeholder="Email"
-                    className="input-dark text-sm"
+                    className="input-dark [font-size:var(--fs-body-sm)]"
                   />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="tel"
                       placeholder="Phone Number"
-                      className="input-dark text-sm"
+                      className="input-dark [font-size:var(--fs-body-sm)]"
                     />
                     <input
                       type="text"
                       placeholder="City"
-                      className="input-dark text-sm"
+                      className="input-dark [font-size:var(--fs-body-sm)]"
                     />
                   </div>
                   <textarea
                     placeholder="Address"
                     rows={3}
-                    className="input-dark text-sm resize-none"
+                    className="input-dark [font-size:var(--fs-body-sm)] resize-none"
                   />
                 </div>
               </div>
 
               {/* Professional Details */}
               <div className="mb-6">
-                <p className=" text-[clamp(1rem,4vw,1.5rem)] mb-4 text-white">
+                <p className=" [font-size:var(--fs-body-2xl)] mb-4 text-white">
                   Professional Details
                 </p>
                 <div className="space-y-4">
@@ -80,24 +80,24 @@ export default function CareerApply() {
                     <input
                       type="text"
                       placeholder="Degree Level"
-                      className="input-dark text-sm"
+                      className="input-dark [font-size:var(--fs-body-sm)]"
                     />
                     <input
                       type="text"
                       placeholder="Degree Title"
-                      className="input-dark text-sm"
+                      className="input-dark [font-size:var(--fs-body-sm)]"
                     />
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
                       placeholder="Total Experience"
-                      className="input-dark text-sm"
+                      className="input-dark [font-size:var(--fs-body-sm)]"
                     />
                     <input
                       type="text"
                       placeholder="Expected Salary"
-                      className="input-dark text-sm"
+                      className="input-dark [font-size:var(--fs-body-sm)]"
                     />
                   </div>
                 </div>
@@ -105,18 +105,18 @@ export default function CareerApply() {
 
               {/* Resume Upload */}
               <div className="mb-6">
-                <p className=" text-[clamp(0.75rem,4vw,1.125rem)] mb-4 text-white">
+                <p className="[font-size:var(--fs-body-md)] mb-4 text-white">
                   Recent Resume
                 </p>
                 <div className="flex flex-col items-center justify-center gap-2 p-6 rounded-lg cursor-pointer transition-all border border-dashed border-[#C6C6C6] bg-[rgba(26,107,219,0.04)]">
-                  <p className="text-sm text-white/50">
+                  <p className="[font-size:var(--fs-body-sm)] text-white/50">
                     <span>
                       <Upload size={20} className="inline text-white mr-1" />
                     </span>
                     <span className="font-semibold text-white">Upload</span> or <span className="text-white">Drag and
                     Drop here</span>
                   </p>
-                  <p className="text-xs text-white/30">
+                  <p className="[font-size:var(--fs-body-xs)] text-white/30">
                     PDF, JPG or PNG (MAX Limit 100MB)
                   </p>
                 </div>
@@ -127,7 +127,7 @@ export default function CareerApply() {
                   Submit
                 </Button>
               </div>
-              <p className="mt-4 text-[clamp(0.675rem,3vw,1rem)] text-white">
+              <p className="mt-4 [font-size:var(--fs-body)] text-white">
                 We respect your privacy. Your data will never be shared
               </p>
             </div>

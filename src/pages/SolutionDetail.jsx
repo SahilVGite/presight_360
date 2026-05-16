@@ -28,7 +28,7 @@ export default function SolutionDetail() {
         <div className="max-w-6xl mx-auto">
           <Link
             to="/solutions"
-            className="flex items-center gap-2 text-sm mb-10 text-secondary\/60 hover:text-white transition-colors no-underline"
+            className="flex items-center gap-2 [font-size:var(--fs-body-sm)] mb-10 text-secondary\/60 hover:text-white transition-colors no-underline"
           >
             <ArrowLeft size={14} /> Back to Solutions
           </Link>
@@ -36,15 +36,15 @@ export default function SolutionDetail() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="section-label mb-3">Overview</p>
-              <h2 className="font-display font-[800] uppercase leading-[1.1] mb-5 text-[clamp(1.5rem,3vw,2.25rem)]">
+              <h2 className="font-display font-[800] uppercase leading-[1.1] mb-5 [font-size:var(--fs-title-xl)]">
                 {solution.summary.toUpperCase()}
               </h2>
-              <p className="text-sm leading-relaxed text-secondary\/75">
+              <p className="[font-size:var(--fs-body-sm)] leading-relaxed text-secondary\/75">
                 {solution.desc}
               </p>
             </div>
 
-            <div className="rounded-xl aspect-[4/3] bg-blue-subtle border border-white\/06 flex items-center justify-center text-white/15 text-sm">
+            <div className="rounded-xl aspect-[4/3] bg-blue-subtle border border-white\/06 flex items-center justify-center text-white/15 [font-size:var(--fs-body-sm)]">
               [ Solution Image ]
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function SolutionDetail() {
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0 bg-blue-dim text-accent-blue-light">
                     <CheckCircle size={18} />
                   </div>
-                  <p className="font-bold font-display text-[1.05rem] uppercase">
+                  <p className="font-bold font-display [font-size:var(--fs-body)] uppercase">
                     {benefit}
                   </p>
                 </div>

@@ -22,7 +22,7 @@ export default function CertificationsSection() {
       <div className="main-wrapper">
         {/* Heading */}
         <div className="mb-10 pl-0 md:pl-6 lg:pl-12.5">
-          <p className="uppercase text-lg tracking-[0.18em] text-[#DB3B3B] font-semibold mb-3">
+          <p className="uppercase [font-size:var(--fs-body-md)] tracking-[0.18em] text-[#DB3B3B] font-semibold mb-3">
             Dummy text
           </p>
           <h2 className="section-title">Certifications</h2>

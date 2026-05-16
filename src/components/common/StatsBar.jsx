@@ -12,10 +12,10 @@ export default function StatsBar({ stats = DEFAULT_STATS }) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
-              <p className="font-display font-[800] text-white leading-none tracking-[-0.02em] text-[clamp(2.5rem,5vw,4rem)]">
+              <p className="font-display font-[800] text-white leading-none tracking-[-0.02em] [font-size:var(--fs-banner-title-xl)]">
                 {stat.value}
               </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.1em] text-secondary\/60">
+              <p className="mt-2 [font-size:var(--fs-body-xs)] uppercase tracking-[0.1em] text-secondary\/60">
                 {stat.label}
               </p>
             </div>

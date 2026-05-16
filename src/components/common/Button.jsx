@@ -3,21 +3,21 @@ import { ArrowRight } from 'lucide-react';
 const sizeClasses = {
   sm: `
     px-5 pr-2.5 py-1 md:py-2
-    text-[0.9rem]
+    [font-size:var(--fs-body-sm)]
     gap-3
     rounded-full
   `,
 
   md: `
     px-7 pr-3.5 py-2 md:py-[10px]
-    text-[1.0625rem]
+    [font-size:calc(var(--fs-body-md)-1px)]
     gap-4
     rounded-full
   `,
 
   lg: `
     px-8 pr-4 py-1.5 md:py-3
-    text-[1.15rem]
+    [font-size:var(--fs-body-md)]
     gap-5
     rounded-full
   `,

@@ -65,6 +65,7 @@ import expertise1 from "./expertise1.png";
 import expertise2 from "./expertise2.png";
 import expertise3 from "./expertise3.png";
 import expertise4 from "./expertise4.png";
+import ourClientsBg from "./ourClientsBg.png";
 
 export {
   bannerBgImage,
@@ -127,4 +128,5 @@ export {
   expertise2,
   expertise3,
   expertise4,
+  ourClientsBg,
 };

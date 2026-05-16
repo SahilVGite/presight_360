@@ -50,7 +50,7 @@ export default function ReportsSection() {
       <div className="main-wrapper">
         {/* Heading */}
         <div className="mb-10 pl-0 md:pl-6 lg:pl-24">
-          <p className="uppercase text-lg tracking-[0.18em] text-[#DB3B3B] font-semibold mb-3">
+          <p className="uppercase [font-size:var(--fs-body-md)] tracking-[0.18em] text-[#DB3B3B] font-semibold mb-3">
             Trending statistics
           </p>
           <h2 className="section-title">REPORTS</h2>
@@ -85,25 +85,25 @@ export default function ReportsSection() {
                 {/* Left — text content */}
                 <div className="flex-1 flex flex-col justify-between">
                   <div>
-                    <p className="text-base text-white/60 mb-2 leading-snug">
+                    <p className="[font-size:var(--fs-body)] text-white/60 mb-2 leading-snug">
                       {report.date}&nbsp;
                       <span className="text-white/60 mx-1">|</span>
                       {report.category}
                     </p>
 
-                    <h3 className="font-display font-bold text-white text-[0.95rem] leading-snug mb-3">
+                    <h3 className="font-display font-bold text-white [font-size:var(--fs-body)] leading-snug mb-3">
                       {report.title}
                     </h3>
 
                     <p
-                      className="text-[0.75rem] leading-[1.7] text-white/50 line-clamp-4"
+                      className="[font-size:var(--fs-body-xs)] leading-[1.7] text-white/50 line-clamp-4"
                       dangerouslySetInnerHTML={{ __html: report.desc }}
                     />
                   </div>
 
                   {/* Read More button */}
                   <div className="mt-4">
-                    <span className="inline-flex items-center gap-2 bg-[#DB3B3B] text-white text-[0.75rem] font-semibold px-4 py-2 rounded-full">
+                    <span className="inline-flex items-center gap-2 bg-[#DB3B3B] text-white [font-size:var(--fs-body-xs)] font-semibold px-4 py-2 rounded-full">
                       Read More
                       <span className="w-6 h-6 rounded-full bg-white/25 flex items-center justify-center shrink-0">
                         <ArrowRight size={12} />
