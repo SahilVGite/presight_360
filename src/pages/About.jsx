@@ -16,10 +16,20 @@ import Card from "../components/common/Card";
 import CTASection from "../components/common/CTASection";
 import {
   aboutBannerBg,
+  aboutClientRetention,
+  aboutCountries,
+  aboutExpertiesBg,
   aboutInfoSecBg,
   aboutMapBg,
   aboutOverviewBg,
   aboutPgBgGradient,
+  aboutProjectsCompeted,
+  aboutSuccessfulYears,
+  expertise1,
+  expertise2,
+  expertise3,
+  expertise4,
+  siteLogo,
   Team1,
   Team2,
   Team3,
@@ -29,6 +39,7 @@ import {
 import VisionIcon from "../assets/icons/VisionIcon";
 import MissionIcon from "../assets/icons/MissionIcon";
 import ValuesIcon from "../assets/icons/ValuesIcon";
+import LocationSection from "../components/home/LocationSection";
 
 const TEAM = [
   { name: "Team Name", role: "Description", img: Team1 },
@@ -64,18 +75,22 @@ const ACCORDION_ITEMS = [
 
 const EXPERTISE = [
   {
+    image: expertise1,
     title: "AI & Analytics",
     desc: "Harnessing cutting-edge AI to process and interpret vast intelligence datasets.",
   },
   {
+    image: expertise2,
     title: "Security & Public Safety Tech",
     desc: "Advanced technology solutions for threat detection and public protection.",
   },
   {
+    image: expertise3,
     title: "Engineering",
     desc: "Technical infrastructure and systems engineering for secure operations.",
   },
   {
+    image: expertise4,
     title: "Digital Government Transformation",
     desc: "Modernizing government systems with security-first digital strategies.",
   },
@@ -273,13 +288,7 @@ export default function About() {
           }}
         >
           <div className="main-wrapper">
-            <p className="section-label text-[clamp(0.7rem,1.5rem,1.125rem)]! mb-2">
-              Presight 360 Offices
-            </p>
-            <SectionHeader title="OUR PRESENCE" className="mb-10" />
-            <div className="w-full mx-auto mt-14">
-              <img src={worldMap} alt="World Map" className="w-full h-auto" />
-            </div>
+            <LocationSection />
           </div>
         </section>
 
@@ -290,32 +299,62 @@ export default function About() {
           }}
         >
           <div className="main-wrapper">
-            <div className="px-12 py-12.5"></div>
+            <div className="px-12 py-12.5 relative bg-glass-effect w-fit mx-auto shadow-[0px_4px_15px_rgba(0,0,0,0.55)]">
+                <ul className="aboutInfos flex items-center justify-center text-center">
+                    <li className="py-5 px-15 mr-8 last:mr-0">
+                        <img className="w-13 mx-auto" src={aboutProjectsCompeted} alt="Client 1" />
+                        <p className="text-[clamp(1.7rem,3.5vw,3.25rem)] font-bold">400 <span>+</span></p>
+                        <p className="text-[#FFDBDB] text-[clamp(0.875rem,4vw,1.25rem)]">Projects Competed</p>
+                    </li>
+                    <li className="py-5 px-15 mr-8 last:mr-0">
+                        <img className="w-13 mx-auto" src={aboutSuccessfulYears} alt="Client 2" />
+                        <p className="text-[clamp(1.7rem,3.5vw,3.25rem)] font-bold">15 <span>+</span></p>
+                        <p className="text-[#FFDBDB] text-[clamp(0.875rem,4vw,1.25rem)]">Successful Years</p>
+                    </li>
+                    <li className="py-5 px-15 mr-8 last:mr-0">
+                        <img className="w-13 mx-auto" src={aboutClientRetention} alt="Client 3" />
+                        <p className="text-[clamp(1.7rem,3.5vw,3.25rem)] font-bold">98 <span>%</span></p>
+                        <p className="text-[#FFDBDB] text-[clamp(0.875rem,4vw,1.25rem)]">Client Retention</p>
+                    </li>
+                    <li className="py-5 px-15 mr-8 last:mr-0">
+                        <img className="w-13 mx-auto" src={aboutCountries} alt="Client 4" />
+                        <p className="text-[clamp(1.7rem,3.5vw,3.25rem)] font-bold">10 <span>+</span></p>
+                        <p className="text-[#FFDBDB] text-[clamp(0.875rem,4vw,1.25rem)]">Countries</p>
+                    </li>
+                </ul>
+            </div>
           </div>
         </section>
 
         {/* Expertise Pillars */}
-        <section className="py-20 px-6">
-          <div className="max-w-6xl mx-auto">
-            <p className="section-label mb-2">Presight 360 Offices</p>
+        <section className="py-25 px-6" style={{
+            background: `url(${aboutExpertiesBg}) bottom/cover no-repeat`,
+          }}>
+          <div className="main-wrapper">
+            <p className="section-label text-[clamp(0.7rem,1.5rem,1.125rem)]! mb-2">Presight 360 Offices</p>
             <SectionHeader title="EXPERTISE PILLARS" className="mb-10" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <p className="text-white text-[clamp(0.675rem,4vw,1.125rem)] mb-13">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12.5 p-12.5 rounded-[38px] bg-[rgba(0, 0, 0, 0.004)] border border-[rgba(255,255,255,0.1)] shadow-[0px_4px_15px_rgba(0,0,0,0.55)] backdrop-blur-2xl relative">
               {EXPERTISE.map((item, i) => (
-                <Card key={i} className="p-6">
-                  <h3 className="font-bold mb-2 font-display text-base uppercase">
+                <Card key={i} className="p-9.5">
+                <img src={item.image} alt="expertise" className="rounded-xl" />
+                  <h3 className="font-bold mb-2 font-display text-[clamp(0.65rem,5vw,1.5rem)] uppercase mt-6">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-secondary\/70 leading-[1.7]">
+                  <p className="text-[clamp(0.5rem,4vw,1.125rem)] text-secondary\/70 leading-[1.7]">
                     {item.desc}
                   </p>
                 </Card>
               ))}
+              <div className="absolute top-1/2 left-1/2 transform -translate-1/2 bg-[#041246] h-auto w-[20%] max-w-78 max-h-78 aspect-square rounded-[100%]"><img src={siteLogo} alt="Presight 360" className="w-full h-full mx-auto object-contain max-w-[65%]" /></div>
             </div>
           </div>
         </section>
 
         {/* Clients */}
-        <section className="py-[60px] px-6 border-t border-white\/05">
+        <section className="py-15 px-6 border-t border-white\/05">
           <div className="max-w-6xl mx-auto">
             <p className="section-label mb-8 text-center">
               Associated Partners
@@ -325,7 +364,7 @@ export default function About() {
               {CLIENTS.map((client, i) => (
                 <div
                   key={i}
-                  className="text-white/40 font-display font-bold text-[1.1rem] tracking-[0.05em]"
+                  className="text-white/40 font-display font-bold text-[1.1rem] tracking-wider"
                 >
                   {client}
                 </div>
