@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, User, ArrowRight, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import PageHero from '../components/common/PageHero';
 import Card from '../components/common/Card';
 import { Avatar1, Avatar2, Avatar3, dummyUserIcon, insight1, insight2, insight3, insight4, insightListing, insightListingBg } from '../assets/images';
@@ -48,6 +49,33 @@ function InsightCard({ insight }) {
 
 export default function Insights() {
   const featured = INSIGHTS_DATA[3];
+  const [currentPage, setCurrentPage] = useState(1);
+  const [cols, setCols] = useState(3);
+
+  useEffect(() => {
+    const updateCols = () => {
+      if (window.innerWidth >= 1024) setCols(3);
+      else if (window.innerWidth >= 768) setCols(2);
+      else setCols(1);
+    };
+    updateCols();
+    window.addEventListener('resize', updateCols);
+    return () => window.removeEventListener('resize', updateCols);
+  }, []);
+
+  useEffect(() => { setCurrentPage(1); }, [cols]);
+
+  const itemsPerPage = cols * 3;
+  const totalPages = Math.ceil(INSIGHTS_DATA.length / itemsPerPage);
+  const currentItems = INSIGHTS_DATA.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+  const getPageNumbers = () => {
+    if (totalPages <= 3) return Array.from({ length: totalPages }, (_, i) => i + 1);
+    const start = Math.max(1, Math.min(currentPage - 1, totalPages - 2));
+    const pages = [start, start + 1, start + 2];
+    if (start + 2 < totalPages) pages.push('...', totalPages);
+    return pages;
+  };
 
   return (
     <>
@@ -108,26 +136,39 @@ export default function Insights() {
           {/* <SectionHeader title="News &amp; Insight" className="mb-10" /> */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8.5">
-            {INSIGHTS_DATA.map((insight) => (
-              <InsightCard key={insight.slug} insight={insight} />
+            {currentItems.map((insight, i) => (
+              <InsightCard key={`${insight.slug}-${i}`} insight={insight} />
             ))}
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center gap-2 mt-12">
-            <button className="w-8 h-8 flex items-center justify-center rounded border border-white\/10 text-white/50 bg-transparent cursor-pointer hover:border-white/30 transition-colors">
-              <ChevronLeft size={14} />
+          <div className="flex items-center justify-center gap-12.5 mt-12">
+            <button
+              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className="flex items-center justify-center gap-1 rounded text-white [font-size:var(--fs-body-sm)] font-medium bg-transparent cursor-pointer hover:border-white/30 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <ArrowLeft size={18} /> Previous
             </button>
-            {[1, 2, 3, '...', 30].map((p, i) => (
-              <button
-                key={i}
-                className={`w-8 h-8 flex items-center justify-center rounded [font-size:var(--fs-body-xs)] border border-white\/10 cursor-pointer transition-colors ${p === 2 ? 'bg-accent-red text-white' : 'bg-transparent text-white/50 hover:border-white/30'}`}
-              >
-                {p}
-              </button>
-            ))}
-            <button className="w-8 h-8 flex items-center justify-center rounded border border-white\/10 text-white/50 bg-transparent cursor-pointer hover:border-white/30 transition-colors">
-              <ChevronRight size={14} />
+            <div className="flex items-center justify-center gap-2 px-12.5 border-x">
+              {getPageNumbers().map((p, i) => (
+                <button
+                  key={i}
+                  onClick={() => typeof p === 'number' && setCurrentPage(p)}
+                  disabled={p === '...'}
+                  className={`w-8 h-8 flex items-center justify-center rounded-full [font-size:var(--fs-body-sm)] transition-colors
+                    ${p === currentPage ? 'bg-accent-red text-white cursor-pointer' : p === '...' ? 'text-white cursor-default' : 'bg-white/10 text-white hover:bg-white/20 cursor-pointer'}`}
+                >
+                  {p}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className="flex items-center justify-center gap-1 rounded text-white [font-size:var(--fs-body-sm)] font-medium bg-transparent cursor-pointer hover:border-white/30 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              Next <ArrowRight size={18} />
             </button>
           </div>
         </div>
