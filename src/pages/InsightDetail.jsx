@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import {
     User,
@@ -8,6 +9,10 @@ import {
     ChevronRight,
     Dot,
 } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import PageHero from "../components/common/PageHero";
 import Card from "../components/common/Card";
 import { INSIGHTS_DATA } from "./Insights";
@@ -27,10 +32,48 @@ const CATEGORIES = [
     { name: "News", count: 21 },
 ];
 
+function RelatedCard({ post }) {
+    return (
+        <Link to={`/insights/${post.slug}`} className="block no-underline">
+            <Card className="overflow-hidden group h-full p-5">
+                <div className="bg-[linear-gradient(135deg,rgba(26,107,219,0.2)_0%,rgba(7,29,56,0.8)_100%)] flex items-center justify-center text-white/10 [font-size:var(--fs-body-xs)]">
+                    <img
+                        src={post.image}
+                        alt={post.title}
+                        className="aspect-[2.04/1] rounded-[10px] w-full h-auto"
+                    />
+                </div>
+                <div className="mt-2.5">
+                    <h3 className="line-clamp-3 font-bold mb-3 leading-snug group-hover:opacity-80 transition-opacity font-display [font-size:var(--fs-body)] uppercase">
+                        {post.title}
+                    </h3>
+                    <div className="flex items-center gap-4 [font-size:var(--fs-body-sm)] text-white">
+                        <span className="flex items-center gap-1.5">
+                            <img src={post.avatar} alt={post.author} />{" "}
+                            {post.author}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                            <Calendar size={11} /> {post.date}
+                        </span>
+                    </div>
+                </div>
+            </Card>
+        </Link>
+    );
+}
+
 export default function InsightDetail() {
     const { slug } = useParams();
     const insight = INSIGHTS_DATA.find((i) => i.slug === slug);
     const related = INSIGHTS_DATA.filter((i) => i.slug !== slug).slice(0, 4);
+    const [isSlider, setIsSlider] = useState(false);
+
+    useEffect(() => {
+        const check = () => setIsSlider(window.innerWidth <= 1336);
+        check();
+        window.addEventListener("resize", check);
+        return () => window.removeEventListener("resize", check);
+    }, []);
 
     if (!insight) {
         return (
@@ -251,43 +294,31 @@ export default function InsightDetail() {
                                 </Button>
                             </Link>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-                            {related.map((post) => (
-                                <Link
-                                    key={post.slug}
-                                    to={`/insights/${post.slug}`}
-                                    className="block no-underline"
-                                >
-                                    <Card className="overflow-hidden group h-full p-5">
-                                        <div className="bg-[linear-gradient(135deg,rgba(26,107,219,0.2)_0%,rgba(7,29,56,0.8)_100%)] flex items-center justify-center text-white/10 [font-size:var(--fs-body-xs)]">
-                                            <img
-                                                src={post.image}
-                                                alt={post.title}
-                                                className="aspect-[2.04/1] rounded-[10px] w-full h-auto"
-                                            />
-                                        </div>
-                                        <div className="mt-2.5">
-                                            <h3 className="line-clamp-3 font-bold mb-3 leading-snug group-hover:opacity-80 transition-opacity font-display [font-size:var(--fs-body)] uppercase">
-                                                {post.title}
-                                            </h3>
-                                            <div className="flex items-center gap-4 [font-size:var(--fs-body-sm)] text-white">
-                                                <span className="flex items-center gap-1.5">
-                                                    <img
-                                                        src={post.avatar}
-                                                        alt={post.author}
-                                                    />{" "}
-                                                    {post.author}
-                                                </span>
-                                                <span className="flex items-center gap-1.5">
-                                                    <Calendar size={11} />{" "}
-                                                    {post.date}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </Card>
-                                </Link>
-                            ))}
-                        </div>
+                        {isSlider ? (
+                            <Swiper
+                                modules={[Pagination]}
+                                pagination={{ clickable: true }}
+                                spaceBetween={20}
+                                breakpoints={{
+                                    0: { slidesPerView: 1 },
+                                    768: { slidesPerView: 2 },
+                                    1024: { slidesPerView: 3 },
+                                }}
+                                className="w-full related-swiper"
+                            >
+                                {related.map((post, i) => (
+                                    <SwiperSlide key={`${post.slug}-${i}`}>
+                                        <RelatedCard post={post} />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        ) : (
+                            <div className="grid grid-cols-4 gap-5">
+                                {related.map((post, i) => (
+                                    <RelatedCard key={`${post.slug}-${i}`} post={post} />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </section>
             </main>
