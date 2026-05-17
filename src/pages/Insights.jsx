@@ -142,7 +142,7 @@ export default function Insights() {
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center gap-12.5 mt-12">
+          <div className="flex items-center justify-center gap-3 md:gap-12.5 mt-12">
             <button
               onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
               disabled={currentPage === 1}
@@ -150,13 +150,13 @@ export default function Insights() {
             >
               <ArrowLeft size={18} /> Previous
             </button>
-            <div className="flex items-center justify-center gap-2 px-12.5 border-x">
+            <div className="flex items-center justify-center gap-2 px-4 md:px-12.5 border-x">
               {getPageNumbers().map((p, i) => (
                 <button
                   key={i}
                   onClick={() => typeof p === 'number' && setCurrentPage(p)}
                   disabled={p === '...'}
-                  className={`w-8 h-8 flex items-center justify-center rounded-full [font-size:var(--fs-body-sm)] transition-colors
+                  className={`w-5 md:w-8 h-5 md:h-8 flex items-center justify-center rounded-full [font-size:var(--fs-body-sm)] transition-colors
                     ${p === currentPage ? 'bg-accent-red text-white cursor-pointer' : p === '...' ? 'text-white cursor-default' : 'bg-white/10 text-white hover:bg-white/20 cursor-pointer'}`}
                 >
                   {p}
