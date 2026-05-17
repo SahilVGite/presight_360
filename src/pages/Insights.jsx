@@ -2,32 +2,44 @@ import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import PageHero from '../components/common/PageHero';
 import Card from '../components/common/Card';
+import { Avatar1, Avatar2, Avatar3, dummyUserIcon, insight1, insight2, insight3, insight4, insightListing, insightListingBg } from '../assets/images';
+import Button from '../components/common/Button';
+import SectionHeader from '../components/common/SectionHeader';
 
 export const INSIGHTS_DATA = [
-  { slug: 'from-insight-to-impact', category: 'Insights', title: 'From Insight to Impact: Understanding Strategic Intelligence and Risk Management', author: 'Seth Stanton', date: '07 Apr, 2025', readTime: '2 min read', excerpt: "In today's fast-changing business environment, uncertainty is no longer an exception, it is the norm." },
-  { slug: 'why-strategic-intelligence-matters', category: 'News', title: 'Why Strategic Intelligence and Risk Awareness Matter More Than Ever', author: 'Bianca Fontana', date: '07 Apr, 2025', readTime: '3 min read', excerpt: 'Organizations that succeed are not those that avoid risk entirely, but those that understand it early.' },
-  { slug: 'navigating-uncertainty', category: 'Casestudy', title: 'Navigating Uncertainty: The Role of Strategic Intelligence and Risk Concepts', author: 'Claudia Pridham', date: '07 Apr, 2025', readTime: '4 min read', excerpt: 'A deep dive into how leading organizations build resilience through strategic foresight.' },
-  { slug: 'crisis-response-israel-iran', category: 'News', title: "Crisis Response Under Pressure: Sicuro Group's Israel-Iran Escalation Response", author: 'Shafiq B', date: '16 Jan, 2025', readTime: '5 min read', excerpt: "In today's fast-changing business environment, uncertainty is no longer an exception, it is the norm." },
+  { slug: 'from-insight-to-impact', category: 'Insights', image: insight2, title: 'From Insight to Impact: Understanding Strategic Intelligence and Risk Management', author: 'Seth Stanton', avatar: Avatar1, date: '07 Apr, 2025', readTime: '2 min read', excerpt: "In today's fast-changing business environment, uncertainty is no longer an exception, it is the norm." },
+  { slug: 'why-strategic-intelligence-matters', category: 'News', image: insight3, title: 'Why Strategic Intelligence and Risk Awareness Matter More Than Ever', author: 'Bianca Fontana', avatar: Avatar2, date: '07 Apr, 2025', readTime: '3 min read', excerpt: 'Organizations that succeed are not those that avoid risk entirely, but those that understand it early.' },
+  { slug: 'navigating-uncertainty', category: 'Casestudy', image: insight4, title: 'Navigating Uncertainty: The Role of Strategic Intelligence and Risk Concepts', author: 'Claudia Pridham', avatar: Avatar3, date: '07 Apr, 2025', readTime: '4 min read', excerpt: 'A deep dive into how leading organizations build resilience through strategic foresight.' },
+  { slug: 'crisis-response-israel-iran', category: 'News', image: insight1, title: "Crisis Response Under Pressure: Sicuro Group's Israel-Iran Escalation Response", author: 'Shafiq B', avatar: dummyUserIcon, date: '16 Jan, 2025', readTime: '5 min read', excerpt: "In today’s fast-changing business environment, uncertainty is no longer an exception, it is the norm. Organizations that succeed are not those that avoid risk entirely, but those that understand it early and respond with clarity and confidence. This is where Strategic Intelligence and Risk Management play a critical role." },
+  { slug: 'from-insight-to-impact', category: 'Insights', image: insight2, title: 'From Insight to Impact: Understanding Strategic Intelligence and Risk Management', author: 'Seth Stanton', avatar: Avatar1, date: '07 Apr, 2025', readTime: '2 min read', excerpt: "In today's fast-changing business environment, uncertainty is no longer an exception, it is the norm." },
+  { slug: 'why-strategic-intelligence-matters', category: 'News', image: insight3, title: 'Why Strategic Intelligence and Risk Awareness Matter More Than Ever', author: 'Bianca Fontana', avatar: Avatar2, date: '07 Apr, 2025', readTime: '3 min read', excerpt: 'Organizations that succeed are not those that avoid risk entirely, but those that understand it early.' },
+  { slug: 'navigating-uncertainty', category: 'Casestudy', image: insight4, title: 'Navigating Uncertainty: The Role of Strategic Intelligence and Risk Concepts', author: 'Claudia Pridham', avatar: Avatar3, date: '07 Apr, 2025', readTime: '4 min read', excerpt: 'A deep dive into how leading organizations build resilience through strategic foresight.' },
+  { slug: 'crisis-response-israel-iran', category: 'News', image: insight1, title: "Crisis Response Under Pressure: Sicuro Group's Israel-Iran Escalation Response", author: 'Shafiq B', avatar: dummyUserIcon, date: '16 Jan, 2025', readTime: '5 min read', excerpt: "In today’s fast-changing business environment, uncertainty is no longer an exception, it is the norm. Organizations that succeed are not those that avoid risk entirely, but those that understand it early and respond with clarity and confidence. This is where Strategic Intelligence and Risk Management play a critical role." },
+  { slug: 'from-insight-to-impact', category: 'Insights', image: insight2, title: 'From Insight to Impact: Understanding Strategic Intelligence and Risk Management', author: 'Seth Stanton', avatar: Avatar1, date: '07 Apr, 2025', readTime: '2 min read', excerpt: "In today's fast-changing business environment, uncertainty is no longer an exception, it is the norm." },
+  { slug: 'why-strategic-intelligence-matters', category: 'News', image: insight3, title: 'Why Strategic Intelligence and Risk Awareness Matter More Than Ever', author: 'Bianca Fontana', avatar: Avatar2, date: '07 Apr, 2025', readTime: '3 min read', excerpt: 'Organizations that succeed are not those that avoid risk entirely, but those that understand it early.' },
+  { slug: 'navigating-uncertainty', category: 'Casestudy', image: insight4, title: 'Navigating Uncertainty: The Role of Strategic Intelligence and Risk Concepts', author: 'Claudia Pridham', avatar: Avatar3, date: '07 Apr, 2025', readTime: '4 min read', excerpt: 'A deep dive into how leading organizations build resilience through strategic foresight.' },
+  { slug: 'crisis-response-israel-iran', category: 'News', image: insight1, title: "Crisis Response Under Pressure: Sicuro Group's Israel-Iran Escalation Response", author: 'Shafiq B', avatar: dummyUserIcon, date: '16 Jan, 2025', readTime: '5 min read', excerpt: "In today’s fast-changing business environment, uncertainty is no longer an exception, it is the norm. Organizations that succeed are not those that avoid risk entirely, but those that understand it early and respond with clarity and confidence. This is where Strategic Intelligence and Risk Management play a critical role." },
+  { slug: 'from-insight-to-impact', category: 'Insights', image: insight2, title: 'From Insight to Impact: Understanding Strategic Intelligence and Risk Management', author: 'Seth Stanton', avatar: Avatar1, date: '07 Apr, 2025', readTime: '2 min read', excerpt: "In today's fast-changing business environment, uncertainty is no longer an exception, it is the norm." },
+  { slug: 'why-strategic-intelligence-matters', category: 'News', image: insight3, title: 'Why Strategic Intelligence and Risk Awareness Matter More Than Ever', author: 'Bianca Fontana', avatar: Avatar2, date: '07 Apr, 2025', readTime: '3 min read', excerpt: 'Organizations that succeed are not those that avoid risk entirely, but those that understand it early.' },
+  { slug: 'navigating-uncertainty', category: 'Casestudy', image: insight4, title: 'Navigating Uncertainty: The Role of Strategic Intelligence and Risk Concepts', author: 'Claudia Pridham', avatar: Avatar3, date: '07 Apr, 2025', readTime: '4 min read', excerpt: 'A deep dive into how leading organizations build resilience through strategic foresight.' },
+  { slug: 'crisis-response-israel-iran', category: 'News', image: insight1, title: "Crisis Response Under Pressure: Sicuro Group's Israel-Iran Escalation Response", author: 'Shafiq B', avatar: dummyUserIcon, date: '16 Jan, 2025', readTime: '5 min read', excerpt: "In today’s fast-changing business environment, uncertainty is no longer an exception, it is the norm. Organizations that succeed are not those that avoid risk entirely, but those that understand it early and respond with clarity and confidence. This is where Strategic Intelligence and Risk Management play a critical role." },
 ];
 
 function InsightCard({ insight }) {
   return (
     <Link to={`/insights/${insight.slug}`} className="block no-underline">
-      <Card className="overflow-hidden group h-full">
-        <div className="h-[180px] bg-[linear-gradient(135deg,rgba(26,107,219,0.2)_0%,rgba(7,29,56,0.8)_100%)] flex items-center justify-center text-white/10 [font-size:var(--fs-body-xs)]">
-          [ Article Image ]
+      <Card className="overflow-hidden group h-full p-5">
+        <div className="bg-[linear-gradient(135deg,rgba(26,107,219,0.2)_0%,rgba(7,29,56,0.8)_100%)] flex items-center justify-center text-white/10 [font-size:var(--fs-body-xs)]">
+          <img src={insight.image} alt={insight.title} className='aspect-[2.04/1] rounded-[10px] w-full h-auto' />
         </div>
-        <div className="p-5">
-          <p className="[font-size:var(--fs-body-xs)] mb-2 font-semibold uppercase tracking-wider text-accent-red">
-            {insight.category}
-          </p>
-          <h3 className="font-bold mb-3 leading-snug group-hover:opacity-80 transition-opacity font-display [font-size:var(--fs-body)] uppercase">
+        <div className="mt-2.5">
+          <h3 className="line-clamp-2 font-bold mb-3 leading-snug group-hover:opacity-80 transition-opacity font-display [font-size:var(--fs-body)] uppercase">
             {insight.title}
           </h3>
-          <div className="flex items-center gap-3 [font-size:var(--fs-body-xs)]text-secondary\/50">
-            <span className="flex items-center gap-1"><User size={11} /> {insight.author}</span>
-            <span className="flex items-center gap-1"><Calendar size={11} /> {insight.date}</span>
-          </div>
+          <div className="flex items-center gap-4 [font-size:var(--fs-body-sm)] text-white">
+                <span className="flex items-center gap-1.5"><img src={insight.avatar} alt={insight.author} /> {insight.author}</span>
+                <span className="flex items-center gap-1.5"><Calendar size={11} /> {insight.date}</span>
+              </div>
         </div>
       </Card>
     </Link>
@@ -39,50 +51,63 @@ export default function Insights() {
 
   return (
     <>
-      <PageHero label="Insights" title="NEWS & INTELLIGENCE INSIGHTS" />
-
+      <PageHero label="Insights" title="NEWS & INTELLIGENCE INSIGHTS" bgImage={insightListing} />
+    <main className='' style={{
+        background: `url(${insightListingBg}) top/cover no-repeat`,
+    }}>
       {/* Featured */}
-      <section className="py-[60px] px-6 bg-secondary">
-        <div className="max-w-6xl mx-auto">
-          <div className="rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2 border border-white\/08">
-            <div className="p-8 flex flex-col justify-center bg-card-70">
-              <p className="[font-size:var(--fs-body-xs)] mb-3 font-semibold uppercase tracking-wider text-accent-red">
-                {featured.category}
-              </p>
-              <h2 className="mb-4 font-display font-[800] uppercase leading-[1.15] [font-size:var(--fs-title-sm)]">
+      <section className="py-25">
+        <div className="main-wrapper">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="py-[2em] md:py-[4em] [@media(min-width:1440px)]:py-[4.687em] px-[2em] md:px-[4em] [@media(min-width:1440px)]:px-[8.125em] [font-size:var(--fs-body)] bg-[rgba(255,255,255,0.02)] backdrop-blur-xl flex flex-col justify-center">
+              <h2 className="mb-[0.666em] font-display font-medium leading-[1.2666] [font-size:var(--fs-title-base)]">
                 {featured.title}
               </h2>
-              <div className="flex items-center gap-3 [font-size:var(--fs-body-xs)]mb-5 text-secondary\/50">
-                <span className="flex items-center gap-1"><User size={11} /> {featured.author}</span>
-                <span className="flex items-center gap-1"><Calendar size={11} /> {featured.date}</span>
+              <div className="flex items-center gap-4 [font-size:var(--fs-body-sm)] mb-[1.428em] text-white">
+                <span className="flex items-center gap-1.5"><img src={featured.avatar} alt={featured.author} /> {featured.author}</span>
+                <span className="flex items-center gap-1.5"><Calendar size={11} /> {featured.date}</span>
               </div>
-              <p className="[font-size:var(--fs-body-sm)] leading-relaxed mb-6 text-secondary\/70">
+              <p className="[font-size:var(--fs-body)] leading-relaxed mb-[1.25em] text-white">
                 {featured.excerpt}
               </p>
-              <Link to={`/insights/${featured.slug}`} className="btn-primary px-5 py-2 [font-size:var(--fs-body-sm)] self-start no-underline">
-                Continue Reading <ArrowRight size={14} />
-              </Link>
+                <Link to={`/insights/${featured.slug}`}>
+                    <Button variant="primary" size="md" showArrow>
+                        Continue Reading
+                    </Button>
+                </Link>
             </div>
-            <div className="min-h-[260px] bg-[linear-gradient(135deg,rgba(26,107,219,0.15)_0%,rgba(7,29,56,0.6)_100%)] flex items-center justify-center text-white/10 [font-size:var(--fs-body-xs)]">
-              [ Featured Image ]
+            <div className="flex items-center justify-center text-white/40 [font-size:var(--fs-body-xs)]">
+              <img src={featured.image} alt={featured.title} className='w-full h-full object-cover' />
             </div>
           </div>
         </div>
       </section>
 
+      <div className='mx-auto w-[75vw] h-0.5 bg-white/10' />
+
       {/* Grid */}
-      <section className="py-[60px] px-6 bg-primary">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="font-display font-[800] [font-size:var(--fs-body-2xl)] text-accent-red uppercase">
+      <section className="py-25">
+        <div className="main-wrapper">
+          <div className="flex items-center justify-between mb-16">
+            <div className=''>
+                <h2 className="font-display [font-size:var(--fs-title-lg)] font-bold text-accent-red leading-loose">
               News &amp; Insight
             </h2>
-            <button className="btn-outline px-4 py-2 [font-size:var(--fs-body-xs)] flex items-center gap-1.5">
-              Latest Topic ▾
-            </button>
+            <p className='[font-size:var(--fs-body-md)]'>To begin the application process, search current openings and click “Apply”.</p>
+            </div>
+            <div className='relative'>
+                <select name="" id="" className='appearance-none rounded-[150px] focus:border-none shadow-[0px_10px_20px_rgba(0,0,0,0.08)] bg-[rgba(255,255,255,0.1)] border-none text-white [font-size:var(--fs-body)] px-6 py-4 pr-10 cursor-pointer'>
+                    <option value="" selected disabled>Latest Totpic</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                </select>
+                <span className='absolute pointer-events-none top-1/2 right-3.5 transform -translate-1/2'>▾</span>
+            </div>
           </div>
+          {/* <SectionHeader title="News &amp; Insight" className="mb-10" /> */}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8.5">
             {INSIGHTS_DATA.map((insight) => (
               <InsightCard key={insight.slug} insight={insight} />
             ))}
@@ -107,6 +132,7 @@ export default function Insights() {
           </div>
         </div>
       </section>
+    </main>
     </>
   );
 }

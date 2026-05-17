@@ -66,6 +66,16 @@ import expertise2 from "./expertise2.png";
 import expertise3 from "./expertise3.png";
 import expertise4 from "./expertise4.png";
 import ourClientsBg from "./ourClientsBg.png";
+import insightListing from "./insightListing.png";
+import insightListingBg from "./insightListingBg.png";
+import dummyUserIcon from "./dummyUserIcon.png";
+import Avatar1 from "./Avatar1.png";
+import Avatar2 from "./Avatar2.png";
+import Avatar3 from "./Avatar3.png";
+import insight1 from "./insight1.png";
+import insight2 from "./insight2.png";
+import insight3 from "./insight3.png";
+import insight4 from "./insight4.png";
 
 export {
   bannerBgImage,
@@ -129,4 +139,14 @@ export {
   expertise3,
   expertise4,
   ourClientsBg,
+  insightListing,
+  insightListingBg,
+  dummyUserIcon,
+  insight1,
+  insight2,
+  insight3,
+  insight4,
+  Avatar1,
+  Avatar2,
+  Avatar3,
 };
