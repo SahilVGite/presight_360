@@ -1,9 +1,8 @@
 import Link from "next/link";
 import Button from "../common/Button";
 
-import halfGlobe from "../../assets/images/globeHalf.png";
-
 import {
+  globeHalf,
   securityIcon1,
   securityIcon2,
   securityIcon3,
@@ -71,7 +70,7 @@ export default function SecurityIntelligenceSection() {
       <div className="relative [@media(max-width:850px)]:pb-52 [@media(max-width:1023px)]:pb-64">
         {/* Globe Image */}
         <img
-          src={halfGlobe}
+          src={globeHalf}
           alt=""
           aria-hidden="true"
           className="absolute bottom-0 right-0 w-[72%] max-w-[55%] lg:max-w-[40%] [@media(min-width:1680px)]:max-w-[49.75%] h-auto pointer-events-none select-none z-0"
