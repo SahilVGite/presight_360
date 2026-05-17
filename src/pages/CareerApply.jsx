@@ -1,5 +1,4 @@
-import "../assets/css/career.css";
-import { useParams } from "react-router-dom";
+import { useRouter } from "next/router";
 import PageHero from "../components/common/PageHero";
 import Button from "../components/common/Button";
 import { CareerFormMain, careerFormBannerBg } from "../assets/images";
@@ -7,7 +6,7 @@ import { JOBS_DATA } from "./Careers";
 import Upload from "../assets/icons/Upload.jsx";
 
 export default function CareerApply() {
-  const { id } = useParams();
+  const { id } = useRouter().query;
   const job = JOBS_DATA.find((j) => j.id === parseInt(id));
 
   return (

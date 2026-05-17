@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Button from '../common/Button';
 
 export default function HeroSection() {
@@ -18,12 +18,12 @@ export default function HeroSection() {
             Transforming data into actionable intelligence
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link to="/solutions">
+            <Link href="/solutions">
               <Button variant="primary" size="md" showArrow>
                 Explore Services
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link href="/contact">
               <Button variant="primary" size="md" showArrow>
                 Request Consultation
               </Button>

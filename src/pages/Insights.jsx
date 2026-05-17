@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Calendar, User, ArrowRight, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import PageHero from '../components/common/PageHero';
 import Card from '../components/common/Card';
@@ -28,7 +28,7 @@ export const INSIGHTS_DATA = [
 
 function InsightCard({ insight }) {
   return (
-    <Link to={`/insights/${insight.slug}`} className="block no-underline">
+    <Link href={`/insights/${insight.slug}`} className="block no-underline">
       <Card className="overflow-hidden group h-full p-5">
         <div className="bg-[linear-gradient(135deg,rgba(26,107,219,0.2)_0%,rgba(7,29,56,0.8)_100%)] flex items-center justify-center text-white/10 [font-size:var(--fs-body-xs)]">
           <img src={insight.image} alt={insight.title} className='aspect-[2.04/1] rounded-[10px] w-full h-auto' />
@@ -98,7 +98,7 @@ export default function Insights() {
               <p className="[font-size:var(--fs-body)] leading-relaxed mb-[1.25em] text-white">
                 {featured.excerpt}
               </p>
-                <Link to={`/insights/${featured.slug}`}>
+                <Link href={`/insights/${featured.slug}`}>
                     <Button variant="primary" size="md" showArrow>
                         Continue Reading
                     </Button>

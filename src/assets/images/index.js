@@ -1,153 +1,79 @@
-import ContactMain from "../images/contact_main.png";
-import CareerFormMain from "../images/career_form_main.png";
-import careerFormBannerBg from "../images/carrer_form_banner-bg.png";
-import careerFormBg from "../images/carrer_form-bg.png";
-import careerBannerBg from "../images/carrer_banner-bg.png";
-import bannerBgImage from "./bannerBgImg.png";
-import globeHalf from "./globeHalf.png";
-import siteLogo from "./siteLogo.png";
-import siteShortLogo from "./siteShortLogo.png";
-import smartSecurityBg from "./smartSecurityBg.png";
+export const ContactMain         = '/images/contact_main.png';
+export const CareerFormMain      = '/images/career_form_main.png';
+export const careerFormBannerBg  = '/images/carrer_form_banner-bg.png';
+export const careerFormBg        = '/images/carrer_form-bg.png';
+export const careerBannerBg      = '/images/carrer_banner-bg.png';
+export const bannerBgImage       = '/images/bannerBgImg.png';
+export const globeHalf           = '/images/globeHalf.png';
+export const siteLogo            = '/images/siteLogo.png';
+export const siteShortLogo       = '/images/siteShortLogo.png';
+export const smartSecurityBg     = '/images/smartSecurityBg.png';
 
-import securityIcon1 from "./icon1.png";
-import securityIcon2 from "./icon2.png";
-import securityIcon3 from "./icon3.png";
-import securityIcon4 from "./icon4.png";
-import securityIcon5 from "./icon5.png";
-import securityIcon6 from "./icon6.png";
-import securityIcon7 from "./icon7.png";
-import securityIcon8 from "./icon8.png";
+export const securityIcon1 = '/images/icon1.png';
+export const securityIcon2 = '/images/icon2.png';
+export const securityIcon3 = '/images/icon3.png';
+export const securityIcon4 = '/images/icon4.png';
+export const securityIcon5 = '/images/icon5.png';
+export const securityIcon6 = '/images/icon6.png';
+export const securityIcon7 = '/images/icon7.png';
+export const securityIcon8 = '/images/icon8.png';
 
-import guidingImg1 from "./guidingImg1.png";
-import guidingImg2 from "./guidingImg2.png";
+export const guidingImg1 = '/images/guidingImg1.png';
+export const guidingImg2 = '/images/guidingImg2.png';
 
-import whyPresightBg from "./bgGif.gif";
-import strategyImg1 from "./strategyImg1.png";
-import strategyImg2 from "./strategyImg2.png";
-import strategyImg3 from "./strategyImg3.png";
-import reportImg1 from "./reportImg1.png";
-import reportImg2 from "./reportImg2.png";
-import reportImg3 from "./reportImg3.png";
-import worldMap from "./worldmap.svg";
+export const whyPresightBg = '/images/bgGif.gif';
+export const strategyImg1  = '/images/strategyImg1.png';
+export const strategyImg2  = '/images/strategyImg2.png';
+export const strategyImg3  = '/images/strategyImg3.png';
+export const reportImg1    = '/images/reportImg1.png';
+export const reportImg2    = '/images/reportImg2.png';
+export const reportImg3    = '/images/reportImg3.png';
+export const worldMap      = '/images/worldmap.svg';
 
-import industriesBannerBg from "./industries_banner_bg.png";
-import industriesMainImg from "./industriesMainImg.png";
-import certification1 from "./certification1.png";
-import certification2 from "./certification2.png";
-import certification3 from "./certification3.png";
-import certification4 from "./certification4.png";
-import certification5 from "./certification5.png";
-import certification6 from "./certification6.png";
+export const industriesBannerBg = '/images/industries_banner_bg.png';
+export const industriesMainImg  = '/images/industriesMainImg.png';
+export const certification1     = '/images/certification1.png';
+export const certification2     = '/images/certification2.png';
+export const certification3     = '/images/certification3.png';
+export const certification4     = '/images/certification4.png';
+export const certification5     = '/images/certification5.png';
+export const certification6     = '/images/certification6.png';
 
-import successStoryImg1 from "./successStoryImg1.png";
-import successStoryImg2 from "./successStoryImg2.png";
+export const successStoryImg1 = '/images/successStoryImg1.png';
+export const successStoryImg2 = '/images/successStoryImg2.png';
 
-import aboutBannerBg from "./about_banner-bg.png";
-import aboutPgBgGradient from "./aboutPgBgGradient.png";
-import aboutOverviewBg from "./aboutOverviewBg.png";
-import Team1 from "./team1.png";
-import Team2 from "./team2.png";
-import Team3 from "./team3.png";
-import Team4 from "./team4.png";
-import aboutMapBg from "./aboutMapBg.png";
-import aboutInfoSecBg from "./aboutInfoSecBg.png";
-import aboutProjectsCompeted from "./aboutProjectsCompeted.png";
-import aboutSuccessfulYears from "./aboutSuccessfulYears.png";
-import aboutClientRetention from "./aboutClientRetention.png";
-import aboutCountries from "./aboutCountries.png";
-import Client1 from "./client1.png";
-import Client2 from "./client2.png";
-import Client3 from "./client3.png";
-import Client4 from "./client4.png";
-import aboutExpertiesBg from "./aboutExpertiesBg.png";
-import expertise1 from "./expertise1.png";
-import expertise2 from "./expertise2.png";
-import expertise3 from "./expertise3.png";
-import expertise4 from "./expertise4.png";
-import ourClientsBg from "./ourClientsBg.png";
-import insightListing from "./insightListing.png";
-import insightListingBg from "./insightListingBg.png";
-import dummyUserIcon from "./dummyUserIcon.png";
-import Avatar1 from "./Avatar1.png";
-import Avatar2 from "./Avatar2.png";
-import Avatar3 from "./Avatar3.png";
-import insight1 from "./insight1.png";
-import insight2 from "./insight2.png";
-import insight3 from "./insight3.png";
-import insight4 from "./insight4.png";
-import videoPlayBtn from "./videoPlayBtn.png";
+export const aboutBannerBg          = '/images/about_banner-bg.png';
+export const aboutPgBgGradient      = '/images/aboutPgBgGradient.png';
+export const aboutOverviewBg        = '/images/aboutOverviewBg.png';
+export const Team1                  = '/images/team1.png';
+export const Team2                  = '/images/team2.png';
+export const Team3                  = '/images/team3.png';
+export const Team4                  = '/images/team4.png';
+export const aboutMapBg             = '/images/aboutMapBg.png';
+export const aboutInfoSecBg         = '/images/aboutInfoSecBg.png';
+export const aboutProjectsCompeted  = '/images/aboutProjectsCompeted.png';
+export const aboutSuccessfulYears   = '/images/aboutSuccessfulYears.png';
+export const aboutClientRetention   = '/images/aboutClientRetention.png';
+export const aboutCountries         = '/images/aboutCountries.png';
+export const Client1                = '/images/client1.png';
+export const Client2                = '/images/client2.png';
+export const Client3                = '/images/client3.png';
+export const Client4                = '/images/client4.png';
+export const aboutExpertiesBg       = '/images/aboutExpertiesBg.png';
+export const expertise1             = '/images/expertise1.png';
+export const expertise2             = '/images/expertise2.png';
+export const expertise3             = '/images/expertise3.png';
+export const expertise4             = '/images/expertise4.png';
+export const ourClientsBg           = '/images/ourClientsBg.png';
 
-export {
-    bannerBgImage,
-    globeHalf,
-    siteLogo,
-    siteShortLogo,
-    smartSecurityBg,
-    securityIcon1,
-    securityIcon2,
-    securityIcon3,
-    securityIcon4,
-    securityIcon5,
-    securityIcon6,
-    securityIcon7,
-    securityIcon8,
-    guidingImg1,
-    guidingImg2,
-    whyPresightBg,
-    ContactMain,
-    CareerFormMain,
-    careerFormBannerBg,
-    careerFormBg,
-    careerBannerBg,
-    strategyImg1,
-    strategyImg2,
-    strategyImg3,
-    reportImg1,
-    reportImg2,
-    reportImg3,
-    worldMap,
-    industriesBannerBg,
-    industriesMainImg,
-    certification1,
-    certification2,
-    certification3,
-    certification4,
-    certification5,
-    certification6,
-    successStoryImg1,
-    successStoryImg2,
-    aboutBannerBg,
-    aboutPgBgGradient,
-    aboutOverviewBg,
-    Team1,
-    Team2,
-    Team3,
-    Team4,
-    aboutMapBg,
-    aboutInfoSecBg,
-    aboutProjectsCompeted,
-    aboutSuccessfulYears,
-    aboutClientRetention,
-    aboutCountries,
-    Client1,
-    Client2,
-    Client3,
-    Client4,
-    aboutExpertiesBg,
-    expertise1,
-    expertise2,
-    expertise3,
-    expertise4,
-    ourClientsBg,
-    insightListing,
-    insightListingBg,
-    dummyUserIcon,
-    insight1,
-    insight2,
-    insight3,
-    insight4,
-    Avatar1,
-    Avatar2,
-    Avatar3,
-    videoPlayBtn,
-};
+export const insightListing    = '/images/insightListing.png';
+export const insightListingBg  = '/images/insightListingBg.png';
+export const dummyUserIcon     = '/images/dummyUserIcon.png';
+export const Avatar1           = '/images/Avatar1.png';
+export const Avatar2           = '/images/Avatar2.png';
+export const Avatar3           = '/images/Avatar3.png';
+export const insight1          = '/images/insight1.png';
+export const insight2          = '/images/insight2.png';
+export const insight3          = '/images/insight3.png';
+export const insight4          = '/images/insight4.png';
+export const videoPlayBtn      = '/images/videoPlayBtn.png';

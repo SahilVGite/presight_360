@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import PageHero from '../components/common/PageHero';
 import Card from '../components/common/Card';
@@ -24,7 +24,7 @@ export default function Solutions() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {SOLUTIONS_DATA.map((sol) => (
-              <Link key={sol.slug} to={`/solutions/${sol.slug}`} className="block no-underline">
+              <Link key={sol.slug} href={`/solutions/${sol.slug}`} className="block no-underline">
                 <Card className="p-7 h-full group">
                   <h3 className="font-bold mb-3 font-display [font-size:var(--fs-body-md)] uppercase leading-[1.2]">
                     {sol.title}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Button from "../common/Button";
 
 import halfGlobe from "../../assets/images/globeHalf.png";
@@ -101,15 +101,11 @@ export default function SecurityIntelligenceSection() {
             </p>
           </div>
 
-          <Button
-            variant="primary"
-            size="sm"
-            showArrow
-            as={Link}
-            to="/solutions"
-          >
-            Explore Us
-          </Button>
+          <Link href="/solutions">
+            <Button variant="primary" size="sm" showArrow>
+              Explore Us
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -122,7 +118,7 @@ export default function SecurityIntelligenceSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 [@media(min-width:1600px)]:grid-cols-4 gap-x-20 gap-y-11.5">
             {SOLUTIONS.map(({ icon, title, desc, href }, i) => (
-              <Link key={i} to={href} className="group block no-underline">
+              <Link key={i} href={href} className="group block no-underline">
                 {/* Icon Box */}
                 <div className="w-12 h-12 flex items-center justify-center mb-4 ">
                   <img src={icon} alt={title} />

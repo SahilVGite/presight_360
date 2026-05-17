@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
@@ -12,7 +12,7 @@ export default function NotFound() {
       <p className="[font-size:var(--fs-body-sm)] mb-8 text-secondary\/60 max-w-[320px] leading-[1.7]">
         The page you're looking for doesn't exist or has been moved.
       </p>
-      <Link to="/" className="btn-primary px-6 py-3 [font-size:var(--fs-body-sm)] no-underline">
+      <Link href="/" className="btn-primary px-6 py-3 [font-size:var(--fs-body-sm)] no-underline">
         Back to Home →
       </Link>
     </div>

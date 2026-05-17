@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Search, MapPin, ChevronUp, ArrowRight } from "lucide-react";
 import PageHero from "../components/common/PageHero";
 import Card from "../components/common/Card";
@@ -111,7 +111,7 @@ function JobCard({ job }) {
                     </ul>
                     <div className="flex justify-end">
                         <Link
-                            to={`/careers/${job.id}/apply`}
+                            href={`/careers/${job.id}/apply`}
                             className="btn-primary px-5 py-2 [font-size:var(--fs-body-sm)] no-underline"
                         >
                             Apply Now

@@ -1,11 +1,12 @@
-import { useParams, Link } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import PageHero from '../components/common/PageHero';
 import CTASection from '../components/common/CTASection';
 import { SOLUTIONS_DATA } from './Solutions';
 
 export default function SolutionDetail() {
-  const { slug } = useParams();
+  const { slug } = useRouter().query;
   const solution = SOLUTIONS_DATA.find((s) => s.slug === slug);
 
   if (!solution) {
@@ -13,7 +14,7 @@ export default function SolutionDetail() {
       <div className="pt-[120px] text-center min-h-[60vh] flex items-center justify-center">
         <div>
           <p className="text-white/50 mb-4">Solution not found.</p>
-          <Link to="/solutions" className="text-accent-red no-underline hover:underline">← Back to Solutions</Link>
+          <Link href="/solutions" className="text-accent-red no-underline hover:underline">← Back to Solutions</Link>
         </div>
       </div>
     );
@@ -27,7 +28,7 @@ export default function SolutionDetail() {
       <section className="py-20 px-6 bg-secondary">
         <div className="max-w-6xl mx-auto">
           <Link
-            to="/solutions"
+            href="/solutions"
             className="flex items-center gap-2 [font-size:var(--fs-body-sm)] mb-10 text-secondary\/60 hover:text-white transition-colors no-underline"
           >
             <ArrowLeft size={14} /> Back to Solutions

@@ -1,4 +1,3 @@
-import "../assets/css/contact.css";
 import { ContactMain } from "../assets/images";
 import Button from "../components/common/Button";
 

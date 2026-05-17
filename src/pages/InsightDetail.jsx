@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import {
     User,
     Clock,
@@ -34,7 +35,7 @@ const CATEGORIES = [
 
 function RelatedCard({ post }) {
     return (
-        <Link to={`/insights/${post.slug}`} className="block no-underline">
+        <Link href={`/insights/${post.slug}`} className="block no-underline">
             <Card className="overflow-hidden group h-full p-5">
                 <div className="bg-[linear-gradient(135deg,rgba(26,107,219,0.2)_0%,rgba(7,29,56,0.8)_100%)] flex items-center justify-center text-white/10 [font-size:var(--fs-body-xs)]">
                     <img
@@ -63,7 +64,7 @@ function RelatedCard({ post }) {
 }
 
 export default function InsightDetail() {
-    const { slug } = useParams();
+    const { slug } = useRouter().query;
     const insight = INSIGHTS_DATA.find((i) => i.slug === slug);
     const related = INSIGHTS_DATA.filter((i) => i.slug !== slug).slice(0, 4);
     const [isSlider, setIsSlider] = useState(false);
@@ -81,7 +82,7 @@ export default function InsightDetail() {
                 <div>
                     <p className="text-white/50 mb-4">Article not found.</p>
                     <Link
-                        to="/insights"
+                        href="/insights"
                         className="text-accent-red no-underline hover:underline"
                     >
                         ← Back to Insights
@@ -191,19 +192,19 @@ export default function InsightDetail() {
                                             Share:
                                         </span>
                                         <Link
-                                            to={"/"}
+                                            href={"/"}
                                             className="text-white/40 bg-transparent border-none cursor-pointer p-1 hover:text-white/70 transition-colors"
                                         >
                                             <FacebookIcon />
                                         </Link>
                                         <Link
-                                            to={"/"}
+                                            href={"/"}
                                             className="text-white/40 bg-transparent border-none cursor-pointer p-1 hover:text-white/70 transition-colors"
                                         >
                                             <TelegramIcon />
                                         </Link>
                                         <Link
-                                            to={"/"}
+                                            href={"/"}
                                             className="text-white/40 bg-transparent border-none cursor-pointer p-1 hover:text-white/70 transition-colors"
                                         >
                                             <InstagramIcon />
@@ -223,7 +224,7 @@ export default function InsightDetail() {
                                             (post, i) => (
                                                 <Link
                                                     key={i}
-                                                    to={`/insights/${post.slug}`}
+                                                    href={`/insights/${post.slug}`}
                                                     className="flex items-center gap-3 group no-underline"
                                                 >
                                                     <div className="rounded shrink-0 w-16 lg:w-28 h-16 lg:h-28 bg-blue-dim flex items-center justify-center text-[calc(var(--fs-body-xs)-2px)] text-white/20">
@@ -288,7 +289,7 @@ export default function InsightDetail() {
                             <h2 className="font-display font-[800] [font-size:var(--fs-title-lg)] text-accent-red uppercase">
                                 Related Post
                             </h2>
-                            <Link to={`/insights`}>
+                            <Link href={`/insights`}>
                                 <Button variant="primary" size="md" showArrow>
                                     View All
                                 </Button>

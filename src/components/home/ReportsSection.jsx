@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper/modules";
@@ -79,7 +79,7 @@ export default function ReportsSection() {
           {REPORTS.map((report, i) => (
             <SwiperSlide key={i}>
               <Link
-                to={report.href}
+                href={report.href}
                 className="no-underline flex [@media(max-width:610px)]:flex-col-reverse items-stretch gap-2 rounded-2xl overflow-hidden transition-all duration-200 group p-4 md:p-8 bg-glass-effect"
               >
                 {/* Left — text content */}
