@@ -8,7 +8,12 @@ import { siteLogo } from "../../assets/images";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -21,7 +26,7 @@ export default function Navbar() {
   }, []);
 
   const isActive = (path) =>
-    router.asPath === path || router.asPath.startsWith(path + "/");
+    mounted && (router.asPath === path || router.asPath.startsWith(path + "/"));
 
   return (
     <header className="fixed top-4 md:top-8 lg:top-14 left-0 right-0 z-50 px-3 md:px-5">
