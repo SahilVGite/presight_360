@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
@@ -33,16 +34,45 @@ const SOLUTIONS = [
     desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
     icon: MedicalKitIcon,
   },
+  {
+    title: "Quick Support1",
+    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
+    icon: HeadPhonesIcon,
+  },
+  {
+    title: "Oversight2",
+    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
+    icon: EyeIcon,
+  },
+  {
+    title: "Intelligence3",
+    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
+    icon: BulbIcon,
+  },
+  {
+    title: "Medical Integration4",
+    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
+    icon: MedicalKitIcon,
+  },
+  {
+    title: "Medical Integration10",
+    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
+    icon: MedicalKitIcon,
+  },
 ];
 
 const SolutionsSlider = () => {
+  const [prevEl, setPrevEl] = useState(null);
+  const [nextEl, setNextEl] = useState(null);
+  const [paginationEl, setPaginationEl] = useState(null);
+
   return (
     <section
       className="solutions-slider-section py-16 md:py-22 lg:py-25 overflow-hidden"
       style={{
         backgroundImage: `url(${solutionSliderBg})`,
-        backgroundPosition: "bottom",
-        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -56,13 +86,32 @@ const SolutionsSlider = () => {
           slidesPerView="auto"
           spaceBetween={20}
           initialSlide={1}
-          navigation={{
-            prevEl: ".solutions-slider-prev",
-            nextEl: ".solutions-slider-next",
-          }}
-          pagination={{
-            el: ".solutions-slider-pagination",
-            clickable: true,
+          speed={600}
+          navigation={
+            prevEl && nextEl
+              ? {
+                  prevEl,
+                  nextEl,
+                }
+              : false
+          }
+          pagination={
+            paginationEl
+              ? {
+                  el: paginationEl,
+                  clickable: true,
+                }
+              : false
+          }
+          onBeforeInit={(swiper) => {
+            if (swiper.params.navigation && prevEl && nextEl) {
+              swiper.params.navigation.prevEl = prevEl;
+              swiper.params.navigation.nextEl = nextEl;
+            }
+
+            if (swiper.params.pagination && paginationEl) {
+              swiper.params.pagination.el = paginationEl;
+            }
           }}
           breakpoints={{
             768: { spaceBetween: 28 },
@@ -97,14 +146,16 @@ const SolutionsSlider = () => {
           aria-label="Solutions slider controls"
         >
           <button
+            ref={setPrevEl}
             type="button"
             className="solutions-slider-arrow solutions-slider-prev"
             aria-label="Previous solution"
           >
             <ChevronLeft size={18} strokeWidth={2.4} />
           </button>
-          <div className="solutions-slider-pagination" />
+          <div ref={setPaginationEl} className="solutions-slider-pagination" />
           <button
+            ref={setNextEl}
             type="button"
             className="solutions-slider-arrow solutions-slider-next"
             aria-label="Next solution"
