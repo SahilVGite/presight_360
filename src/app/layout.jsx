@@ -3,6 +3,19 @@ import '../assets/css/fonts.css'
 import '../assets/css/career.css'
 import '../assets/css/contact.css'
 import Layout from '../components/layout/Layout'
+import { Montserrat, Roboto } from 'next/font/google'
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+})
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  variable: '--font-roboto',
+  display: 'swap',
+})
 
 export const metadata = {
   icons: {
@@ -18,7 +31,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable} ${roboto.variable}`}>
       <body>
         <Layout>{children}</Layout>
       </body>

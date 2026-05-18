@@ -16,7 +16,7 @@ export default function About() {
         isStarsBg={true}
         bgImage={aboutBannerBg}
       />
-      <main
+      <div
         style={{
           background: `url(${aboutPgBgGradient}) center/cover no-repeat`,
         }}
@@ -27,7 +27,7 @@ export default function About() {
         <AboutStatsSection />
         <AboutExpertiseSection />
         <AboutClientsSection />
-      </main>
+      </div>
     </>
   )
 }
