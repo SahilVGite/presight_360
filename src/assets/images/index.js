@@ -92,6 +92,8 @@ import _solutionFaq4 from './solutionFaq4.png';
 import _solutionFaqBg from './solutionFaqBg.png';
 import _keyBenefits from './keyBenefits.png';
 import _solutionSliderBg from './solutionSliderBg.png';
+import _solutionDetailsPgBg from './solutionDetailsPgBg.png';
+import _industriesPgBg from './industriesPgBg.png';
 
 export const ContactMain = _ContactMain.src;
 export const CareerFormMain = _CareerFormMain.src;
@@ -187,3 +189,5 @@ export const solutionFaq4 = _solutionFaq4.src;
 export const solutionFaqBg = _solutionFaqBg.src;
 export const keyBenefits = _keyBenefits.src;
 export const solutionSliderBg = _solutionSliderBg.src;
+export const solutionDetailsPgBg = _solutionDetailsPgBg.src;
+export const industriesPgBg = _industriesPgBg.src;
