@@ -77,6 +77,7 @@ import _insight2          from './insight2.png';
 import _insight3          from './insight3.png';
 import _insight4          from './insight4.png';
 import _videoPlayBtn      from './videoPlayBtn.png';
+import _solutionsPgBannerBg      from './solutionsPgBannerBg.png';
 
 export const ContactMain         = _ContactMain.src;
 export const CareerFormMain      = _CareerFormMain.src;
@@ -157,3 +158,4 @@ export const insight2          = _insight2.src;
 export const insight3          = _insight3.src;
 export const insight4          = _insight4.src;
 export const videoPlayBtn      = _videoPlayBtn.src;
+export const solutionsPgBannerBg      = _solutionsPgBannerBg.src;
