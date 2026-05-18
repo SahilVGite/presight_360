@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link';
 import { ArrowRight, ArrowUp } from 'lucide-react';
 import { FOOTER_LINKS } from '../../constants/navigation';

@@ -1,6 +1,7 @@
+'use client'
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { Search, Menu, X } from "lucide-react";
 import { NAV_LINKS } from "../../constants/navigation";
 import { siteLogo } from "../../assets/images";
@@ -8,16 +9,11 @@ import { siteLogo } from "../../assets/images";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const pathname = usePathname();
 
   useEffect(() => {
     setMobileOpen(false);
-  }, [router.asPath]);
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -26,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   const isActive = (path) =>
-    mounted && (router.asPath === path || router.asPath.startsWith(path + "/"));
+    pathname === path || pathname.startsWith(path + "/");
 
   return (
     <header className="fixed top-4 md:top-8 lg:top-14 left-0 right-0 z-50 px-3 md:px-5">

@@ -1,3 +1,4 @@
+'use client'
 export default function Card({ children, className = '', onClick }) {
   return (
     <div

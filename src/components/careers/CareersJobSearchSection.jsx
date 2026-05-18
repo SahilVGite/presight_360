@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { JOBS_DATA } from "../../constants/careersData";

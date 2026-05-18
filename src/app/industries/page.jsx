@@ -1,7 +1,7 @@
-import PageHero from '../components/common/PageHero';
-import { industriesBannerBg } from '../assets/images';
-import IndustriesOverviewSection from '../components/industries/IndustriesOverviewSection';
-import IndustriesSectorsSection from '../components/industries/IndustriesSectorsSection';
+import PageHero from '../../components/common/PageHero'
+import { industriesBannerBg } from '../../assets/images'
+import IndustriesOverviewSection from '../../components/industries/IndustriesOverviewSection'
+import IndustriesSectorsSection from '../../components/industries/IndustriesSectorsSection'
 
 export default function Industries() {
   return (
@@ -12,7 +12,6 @@ export default function Industries() {
         bgImage={industriesBannerBg}
         isStarsBg={true}
       />
-
       <section className="py-20 px-6 gradientBgImg industries-section">
         <div className="main-wrapper">
           <IndustriesOverviewSection />
@@ -20,5 +19,5 @@ export default function Industries() {
         </div>
       </section>
     </>
-  );
+  )
 }

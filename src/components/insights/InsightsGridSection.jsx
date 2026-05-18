@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { INSIGHTS_DATA } from '../../constants/insightsData';
@@ -43,8 +44,8 @@ export default function InsightsGridSection() {
             <p className='[font-size:var(--fs-body-md)]'>To begin the application process, search current openings and click "Apply".</p>
           </div>
           <div className='relative'>
-            <select name="" id="" className='appearance-none rounded-[150px] focus:border-none shadow-[0px_10px_20px_rgba(0,0,0,0.08)] bg-[rgba(255,255,255,0.1)] border-none text-white [font-size:var(--fs-body)] px-6 py-4 pr-10 cursor-pointer'>
-              <option value="" selected disabled>Latest Totpic</option>
+            <select defaultValue="" name="" id="" className='appearance-none rounded-[150px] focus:border-none shadow-[0px_10px_20px_rgba(0,0,0,0.08)] bg-[rgba(255,255,255,0.1)] border-none text-white [font-size:var(--fs-body)] px-6 py-4 pr-10 cursor-pointer'>
+              <option value="" disabled>Latest Topic</option>
               <option value="">Option 1</option>
               <option value="">Option 2</option>
               <option value="">Option 3</option>

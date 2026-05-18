@@ -1,9 +1,7 @@
-import PageHero from '../../components/common/PageHero';
-import CTASection from '../../components/common/CTASection';
-import SolutionsGridSection from '../../components/solutions/SolutionsGridSection';
-import { solutionsPgBannerBg } from '../../assets/images';
-
-export { SOLUTIONS_DATA } from '../../constants/solutionsData';
+import PageHero from '../../components/common/PageHero'
+import CTASection from '../../components/common/CTASection'
+import SolutionsGridSection from '../../components/solutions/SolutionsGridSection'
+import { solutionsPgBannerBg } from '../../assets/images'
 
 export default function Solutions() {
   return (
@@ -18,5 +16,5 @@ export default function Solutions() {
       <SolutionsGridSection />
       <CTASection />
     </>
-  );
+  )
 }

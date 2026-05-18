@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { aboutOverviewBg } from "../../assets/images";
