@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
@@ -62,9 +62,27 @@ const SOLUTIONS = [
 ];
 
 const SolutionsSlider = () => {
+  const [swiperInstance, setSwiperInstance] = useState(null);
   const [prevEl, setPrevEl] = useState(null);
   const [nextEl, setNextEl] = useState(null);
   const [paginationEl, setPaginationEl] = useState(null);
+
+  useEffect(() => {
+    if (!swiperInstance || !prevEl || !nextEl || !paginationEl) return;
+
+    if (swiperInstance.params.navigation) {
+      swiperInstance.params.navigation.prevEl = prevEl;
+      swiperInstance.params.navigation.nextEl = nextEl;
+      swiperInstance.navigation.init();
+      swiperInstance.navigation.update();
+    }
+
+    if (swiperInstance.params.pagination) {
+      swiperInstance.params.pagination.el = paginationEl;
+      swiperInstance.pagination.init();
+      swiperInstance.pagination.update();
+    }
+  }, [swiperInstance, prevEl, nextEl, paginationEl]);
 
   return (
     <section
@@ -81,38 +99,16 @@ const SolutionsSlider = () => {
           modules={[Navigation, Pagination, A11y]}
           className="solutions-feature-swiper"
           centeredSlides
-          loop
+          centeredSlidesBounds
+          slideToClickedSlide
           grabCursor
           slidesPerView="auto"
-          spaceBetween={20}
+          spaceBetween={22}
           initialSlide={1}
           speed={600}
-          navigation={
-            prevEl && nextEl
-              ? {
-                  prevEl,
-                  nextEl,
-                }
-              : false
-          }
-          pagination={
-            paginationEl
-              ? {
-                  el: paginationEl,
-                  clickable: true,
-                }
-              : false
-          }
-          onBeforeInit={(swiper) => {
-            if (swiper.params.navigation && prevEl && nextEl) {
-              swiper.params.navigation.prevEl = prevEl;
-              swiper.params.navigation.nextEl = nextEl;
-            }
-
-            if (swiper.params.pagination && paginationEl) {
-              swiper.params.pagination.el = paginationEl;
-            }
-          }}
+          onSwiper={setSwiperInstance}
+          navigation={true}
+          pagination={{ clickable: true }}
           breakpoints={{
             768: { spaceBetween: 28 },
             1280: { spaceBetween: 32 },
