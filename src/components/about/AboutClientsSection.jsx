@@ -15,7 +15,7 @@ const CLIENTS = [
 
 export default function AboutClientsSection() {
   return (
-    <section className="py-25 overflow-hidden" style={{
+    <section className="sec-gap overflow-hidden" style={{
       background: `url(${ourClientsBg}) bottom/cover no-repeat`,
     }}>
       <div className="main-wrapper">

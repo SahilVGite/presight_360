@@ -9,7 +9,7 @@ import {
 export default function AboutStatsSection() {
   return (
     <section
-      className="py-20 md:py-35 lg:py-47 w-full relative"
+      className="sec-gap w-full relative"
       style={{
         background: `url(${aboutInfoSecBg}) center/cover no-repeat`,
       }}

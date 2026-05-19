@@ -5,6 +5,8 @@ import SolutionOverviewSection from "../../../components/solutions/SolutionOverv
 import SolutionBenefitsSection from "../../../components/solutions/SolutionBenefitsSection";
 import { SOLUTIONS_DATA } from "../../../constants/solutionsData";
 import { industriesPgBg, solutionDetailsPgBg } from "../../../assets/images";
+import DetailPgHead from "../../../components/solutions/DetailPgHead";
+import DetailPgKeyBenefits from "../../../components/solutions/DetailPgKeyBenefits";
 
 export default async function SolutionDetail({ params }) {
   const { slug } = await params;
@@ -35,12 +37,13 @@ export default async function SolutionDetail({ params }) {
         isStarsBg={true}
       />
       <div
+      className="sec-gap"
         style={{
-          background: `url(${industriesPgBg}) bottom/cover no-repeat`,
+          background: `url(${industriesPgBg}) top/cover no-repeat`,
         }}
       >
-        <SolutionOverviewSection solution={solution} />
-        <SolutionBenefitsSection solution={solution} />
+        <DetailPgHead />
+        <DetailPgKeyBenefits />
       </div>
     </>
   );

@@ -18,7 +18,7 @@ const CERTIFICATIONS = [
 
 export default function CertificationsSection() {
   return (
-    <section className="py-[clamp(4rem,8vw,8rem)] overflow-hidden relative">
+    <section className="sec-gap overflow-hidden relative">
       <div className="main-wrapper">
         {/* Heading */}
         <div className="mb-10 pl-0 md:pl-6 lg:pl-12.5">

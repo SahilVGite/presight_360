@@ -4,7 +4,7 @@ import { soulOverview1, soulOverview2, soulOverview3 } from '../../assets/images
 
 export default function SolutionOverviewSection() {
   return (
-    <section className="py-25">
+    <section className="sec-gap">
       <div className="main-wrapper">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16 [@media(min-width:1600px)]:gap-23.5">
           <div className='w-full max-w-full lg:max-w-[65%] [@media(min-width:1600px)]:max-w-[50%]'>

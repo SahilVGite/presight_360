@@ -86,7 +86,7 @@ const SolutionsSlider = () => {
 
   return (
     <section
-      className="solutions-slider-section py-16 md:py-22 lg:py-25 overflow-hidden"
+      className="solutions-slider-section sec-gap overflow-hidden"
       style={{
         backgroundImage: `url(${solutionSliderBg})`,
         backgroundPosition: "center",

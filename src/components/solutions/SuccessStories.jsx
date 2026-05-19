@@ -5,7 +5,7 @@ import { SuccessStories1, SuccessStories2, SuccessStoriesBg } from "../../assets
 
 const SuccessStories = () => {
   return (
-    <section className="py-20" style={{backgroundImage: `url(${SuccessStoriesBg})`,backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+    <section className="sec-gap" style={{backgroundImage: `url(${SuccessStoriesBg})`,backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
       <div className="main-wrapper">
         <div className="w-full [font-size:var(--fs-body)] mb-[3em]">
           <p className="[font-size:var(--fs-body-md)] text-accent-red font-bold">

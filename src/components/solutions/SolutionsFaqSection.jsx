@@ -14,7 +14,7 @@ export default function SolutionsGridSection() {
   };
 
   return (
-    <section className="py-20" style={{backgroundImage: `url(${solutionFaqBg})`,backgroundPosition: 'bottom', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+    <section className="sec-gap" style={{backgroundImage: `url(${solutionFaqBg})`,backgroundPosition: 'bottom', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
       <div className="main-wrapper">
         <p className="uppercase mb-8 text-accent-red font-semibold [font-size:var(--fs-body-md)]">
           Frequently asked question

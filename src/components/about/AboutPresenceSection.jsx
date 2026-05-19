@@ -4,7 +4,7 @@ import LocationSection from "../home/LocationSection";
 export default function AboutPresenceSection() {
   return (
     <section
-      className="py-20"
+      className="sec-gap"
       style={{
         background: `url(${aboutMapBg}) top/100% 200% no-repeat`,
       }}

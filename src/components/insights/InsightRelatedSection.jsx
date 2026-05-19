@@ -19,7 +19,7 @@ export default function InsightRelatedSection({ related }) {
     }, []);
 
     return (
-        <section className="py-25">
+        <section className="sec-gap">
             <div className="main-wrapper">
                 <div className="flex items-center justify-between mb-16">
                     <h2 className="font-display font-[800] [font-size:var(--fs-title-lg)] text-accent-red uppercase">

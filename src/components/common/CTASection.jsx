@@ -7,7 +7,7 @@ export default function CTASection({
     subtitle = 'Having difficulties choosing the right solution for your business?',
 }) {
     return (
-        <section className="py-[clamp(4rem,8vw,8rem)] overflow-hidden relative">
+        <section className="sec-gap overflow-hidden relative">
             <div className="main-wrapper">
                 <div className='flex justify-between items-end [@media(max-width:768px)]:flex-wrap'>
                     <h2 className="font-display font-bold uppercase max-w-[67.1875rem] leading-[1.2] mb-10 [font-size:var(--fs-banner-title)]">

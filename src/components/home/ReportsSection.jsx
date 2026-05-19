@@ -45,7 +45,7 @@ const REPORTS = [
 export default function ReportsSection() {
   return (
     <section
-      className="pt-[clamp(60px,8vw,100px)] pb-[clamp(60px,8vw,100px)] relative"
+      className="sec-gap relative"
       style={{ overflowX: "clip" }}
     >
       <div className="main-wrapper">

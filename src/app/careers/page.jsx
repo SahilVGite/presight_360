@@ -13,7 +13,7 @@ export default function Careers() {
         bgImage={careerBannerBg}
         isGradientBg={false}
       />
-      <section className="py-32 [@media(max-width:1536px)]:py-20  [@media(max-width:900px)]:py-10 gradientBgImg">
+      <section className="sec-gap gradientBgImg">
         <CareersIntroSection />
         <CareersJobSearchSection />
         <CareersStoriesSection />
