@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { keyBenefits } from "../../assets/images";
-import CustomRightArrow from "../../assets/icons/customRightArrow";
+import CustomRightArrow from "../../assets/icons/CustomRightArrow";
 
 const BENEFITS_DATA = [
   {
