@@ -12,7 +12,7 @@ export default function Industries() {
         bgImage={industriesBannerBg}
         isStarsBg={true}
       />
-      <section className="py-20 px-6 gradientBgImg industries-section">
+      <section className="sec-gap px-6 gradientBgImg industries-section">
         <div className="main-wrapper">
           <IndustriesOverviewSection />
           <IndustriesSectorsSection />

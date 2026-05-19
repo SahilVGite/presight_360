@@ -31,7 +31,7 @@ export default function SolutionBenefitsSection() {
   const [activeIndex, setActiveIndex] = useState(1);
 
   return (
-    <section className="py-25">
+    <section className="sec-gap">
       <div className="main-wrapper">
         <p className="uppercase mb-4 text-accent-red font-semibold [font-size:var(--fs-body-md)]">
           Key Benefits

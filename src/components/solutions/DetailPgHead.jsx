@@ -3,7 +3,7 @@ import { solutionsDetailsCircle } from "../../assets/images";
 
 const DetailPgHead = () => {
   return (
-    <section className="pb-25 relative">
+    <section className="sec-gap-bottom relative">
       <div className="main-wrapper relative z-10">
         <img
           src={solutionsDetailsCircle}

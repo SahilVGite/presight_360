@@ -63,7 +63,7 @@ export default function AboutOverviewSection() {
 
   return (
     <section
-      className="py-20"
+      className="sec-gap"
       style={{
         background: `url(${aboutOverviewBg}) center/100% 100% no-repeat`,
       }}

@@ -7,7 +7,7 @@ export default function InsightsFeaturedSection() {
   const featured = INSIGHTS_DATA[3];
 
   return (
-    <section className="py-25">
+    <section className="sec-gap">
       <div className="main-wrapper">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="py-[2em] md:py-[4em] [@media(min-width:1440px)]:py-[4.687em] px-[2em] md:px-[4em] [@media(min-width:1440px)]:px-[8.125em] [font-size:var(--fs-body)] bg-[rgba(255,255,255,0.02)] backdrop-blur-xl flex flex-col justify-center">

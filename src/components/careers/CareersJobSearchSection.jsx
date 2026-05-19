@@ -16,7 +16,7 @@ export default function CareersJobSearchSection() {
 
     return (
         <div className="main-wrapper">
-            <div className="py-32 [@media(max-width:1536px)]:py-20 [@media(max-width:900px)]:py-10 relative">
+            <div className="sec-gap relative">
                 <h2 className="text-center [font-size:var(--fs-title-lg)] [@media(max-width:900px)]:[font-size:var(--fs-title-base)] font-bold text-[#DB3B3B]">
                     Search Jobs
                 </h2>

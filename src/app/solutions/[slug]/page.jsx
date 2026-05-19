@@ -37,7 +37,7 @@ export default async function SolutionDetail({ params }) {
         isStarsBg={true}
       />
       <div
-      className="py-25"
+      className="sec-gap"
         style={{
           background: `url(${industriesPgBg}) top/cover no-repeat`,
         }}

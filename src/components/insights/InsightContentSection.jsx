@@ -17,7 +17,7 @@ const CATEGORIES = [
 
 export default function InsightContentSection({ insight }) {
     return (
-        <section className="py-25">
+        <section className="sec-gap">
             <div className="main-wrapper">
                 <div className="flex flex-col md:flex-row justify-between gap-6 lg:gap-12.5 bg-[rgba(255,255,255,0.05)] backdrop-blur-2xl border border-[rgba(255,255,255,0.1)] p-7.5">
                     {/* Main content */}

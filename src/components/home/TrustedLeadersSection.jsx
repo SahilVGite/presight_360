@@ -23,10 +23,10 @@ const TRUSTED_ITEMS = [
 
 export default function TrustedLeadersSection() {
   return (
-    <section className="section-gradient py-[clamp(4rem,8vw,8rem)] overflow-hidden">
+    <section className="section-gradient sec-gap overflow-hidden">
       <div className="main-wrapper px-4 lg:px-8">
         {/* Heading */}
-        <h2 className="max-w-[64.375rem] text-white section-title uppercase mb-16 pl-0 md:pl-6 lg:pl-12.5">
+        <h2 className="max-w-257.5 text-white section-title uppercase mb-16 pl-0 md:pl-6 lg:pl-12.5">
           GUIDING LEADERS THROUGH RISK, WITH INSIGHT THEY CAN TRUST
         </h2>
 

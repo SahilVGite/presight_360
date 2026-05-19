@@ -34,7 +34,7 @@ const EXPERTISE = [
 
 export default function AboutExpertiseSection() {
   return (
-    <section className="py-25" style={{
+    <section className="sec-gap" style={{
       background: `url(${aboutExpertiesBg}) bottom/cover no-repeat`,
     }}>
       <div className="main-wrapper">

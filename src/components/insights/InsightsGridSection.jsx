@@ -34,7 +34,7 @@ export default function InsightsGridSection() {
   };
 
   return (
-    <section className="py-25">
+    <section className="sec-gap">
       <div className="main-wrapper">
         <div className="flex items-center justify-between mb-16">
           <div className=''>

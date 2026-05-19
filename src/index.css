@@ -98,6 +98,18 @@ body {
     font-family: var(--font-roboto);
 }
 
+@utility sec-gap {
+    padding-block: var(--sec-gap);
+}
+
+@utility sec-gap-top {
+    padding-top: var(--sec-gap);
+}
+
+@utility sec-gap-bottom {
+    padding-bottom: var(--sec-gap);
+}
+
 /* ── Named component classes ── */
 .hero-bg {
     background:

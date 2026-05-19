@@ -24,7 +24,7 @@ export default function AboutTeamSection() {
   const [teamEnd, setTeamEnd] = useState(false);
 
   return (
-    <section className="py-20">
+    <section className="sec-gap">
       <div className="main-wrapper">
         <p className="section-label [font-size:var(--fs-body-md)]! mb-2">
           Core Team
