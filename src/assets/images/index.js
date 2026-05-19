@@ -1,153 +1,193 @@
-import ContactMain from "../images/contact_main.png";
-import CareerFormMain from "../images/career_form_main.png";
-import careerFormBannerBg from "../images/carrer_form_banner-bg.png";
-import careerFormBg from "../images/carrer_form-bg.png";
-import careerBannerBg from "../images/carrer_banner-bg.png";
-import bannerBgImage from "./bannerBgImg.png";
-import globeHalf from "./globeHalf.png";
-import siteLogo from "./siteLogo.png";
-import siteShortLogo from "./siteShortLogo.png";
-import smartSecurityBg from "./smartSecurityBg.png";
+import _ContactMain from './contact_main.png';
+import _CareerFormMain from './career_form_main.png';
+import _careerFormBannerBg from './carrer_form_banner-bg.png';
+import _careerFormBg from './carrer_form-bg.png';
+import _careerBannerBg from './carrer_banner-bg.png';
+import _bannerBgImage from './bannerBgImg.png';
+import _globeHalf from './globeHalf.png';
+import _siteLogo from './siteLogo.png';
+import _siteShortLogo from './siteShortLogo.png';
+import _smartSecurityBg from './smartSecurityBg.png';
 
-import securityIcon1 from "./icon1.png";
-import securityIcon2 from "./icon2.png";
-import securityIcon3 from "./icon3.png";
-import securityIcon4 from "./icon4.png";
-import securityIcon5 from "./icon5.png";
-import securityIcon6 from "./icon6.png";
-import securityIcon7 from "./icon7.png";
-import securityIcon8 from "./icon8.png";
+import _securityIcon1 from './icon1.png';
+import _securityIcon2 from './icon2.png';
+import _securityIcon3 from './icon3.png';
+import _securityIcon4 from './icon4.png';
+import _securityIcon5 from './icon5.png';
+import _securityIcon6 from './icon6.png';
+import _securityIcon7 from './icon7.png';
+import _securityIcon8 from './icon8.png';
 
-import guidingImg1 from "./guidingImg1.png";
-import guidingImg2 from "./guidingImg2.png";
+import _guidingImg1 from './guidingImg1.png';
+import _guidingImg2 from './guidingImg2.png';
 
-import whyPresightBg from "./bgGif.gif";
-import strategyImg1 from "./strategyImg1.png";
-import strategyImg2 from "./strategyImg2.png";
-import strategyImg3 from "./strategyImg3.png";
-import reportImg1 from "./reportImg1.png";
-import reportImg2 from "./reportImg2.png";
-import reportImg3 from "./reportImg3.png";
-import worldMap from "./worldmap.svg";
+import _whyPresightBg from './bgGif.gif';
+import _strategyImg1 from './strategyImg1.png';
+import _strategyImg2 from './strategyImg2.png';
+import _strategyImg3 from './strategyImg3.png';
+import _reportImg1 from './reportImg1.png';
+import _reportImg2 from './reportImg2.png';
+import _reportImg3 from './reportImg3.png';
+import _worldMap from './worldmap.svg';
 
-import industriesBannerBg from "./industries_banner_bg.png";
-import industriesMainImg from "./industriesMainImg.png";
-import certification1 from "./certification1.png";
-import certification2 from "./certification2.png";
-import certification3 from "./certification3.png";
-import certification4 from "./certification4.png";
-import certification5 from "./certification5.png";
-import certification6 from "./certification6.png";
+import _industriesBannerBg from './industries_banner_bg.png';
+import _industriesMainImg from './industriesMainImg.png';
+import _certification1 from './certification1.png';
+import _certification2 from './certification2.png';
+import _certification3 from './certification3.png';
+import _certification4 from './certification4.png';
+import _certification5 from './certification5.png';
+import _certification6 from './certification6.png';
 
-import successStoryImg1 from "./successStoryImg1.png";
-import successStoryImg2 from "./successStoryImg2.png";
+import _successStoryImg1 from './successStoryImg1.png';
+import _successStoryImg2 from './successStoryImg2.png';
 
-import aboutBannerBg from "./about_banner-bg.png";
-import aboutPgBgGradient from "./aboutPgBgGradient.png";
-import aboutOverviewBg from "./aboutOverviewBg.png";
-import Team1 from "./team1.png";
-import Team2 from "./team2.png";
-import Team3 from "./team3.png";
-import Team4 from "./team4.png";
-import aboutMapBg from "./aboutMapBg.png";
-import aboutInfoSecBg from "./aboutInfoSecBg.png";
-import aboutProjectsCompeted from "./aboutProjectsCompeted.png";
-import aboutSuccessfulYears from "./aboutSuccessfulYears.png";
-import aboutClientRetention from "./aboutClientRetention.png";
-import aboutCountries from "./aboutCountries.png";
-import Client1 from "./client1.png";
-import Client2 from "./client2.png";
-import Client3 from "./client3.png";
-import Client4 from "./client4.png";
-import aboutExpertiesBg from "./aboutExpertiesBg.png";
-import expertise1 from "./expertise1.png";
-import expertise2 from "./expertise2.png";
-import expertise3 from "./expertise3.png";
-import expertise4 from "./expertise4.png";
-import ourClientsBg from "./ourClientsBg.png";
-import insightListing from "./insightListing.png";
-import insightListingBg from "./insightListingBg.png";
-import dummyUserIcon from "./dummyUserIcon.png";
-import Avatar1 from "./Avatar1.png";
-import Avatar2 from "./Avatar2.png";
-import Avatar3 from "./Avatar3.png";
-import insight1 from "./insight1.png";
-import insight2 from "./insight2.png";
-import insight3 from "./insight3.png";
-import insight4 from "./insight4.png";
-import videoPlayBtn from "./videoPlayBtn.png";
+import _aboutBannerBg from './about_banner-bg.png';
+import _aboutPgBgGradient from './aboutPgBgGradient.png';
+import _aboutOverviewBg from './aboutOverviewBg.png';
+import _Team1 from './team1.png';
+import _Team2 from './team2.png';
+import _Team3 from './team3.png';
+import _Team4 from './team4.png';
+import _aboutMapBg from './aboutMapBg.png';
+import _aboutInfoSecBg from './aboutInfoSecBg.png';
+import _aboutProjectsCompeted from './aboutProjectsCompeted.png';
+import _aboutSuccessfulYears from './aboutSuccessfulYears.png';
+import _aboutClientRetention from './aboutClientRetention.png';
+import _aboutCountries from './aboutCountries.png';
+import _Client1 from './client1.png';
+import _Client2 from './client2.png';
+import _Client3 from './client3.png';
+import _Client4 from './client4.png';
+import _aboutExpertiesBg from './aboutExpertiesBg.png';
+import _expertise1 from './expertise1.png';
+import _expertise2 from './expertise2.png';
+import _expertise3 from './expertise3.png';
+import _expertise4 from './expertise4.png';
+import _ourClientsBg from './ourClientsBg.png';
 
-export {
-    bannerBgImage,
-    globeHalf,
-    siteLogo,
-    siteShortLogo,
-    smartSecurityBg,
-    securityIcon1,
-    securityIcon2,
-    securityIcon3,
-    securityIcon4,
-    securityIcon5,
-    securityIcon6,
-    securityIcon7,
-    securityIcon8,
-    guidingImg1,
-    guidingImg2,
-    whyPresightBg,
-    ContactMain,
-    CareerFormMain,
-    careerFormBannerBg,
-    careerFormBg,
-    careerBannerBg,
-    strategyImg1,
-    strategyImg2,
-    strategyImg3,
-    reportImg1,
-    reportImg2,
-    reportImg3,
-    worldMap,
-    industriesBannerBg,
-    industriesMainImg,
-    certification1,
-    certification2,
-    certification3,
-    certification4,
-    certification5,
-    certification6,
-    successStoryImg1,
-    successStoryImg2,
-    aboutBannerBg,
-    aboutPgBgGradient,
-    aboutOverviewBg,
-    Team1,
-    Team2,
-    Team3,
-    Team4,
-    aboutMapBg,
-    aboutInfoSecBg,
-    aboutProjectsCompeted,
-    aboutSuccessfulYears,
-    aboutClientRetention,
-    aboutCountries,
-    Client1,
-    Client2,
-    Client3,
-    Client4,
-    aboutExpertiesBg,
-    expertise1,
-    expertise2,
-    expertise3,
-    expertise4,
-    ourClientsBg,
-    insightListing,
-    insightListingBg,
-    dummyUserIcon,
-    insight1,
-    insight2,
-    insight3,
-    insight4,
-    Avatar1,
-    Avatar2,
-    Avatar3,
-    videoPlayBtn,
-};
+import _insightListing from './insightListing.png';
+import _insightListingBg from './insightListingBg.png';
+import _dummyUserIcon from './dummyUserIcon.png';
+import _Avatar1 from './Avatar1.png';
+import _Avatar2 from './Avatar2.png';
+import _Avatar3 from './Avatar3.png';
+import _insight1 from './insight1.png';
+import _insight2 from './insight2.png';
+import _insight3 from './insight3.png';
+import _insight4 from './insight4.png';
+import _videoPlayBtn from './videoPlayBtn.png';
+import _solutionsPgBannerBg from './solutionsPgBannerBg.png';
+import _solutionPgBg from './solutionPgBg.png';
+import _soulOverview1 from './soulOverview1.png';
+import _soulOverview2 from './soulOverview2.png';
+import _soulOverview3 from './soulOverview3.png';
+import _SuccessStories1 from './SuccessStories1.png';
+import _SuccessStories2 from './SuccessStories2.png';
+import _SuccessStoriesBg from './SuccessStoriesBg.png';
+import _solutionFaq1 from './solutionFaq1.png';
+import _solutionFaq2 from './solutionFaq2.png';
+import _solutionFaq3 from './solutionFaq3.png';
+import _solutionFaq4 from './solutionFaq4.png';
+import _solutionFaqBg from './solutionFaqBg.png';
+import _keyBenefits from './keyBenefits.png';
+import _solutionSliderBg from './solutionSliderBg.png';
+import _solutionDetailsPgBg from './solutionDetailsPgBg.png';
+import _industriesPgBg from './industriesPgBg.png';
+
+export const ContactMain = _ContactMain.src;
+export const CareerFormMain = _CareerFormMain.src;
+export const careerFormBannerBg = _careerFormBannerBg.src;
+export const careerFormBg = _careerFormBg.src;
+export const careerBannerBg = _careerBannerBg.src;
+export const bannerBgImage = _bannerBgImage.src;
+export const globeHalf = _globeHalf.src;
+export const siteLogo = _siteLogo.src;
+export const siteShortLogo = _siteShortLogo.src;
+export const smartSecurityBg = _smartSecurityBg.src;
+
+export const securityIcon1 = _securityIcon1.src;
+export const securityIcon2 = _securityIcon2.src;
+export const securityIcon3 = _securityIcon3.src;
+export const securityIcon4 = _securityIcon4.src;
+export const securityIcon5 = _securityIcon5.src;
+export const securityIcon6 = _securityIcon6.src;
+export const securityIcon7 = _securityIcon7.src;
+export const securityIcon8 = _securityIcon8.src;
+
+export const guidingImg1 = _guidingImg1.src;
+export const guidingImg2 = _guidingImg2.src;
+
+export const whyPresightBg = _whyPresightBg.src;
+export const strategyImg1 = _strategyImg1.src;
+export const strategyImg2 = _strategyImg2.src;
+export const strategyImg3 = _strategyImg3.src;
+export const reportImg1 = _reportImg1.src;
+export const reportImg2 = _reportImg2.src;
+export const reportImg3 = _reportImg3.src;
+export const worldMap = _worldMap.src;
+
+export const industriesBannerBg = _industriesBannerBg.src;
+export const industriesMainImg = _industriesMainImg.src;
+export const certification1 = _certification1.src;
+export const certification2 = _certification2.src;
+export const certification3 = _certification3.src;
+export const certification4 = _certification4.src;
+export const certification5 = _certification5.src;
+export const certification6 = _certification6.src;
+
+export const successStoryImg1 = _successStoryImg1.src;
+export const successStoryImg2 = _successStoryImg2.src;
+
+export const aboutBannerBg = _aboutBannerBg.src;
+export const aboutPgBgGradient = _aboutPgBgGradient.src;
+export const aboutOverviewBg = _aboutOverviewBg.src;
+export const Team1 = _Team1.src;
+export const Team2 = _Team2.src;
+export const Team3 = _Team3.src;
+export const Team4 = _Team4.src;
+export const aboutMapBg = _aboutMapBg.src;
+export const aboutInfoSecBg = _aboutInfoSecBg.src;
+export const aboutProjectsCompeted = _aboutProjectsCompeted.src;
+export const aboutSuccessfulYears = _aboutSuccessfulYears.src;
+export const aboutClientRetention = _aboutClientRetention.src;
+export const aboutCountries = _aboutCountries.src;
+export const Client1 = _Client1.src;
+export const Client2 = _Client2.src;
+export const Client3 = _Client3.src;
+export const Client4 = _Client4.src;
+export const aboutExpertiesBg = _aboutExpertiesBg.src;
+export const expertise1 = _expertise1.src;
+export const expertise2 = _expertise2.src;
+export const expertise3 = _expertise3.src;
+export const expertise4 = _expertise4.src;
+export const ourClientsBg = _ourClientsBg.src;
+
+export const insightListing = _insightListing.src;
+export const insightListingBg = _insightListingBg.src;
+export const dummyUserIcon = _dummyUserIcon.src;
+export const Avatar1 = _Avatar1.src;
+export const Avatar2 = _Avatar2.src;
+export const Avatar3 = _Avatar3.src;
+export const insight1 = _insight1.src;
+export const insight2 = _insight2.src;
+export const insight3 = _insight3.src;
+export const insight4 = _insight4.src;
+export const videoPlayBtn = _videoPlayBtn.src;
+export const solutionsPgBannerBg = _solutionsPgBannerBg.src;
+export const solutionPgBg = _solutionPgBg.src;
+export const soulOverview1 = _soulOverview1.src;
+export const soulOverview2 = _soulOverview2.src;
+export const soulOverview3 = _soulOverview3.src;
+export const SuccessStories1 = _SuccessStories1.src;
+export const SuccessStories2 = _SuccessStories2.src;
+export const SuccessStoriesBg = _SuccessStoriesBg.src;
+export const solutionFaq1 = _solutionFaq1.src;
+export const solutionFaq2 = _solutionFaq2.src;
+export const solutionFaq3 = _solutionFaq3.src;
+export const solutionFaq4 = _solutionFaq4.src;
+export const solutionFaqBg = _solutionFaqBg.src;
+export const keyBenefits = _keyBenefits.src;
+export const solutionSliderBg = _solutionSliderBg.src;
+export const solutionDetailsPgBg = _solutionDetailsPgBg.src;
+export const industriesPgBg = _industriesPgBg.src;

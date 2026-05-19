@@ -1,0 +1,53 @@
+export const JOBS_DATA = [
+    {
+        id: 1,
+        title: "Sr. Manager",
+        openings: 1,
+        experience: "7+ years",
+        location: "Area name, Location",
+        skills: [
+            "Curriculum Designing & Management",
+            "Good Communication Skills",
+            "University, School Co-ordination",
+            "Open for learning",
+        ],
+        desc: "Lead strategic initiatives and manage a high-performing team in a fast-paced, intelligence-driven environment.",
+    },
+    {
+        id: 2,
+        title: "Intelligence Analyst",
+        openings: 2,
+        experience: "3+ years",
+        location: "Remote / On-site",
+        skills: [
+            "Research & Analysis",
+            "Geopolitical Knowledge",
+            "Report Writing",
+            "Data Interpretation",
+        ],
+        desc: "Analyze global threat environments and produce actionable intelligence reports for senior leadership.",
+    },
+    {
+        id: 3,
+        title: "Security Operations Specialist",
+        openings: 1,
+        experience: "5+ years",
+        location: "Area name, Location",
+        skills: [
+            "Security Operations",
+            "Risk Assessment",
+            "Crisis Response",
+            "Team Leadership",
+        ],
+        desc: "Oversee day-to-day security operations and coordinate with field teams across multiple jurisdictions.",
+    },
+    {
+        id: 4,
+        title: "Intern UI/Frontend Developer",
+        openings: 2,
+        experience: "0-1 years",
+        location: "Remote",
+        skills: ["React", "Tailwind CSS", "Figma", "HTML/CSS"],
+        desc: "Join our digital team and help build cutting-edge intelligence platforms and internal tools.",
+    },
+];

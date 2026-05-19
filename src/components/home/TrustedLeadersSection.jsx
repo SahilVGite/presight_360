@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Button from "../common/Button";
 import { guidingImg1, guidingImg2 } from "../../assets/images";
 
@@ -99,7 +99,7 @@ export default function TrustedLeadersSection() {
                     {item.desc}
                   </p>
 
-                  <Link to={item.href}>
+                  <Link href={item.href}>
                     <Button variant="primary" size="sm" showArrow>
                       {item.buttonTxt}
                     </Button>

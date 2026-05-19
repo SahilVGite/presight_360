@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Button from '../common/Button';
 import { strategyImg1, strategyImg2, strategyImg3 } from '../../assets/images';
 
@@ -48,7 +48,7 @@ export default function StrategySection() {
 
           {/* Large Top Card */}
           <Link
-            to={STRATEGY_ITEMS[0].href}
+            href={STRATEGY_ITEMS[0].href}
             className="group rounded-[1.35rem] overflow-hidden flex [@media(max-width:767px)]:flex-col items-stretch transition-all duration-300 md:col-span-2 bg-glass-effect"
           >
             {/* Content */}
@@ -72,7 +72,7 @@ export default function StrategySection() {
           {STRATEGY_ITEMS.slice(1).map((item, i) => (
             <Link
               key={i}
-              to={item.href}
+              href={item.href}
               className="group rounded-[1.35rem] bg-glass-effect pt-8 p-4 md:px-8 md:pt-17.5 md:pb-13.5 overflow-hidden transition-all duration-300"
             >
               <div className="pb-4">
@@ -94,7 +94,7 @@ export default function StrategySection() {
 
         {/* Button */}
         <div className="mt-[3.5rem] pl-0 xl:pl-[15.875rem]">
-          <Link to="/solutions">
+          <Link href="/solutions">
             <Button variant="primary" size="sm" showArrow>
               Explore Now
             </Button>

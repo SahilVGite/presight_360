@@ -1,17 +1,19 @@
+'use client'
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Search, Menu, X } from "lucide-react";
 import { NAV_LINKS } from "../../constants/navigation";
-import siteLogo from "../../assets/images/siteLogo.png";
+import { siteLogo } from "../../assets/images";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     setMobileOpen(false);
-  }, [location.pathname]);
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -20,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   const isActive = (path) =>
-    location.pathname === path || location.pathname.startsWith(path + "/");
+    pathname === path || pathname.startsWith(path + "/");
 
   return (
     <header className="fixed top-4 md:top-8 lg:top-14 left-0 right-0 z-50 px-3 md:px-5">
@@ -36,7 +38,7 @@ export default function Navbar() {
           ].join(" ")}
         >
           {/* Logo */}
-          <Link to="/" className="relative z-10 shrink-0">
+          <Link href="/" className="relative z-10 shrink-0">
             <img
               src={siteLogo}
               alt="Presight 360"
@@ -50,7 +52,7 @@ export default function Navbar() {
               {NAV_LINKS.map((link) => (
                 <li key={link.path}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className={[
                       "block px-3 xl:px-4.5 py-2.5 xl:py-3 text-[calc(var(--fs-body-xs)+1px)] xl:[font-size:var(--fs-body)] font-normal rounded-full transition-all duration-200 whitespace-nowrap font-display tracking-[0.01em] leading-tight",
                       isActive(link.path)
@@ -67,7 +69,7 @@ export default function Navbar() {
             {/* Right: Contact + Hamburger */}
             <div className="relative z-10 shrink-0 flex items-center gap-2">
               <Link
-                to="/contact"
+                href="/contact"
                 className="hidden lg:inline-flex items-center bg-accent-red hover:bg-accent-red-hover text-white font-normal text-[calc(var(--fs-body-xs)+1px)] xl:[font-size:var(--fs-body)] px-3 xl:px-4.5 py-2.5 xl:py-3 rounded-full whitespace-nowrap font-display transition-colors duration-200 no-underline tracking-[0.01em] leading-tight"
               >
                 Contact Us
@@ -100,7 +102,7 @@ export default function Navbar() {
             {NAV_LINKS.map((link) => (
               <li key={link.path}>
                 <Link
-                  to={link.path}
+                  href={link.path}
                   className={[
                     "block px-5 py-3 text-[calc(var(--fs-body-sm)+1px)] font-normal font-display transition-colors",
                     isActive(link.path) ? "text-accent-red" : "text-white/75 hover:text-white",
@@ -112,7 +114,7 @@ export default function Navbar() {
             ))}
             <li className="px-5 pt-2 pb-3">
               <Link
-                to="/contact"
+                href="/contact"
                 className="block bg-accent-red text-white font-normal text-[calc(var(--fs-body-sm)+1px)] px-5 py-2.5 rounded-full text-center font-display no-underline hover:bg-accent-red-hover transition-colors"
               >
                 Contact Us

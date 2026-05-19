@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Button from "../common/Button";
 
-import halfGlobe from "../../assets/images/globeHalf.png";
-
 import {
+  globeHalf,
   securityIcon1,
   securityIcon2,
   securityIcon3,
@@ -71,7 +70,7 @@ export default function SecurityIntelligenceSection() {
       <div className="relative [@media(max-width:850px)]:pb-52 [@media(max-width:1023px)]:pb-64">
         {/* Globe Image */}
         <img
-          src={halfGlobe}
+          src={globeHalf}
           alt=""
           aria-hidden="true"
           className="absolute bottom-0 right-0 w-[72%] max-w-[55%] lg:max-w-[40%] [@media(min-width:1680px)]:max-w-[49.75%] h-auto pointer-events-none select-none z-0"
@@ -101,15 +100,11 @@ export default function SecurityIntelligenceSection() {
             </p>
           </div>
 
-          <Button
-            variant="primary"
-            size="sm"
-            showArrow
-            as={Link}
-            to="/solutions"
-          >
-            Explore Us
-          </Button>
+          <Link href="/solutions">
+            <Button variant="primary" size="sm" showArrow>
+              Explore Us
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -122,7 +117,7 @@ export default function SecurityIntelligenceSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 [@media(min-width:1600px)]:grid-cols-4 gap-x-20 gap-y-11.5">
             {SOLUTIONS.map(({ icon, title, desc, href }, i) => (
-              <Link key={i} to={href} className="group block no-underline">
+              <Link key={i} href={href} className="group block no-underline">
                 {/* Icon Box */}
                 <div className="w-12 h-12 flex items-center justify-center mb-4 ">
                   <img src={icon} alt={title} />

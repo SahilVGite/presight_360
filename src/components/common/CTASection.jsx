@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Button from './Button';
 
@@ -22,7 +22,7 @@ export default function CTASection({
                     <div className='w-full border border-white rounded-4xl lg:rounded-[3.75rem] p-5 md:p-[2rem] lg:p-[3.125rem] flex [@media(max-width:610px)]:gap-2 [@media(max-width:610px)]:flex-col justify-between items-center'>
                         <h3 className='text-white font-semibold [font-size:var(--fs-title-xl)]'>Talk With Us</h3>
                         <div className="">
-                            <Link to="/solutions">
+                            <Link href="/solutions">
                                 <Button variant="primary" size="sm" showArrow>
                                     Explore Now
                                 </Button>
@@ -37,7 +37,7 @@ export default function CTASection({
                                 <input type="number" placeholder="Enter Phone Number " className='[font-size:var(--fs-body-sm)] px-4 py-4 md:py-6 lg:py-8 bg-white/10 rounded-[.5rem] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-full'/>
                             </div>
                             <div className="mt-9 text-end">
-                                <Link to="/solutions">
+                                <Link href="/solutions">
                                     <Button variant="primary" size="sm" showArrow>
                                         Explore Now
                                     </Button>
