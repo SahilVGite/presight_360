@@ -1,17 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Pagination, A11y } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { solutionSliderBg } from "../../assets/images";
 import HeadPhonesIcon from "../../assets/icons/HeadPhonesIcon";
 import BulbIcon from "../../assets/icons/BulbIcon";
 import EyeIcon from "../../assets/icons/EyeIcon";
 import MedicalKitIcon from "../../assets/icons/MedicalKitIcon";
+
+const PAGINATION_SELECTOR = ".solutions-slider-pagination";
 
 const SOLUTIONS = [
   {
@@ -34,55 +35,10 @@ const SOLUTIONS = [
     desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
     icon: MedicalKitIcon,
   },
-  {
-    title: "Quick Support1",
-    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
-    icon: HeadPhonesIcon,
-  },
-  {
-    title: "Oversight2",
-    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
-    icon: EyeIcon,
-  },
-  {
-    title: "Intelligence3",
-    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
-    icon: BulbIcon,
-  },
-  {
-    title: "Medical Integration4",
-    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
-    icon: MedicalKitIcon,
-  },
-  {
-    title: "Medical Integration10",
-    desc: "This is dummy text will be replaced with original content. This is dummy text will be replaced with original content. This is dummy text",
-    icon: MedicalKitIcon,
-  },
 ];
 
 const SolutionsSlider = () => {
-  const [swiperInstance, setSwiperInstance] = useState(null);
-  const [prevEl, setPrevEl] = useState(null);
-  const [nextEl, setNextEl] = useState(null);
-  const [paginationEl, setPaginationEl] = useState(null);
-
-  useEffect(() => {
-    if (!swiperInstance || !prevEl || !nextEl || !paginationEl) return;
-
-    if (swiperInstance.params.navigation) {
-      swiperInstance.params.navigation.prevEl = prevEl;
-      swiperInstance.params.navigation.nextEl = nextEl;
-      swiperInstance.navigation.init();
-      swiperInstance.navigation.update();
-    }
-
-    if (swiperInstance.params.pagination) {
-      swiperInstance.params.pagination.el = paginationEl;
-      swiperInstance.pagination.init();
-      swiperInstance.pagination.update();
-    }
-  }, [swiperInstance, prevEl, nextEl, paginationEl]);
+  const sliderRef = useRef(null);
 
   return (
     <section
@@ -96,22 +52,23 @@ const SolutionsSlider = () => {
     >
       <div className="solutions-slider-wrap">
         <Swiper
-          modules={[Navigation, Pagination, A11y]}
+          ref={sliderRef}
+          modules={[Pagination, A11y]}
           className="solutions-feature-swiper"
           centeredSlides
-          centeredSlidesBounds
           slideToClickedSlide
           grabCursor
           slidesPerView="auto"
-          spaceBetween={22}
+          spaceBetween={20}
           initialSlide={1}
-          speed={600}
-          onSwiper={setSwiperInstance}
-          navigation={true}
-          pagination={{ clickable: true }}
+          speed={500}
+          pagination={{
+            el: PAGINATION_SELECTOR,
+            clickable: true,
+          }}
           breakpoints={{
-            768: { spaceBetween: 28 },
-            1280: { spaceBetween: 32 },
+            768: { spaceBetween: 24 },
+            1280: { spaceBetween: 28 },
           }}
         >
           {SOLUTIONS.map((solution) => {
@@ -142,19 +99,19 @@ const SolutionsSlider = () => {
           aria-label="Solutions slider controls"
         >
           <button
-            ref={setPrevEl}
             type="button"
             className="solutions-slider-arrow solutions-slider-prev"
             aria-label="Previous solution"
+            onClick={() => sliderRef.current?.swiper.slidePrev()}
           >
             <ChevronLeft size={18} strokeWidth={2.4} />
           </button>
-          <div ref={setPaginationEl} className="solutions-slider-pagination" />
+          <div className="solutions-slider-pagination" />
           <button
-            ref={setNextEl}
             type="button"
             className="solutions-slider-arrow solutions-slider-next"
             aria-label="Next solution"
+            onClick={() => sliderRef.current?.swiper.slideNext()}
           >
             <ChevronRight size={18} strokeWidth={2.4} />
           </button>
